@@ -1,3 +1,7 @@
 .slick-track {
   background-color: red;
 }
+
+:global(.render-route-store-search-department) :global(.vtex-search-result-3-x-filter__container--category-3) {
+  display: none;
+}
