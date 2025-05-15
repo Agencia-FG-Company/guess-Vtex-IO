@@ -20,7 +20,7 @@
         "hideUnavailableItems": true,
         "skusFilter": "ALL_AVAILABLE",
         "simulationBehavior": "default",
-        "orderByField": "OrderByTopSaleDESC",
+        "orderByField": "OrderByReleaseDateDESC",
         "maxItemsPerPage": 40,
         "mapField": "productClusterIds"
       }
