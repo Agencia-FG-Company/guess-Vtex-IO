@@ -175,7 +175,7 @@
   content: url(assets/icons/shelf/icon-leaf.png);
 }
 
-.productHighlightWrapper--collection .productHighlightText[data-highlight-name=Valentines] {
+.productHighlightWrapper--collection .productHighlightText[data-highlight-name="#MyValentine"] {
   background: #FFEBF0;
   color: #A20028;
   font-size: 0px;
@@ -188,7 +188,7 @@
   min-height: 21px;
   letter-spacing: 0.6px;
 }
-.productHighlightWrapper--collection .productHighlightText[data-highlight-name=Valentines]::before {
+.productHighlightWrapper--collection .productHighlightText[data-highlight-name="#MyValentine"]::before {
   content: "#MyValentine";
   display: flex;
   align-items: center;

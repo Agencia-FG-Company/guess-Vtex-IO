@@ -5,6 +5,7 @@
     "alink": "(cd app-custom && vtex link) && (cd app-store && vtex link) && (cd app-store && yarn gulp)"
   },
   "dependencies": {
-    "@builder.io/partytown": "^0.10.3"
+    "@builder.io/partytown": "^0.10.3",
+    "gulp": "^5.0.0"
   }
 }
