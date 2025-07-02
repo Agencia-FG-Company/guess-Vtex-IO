@@ -1259,7 +1259,7 @@ footer .bottom .copy p {
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto;
-  width: 50%;
+  width: fit-content;
   border-radius: 20px;
 }
 
