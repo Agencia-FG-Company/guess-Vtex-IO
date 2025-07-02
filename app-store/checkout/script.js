@@ -200,7 +200,7 @@ $(document).ready(function () {
   vtexjs.checkout.getOrderForm().done(function (orderForm) {
     console.log(orderForm);
     cashbackValue = orderForm.value * 0.30;
-    cashbackValue = cashbackValue / 100;  
+    cashbackValue = cashbackValue / 100;
 
     let items = orderForm.items;
     items.forEach((i) => {
@@ -272,4 +272,211 @@ $(document).ready(function () {
       ulElement.classList.toggle("active");
     });
   });
+});
+
+$.ajax({
+  url: "/api/catalog_system/pub/products/search?fq=productId:54",
+  method: "GET",
+  success: function(products) {
+    if (products.length > 0) {
+      const skuId = products[0].items[0].itemId;
+      console.log(skuId)
+
+      // 2. Verifica o estoque do SKU
+      $.ajax({
+        url: `/api/catalog/pvt/product/54`,
+        method: "GET",
+        success: function(skuData) {
+          const availableQuantity = skuData.IsActive;
+
+          console.log(availableQuantity, "Disponivel")
+
+          if (availableQuantity > 0) {
+            (function isPresent() {
+
+              const waitForElement = function (selector, callback) {
+                const element = $(selector)
+
+                if (element.length) {
+                  callback(element)
+                  return
+                }
+                setTimeout(function () {
+                  waitForElement(selector, callback)
+                }, 50)
+              }
+
+
+              waitForElement('.product-item', function (element) {
+                $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
+
+                  $('.cart-template-holder .product-name').append('<div class="present-container"><img src="/arquivos/icon-giftCheckout.png" /><p class="present">Adicionar embalagem para presente</p><div>')
+
+                  $('.body-cart .present').each(function () {
+                    $(this).on('click', function () {
+
+                      $('.my-modal-gift').show();
+
+
+                      $('body').on('click', '.btn-content .btn-presente', function () {
+
+                        let idSku = $(this).parents('.modal-items-main').attr('data-id')
+                        const increment = 1;
+
+                        vtexjs.checkout.getOrderForm().done(function(orderForm) {
+                          const items = orderForm.items;
+                          const existingItem = items.find((item, index) => item.id === idSku);
+
+                          if (existingItem) {
+                            const newQuantity = existingItem.quantity + increment;
+
+                            vtexjs.checkout.updateItems([
+                              {
+                                index: items.findIndex(item => item.id === idSku),
+                                quantity: newQuantity
+                              }
+                            ], null, false).done(function(updatedOrderForm) {
+                              alert('Quantidade atualizada!');
+                            });
+                          } else {
+
+                            const item = {
+                              id: idSku,
+                              quantity: increment,
+                              seller: '1'
+                            };
+
+                            vtexjs.checkout.addToCart([item], null).done(function(orderForm) {
+                              alert('Item adicionado ao carrinho!');
+                            });
+                          }
+                        });
+
+                      })
+                      // }
+
+                    })
+                  })
+                });
+              });
+            })();
+
+            let selectedSku = null;
+            // Variável global para armazenar o SKU do produto que acionou o modal
+
+            // Captura o clique no botão "É para presente?" e armazena o SKU do produto selecionado
+            $('body').on('click', '.table.cart-items td.product-name .present', function() {
+                $('.my-modal-gift').show();
+                const parentItem = $(this).closest('tr');
+                // Pegando a linha do produto no carrinho
+                selectedSku = parentItem.data('sku');
+                // Pegando o SKU do produto (precisa estar no HTML)
+
+                if (!selectedSku) {
+                    console.error('⚠️ Erro: SKU do produto não encontrado no clique do botão de presente.');
+                } else {
+                    console.log('✅ Produto selecionado para presente:', selectedSku);
+                }
+            });
+
+            (function closeModal() {
+              const waitForElement = function (selector, callback) {
+                const element = $(selector)
+
+                if (element.is(':visible')) {
+                  callback(element)
+                  return
+                }
+                setTimeout(function () {
+                  waitForElement(selector, callback)
+                }, 50)
+              }
+
+              waitForElement('#myModal', function () {
+                $('#myModal .close, #myModal .btn-presente').on('click', function () {
+                  $('.my-modal-gift').hide();
+                })
+              });
+            })();
+
+            // Captura o clique no botão "Adicionar Presente" dentro do modal
+            $('body').on('click', '.modal-items .btn-content .btn-presente-v2', function(evt) {
+                evt.preventDefault();
+
+                if (!selectedSku) {
+                    console.error('⚠️ Nenhum produto selecionado para adicionar presente.');
+                    return;
+                }
+
+                console.log('📦 Adicionando presente para o SKU:', selectedSku);
+                $('.present-container').remove()
+
+                const itemPresente = {
+                    id: 53,
+                    // SKU do presente
+                    seller: '1',
+                    quantity: 1
+                };
+
+                // Verifica se o item de presente já está no carrinho
+                vtexjs.checkout.getOrderForm().done( (orderForm) => {
+                    const existingItem = orderForm.items.find(item => item.id === '53');
+                    // Procura o item de presente no carrinho
+
+                    if (existingItem) {
+                        const itemIndex = orderForm.items.indexOf(existingItem);
+                        // Encontra o índice do item
+                        const newQuantity = existingItem.quantity + 1;
+
+                        const itemUpdate = {
+                            index: itemIndex,
+                            // Adiciona o index aqui
+                            quantity: newQuantity
+                        };
+
+                        vtexjs.checkout.updateItems([itemUpdate], null, true).done( (updatedOrderForm) => {
+                            console.log('✅ Quantidade do presente atualizada!', updatedOrderForm);
+                            $('.my-modal-gift').hide();
+                            selectedSku = null;
+                            // Resetando a variável após a ação
+                        }
+                        ).fail( (error) => {
+                            console.error('❌ Erro ao atualizar a quantidade do item no carrinho:', error);
+                        }
+                        );
+                    } else {
+                        // Se o item não existir, adiciona o item ao carrinho
+                        vtexjs.checkout.addToCart([itemPresente], null, 1).done( (orderForm) => {
+                            console.log('✅ Item de presente adicionado!', orderForm);
+                            $('tr[data-sku="53"] .present-container').remove()
+                            $('.my-modal-gift').hide();
+                            selectedSku = null;
+                            // Resetando a variável após a ação
+                        }
+                        ).fail( (error) => {
+                            console.error('❌ Erro ao adicionar item ao carrinho:', error);
+                        }
+                        );
+                    }
+                }
+                ).fail( (error) => {
+                    console.error('❌ Erro ao buscar o carrinho:', error);
+                }
+                );
+            });
+          } else {
+            console.log("Produto sem estoque.");
+          }
+        },
+        error: function(error) {
+          console.error("Erro ao verificar estoque:", error);
+        }
+      });
+    } else {
+      console.log("Produto com ID 53 não existe.");
+    }
+  },
+  error: function(error) {
+    console.error("Erro ao buscar o produto:", error);
+  }
 });

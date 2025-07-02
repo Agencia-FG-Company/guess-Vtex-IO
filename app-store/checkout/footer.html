@@ -133,11 +133,7 @@
           <div class="wd-marketing-newsletter">
             <!-- BEFORE -->
             <div class="wd-marketing-newsletter">
-              <div class="wd-header">
-                <span class="wd-icon"></span>
-                <div class="wd-title"></div>
-                <!-- HEADER -->
-              </div>
+
               <div class="wd-content">
                 <!-- CONTENT -->
                 <form
@@ -146,21 +142,11 @@
                   novalidate="novalidate"
                 >
                   <div class="form-wrapper">
-                    <p>Cadastre-se e receba ofertas exclusivas.</p>
-                    <div class="input-wrapper input-name-marketing-newsletter">
-                      <label for="newsletter-name-wd26">Nome:</label>
-                      <input
-                        type="text"
-                        name="Name"
-                        id="newsletter-name-wd26"
-                        value=""
-                        maxlength="100"
-                        class="clear-default-value"
-                        autocomplete="off"
-                      />
-                    </div>
+
+
                     <div class="input-wrapper input-email-marketing-newsletter">
                       <label for="newsletter-email-wd26">E-mail:</label>
+                      <div class="newsletter__send">
                       <input
                         type="text"
                         name="Email"
@@ -170,18 +156,11 @@
                         class="clear-default-value"
                         autocomplete="off"
                       />
-                      <input type="hidden" name="OptIn" value="true" />
-                      <input
-                        type="hidden"
-                        name="AllowReceiveNewsletter"
-                        value="true"
-                      />
+                      <button>Cadastrar</button>
+                      </div>
+
                     </div>
-                    <div
-                      class="input-wrapper input-button-marketing-newsletter"
-                    >
-                      <i class="loading"></i> <button>Cadastrar</button>
-                    </div>
+
                   </div>
                 </form>
               </div>
@@ -377,5 +356,29 @@
         <p>Guess Brasil © 2021 | TODOS OS DIREITOS RESERVADOS</p>
       </div>
     </div>
+  </div>
+
+  <div id="myModal" class="my-modal-gift">
+      <div class="modal-content">
+          <div class="modal-header">
+              <span class="close"><img src="/arquivos/icon-closeModalGift.png" /></span>
+              <p>Selecione uma embalagem para presente</p>
+          </div>
+          <div class="modal-items">
+              <div class="modal-items-main">
+                  <img src="/arquivos/icon-giftPack.png" alt="Sacola presente - Guess" />
+                  <div class="modal-items-content">
+                      <span>Caixa de Presente Branco P</span>
+                      <span>R$ 65,00</span>
+                      <p>ou 1x sem juros de R$ 65,00 no cartão de crédito</p>
+                      <div class="btn-content">
+                          <button class="btn-presente-v2">
+                              Adicionar ao carrinho
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
 </footer>
