@@ -289,8 +289,6 @@ $.ajax({
         success: function(skuData) {
           const availableQuantity = skuData.IsActive;
 
-          console.log(availableQuantity, "Disponivel")
-
           if (availableQuantity > 0) {
             (function isPresent() {
 
@@ -311,6 +309,8 @@ $.ajax({
                 $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
 
                   $('.cart-template-holder .product-name').append('<div class="present-container"><img src="/arquivos/icon-giftCheckout.png" /><p class="present">Adicionar embalagem para presente</p><div>')
+
+                  $('tr[data-sku="53"] .present-container').remove()
 
                   $('.body-cart .present').each(function () {
                     $(this).on('click', function () {
