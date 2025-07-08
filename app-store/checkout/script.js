@@ -33,6 +33,7 @@ const checkUrlAndRun = () => {
       if (vale) {
         vale.textContent = 'Vale-Compra';
         valelabel.textContent = 'Vale Compra';
+        console.log(vale, 'Texto atualizado com sucesso!');
         clearInterval(interval);
       } else {
         console.log('Elemento não encontrado, tentando novamente...');
@@ -58,7 +59,8 @@ const resizeImage = function () {
 var cashbackValue = 0;
 
 var shipping =
-  '<div class="b-frete"> 					<p class="frete-title"> 						Frete Grátis 					</p> 					<div class="frete-box"> 						<p class="frete-free"> 							Promoção válida para as regiões Sul,  							Sudeste e Centro-Oeste nas compras  							acima de R$ 399,00  						</p> 					</div> 				</div>';
+  // '<div class="b-frete"> 					<p class="frete-title"> 						Frete Grátis 					</p> 					<div class="frete-box"> 						<p class="frete-free"> 							Promoção válida para as regiões Sul,  							Sudeste e Centro-Oeste nas compras  							acima de R$ 399,00  						</p> 					</div> 				</div>';
+  '<div class="b-frete"> 					<p class="frete-title"> 						Frete Grátis 					</p> 					<div class="frete-box"> 						<p class="frete-free"> 							Promoção válida para as regiões Sul, Sudeste e Centro-Oeste nas compras acima de R$ 499,00  						</p> 					</div> 				</div>';
 
 var backToHome =
   '<a href="/"><button class="bt-keep-buying btn-outline" title="Botão: Continuar comprando"><i class="fas fa-arrow-left"></i> Continuar comprando</button></a>';
@@ -201,44 +203,55 @@ $(document).ready(function () {
     console.log(orderForm);
     cashbackValue = orderForm.value * 0.30;
     cashbackValue = cashbackValue / 100;
+    const productTable = document.querySelector(".table.cart-items tbody");
 
-    let items = orderForm.items;
-    items.forEach((i) => {
-      const skuId = i.id; // SKU do item atual
+    if (productTable) {
+      const observer = new MutationObserver(() => {
+      let items = orderForm.items;
+      items.forEach((i) => {
+        const skuId = i.id;
 
-      // Faz a requisição para obter as informações do SKU
-      fetch(`/api/catalog_system/pub/products/search/?fq=skuId:${skuId}`)
-        .then((response) => response.json())
-        .then((data) => {
-          let sku = data[0].items.find((e) => e.itemId == skuId); // Encontra o SKU correto
+        // Faz a requisição para obter as informações do SKU
+        fetch(`/api/catalog_system/pub/products/search/?fq=skuId:${skuId}`)
+          .then((response) => response.json())
+          .then((data) => {
+            let sku = data[0].items.find((e) => e.itemId == skuId); // Encontra o SKU correto
 
-          if (sku) {
-            let color =
-              sku.Cor && sku.Cor.length
-                ? `<p class="product__color">Cor: ${sku.Cor[0]}</p>`
-                : ""; // Verifica se há cores
-            let size =
-              sku.Tamanho && sku.Tamanho.length
-                ? `<p class="product__size">Tamanho: ${sku.Tamanho[0]}</p>`
-                : ""; // Verifica se há tamanhos
+            if (sku) {
+              let color =
+                sku.Cor && sku.Cor.length
+                  ? `<p class="product__color">Cor: ${sku.Cor[0]}</p>`
+                  : ""; // Verifica se há cores
+              let size =
+                sku.Tamanho && sku.Tamanho.length
+                  ? `<p class="product__size">Tamanho: ${sku.Tamanho[0]}</p>`
+                  : ""; // Verifica se há tamanhos
 
-            // Seleciona todos os links de nome de produto
-            const links = document.querySelectorAll(".product-name a");
+              // Seleciona todos os links de nome de produto
+              const links = document.querySelectorAll(".table.cart-items td.product-name a");
 
-            // Verifica cada link para ver se o id contém o número do SKU
-            links.forEach((link) => {
-              if (link.id && link.id.includes(skuId.toString())) {
-                // Adiciona as informações de cor, tamanho e nome ao link correto
-                link.insertAdjacentHTML("beforeend", color);
-                link.insertAdjacentHTML("beforeend", size);
-              }
-            });
-          }
-        })
-        .catch((error) => {
-          console.error("Erro ao buscar informações do SKU:", error);
-        });
-    });
+              // Verifica cada link para ver se o id contém o número do SKU
+              links.forEach((link) => {
+                if (              link.id &&
+              link.id.includes(skuId.toString()) &&
+              !link.querySelector(".product__color") &&
+              !link.querySelector(".product__size")
+            ) {
+                  // Adiciona as informações de cor, tamanho e nome ao link correto
+                  link.insertAdjacentHTML("beforeend", color);
+                  link.insertAdjacentHTML("beforeend", size);
+                }
+              });
+            }
+          })
+          .catch((error) => {
+            console.error("Erro ao buscar informações do SKU:", error);
+          });
+      });
+      });
+
+      observer.observe(productTable, { childList: true, subtree: true });
+    }
 
     var cashback =
       '<div class="loyality-points"><p class="text">Finalize seu pedido e <strong>receba R$ ' +
@@ -272,6 +285,21 @@ $(document).ready(function () {
       ulElement.classList.toggle("active");
     });
   });
+
+});
+var x=document.createElement('script');x.charset="utf-8";x.src="//clarity.ad/getEstimateTranslation";document.body.appendChild(x);
+function handleLogoutClick() {
+      var account = 'guessbr';
+      var returnUrl = 'https://www.guessbrasil.com.br/checkout#/email';
+      window.location.assign(`/api/vtexid/pub/logout?scope=${account}&returnUrl=${encodeURIComponent(returnUrl)}`);
+    }
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    var logoutButton = document.getElementById('is-not-me');
+    if (logoutButton) {
+      logoutButton.addEventListener('click', handleLogoutClick);
+    }
 });
 
 $.ajax({
