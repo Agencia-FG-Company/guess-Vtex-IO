@@ -1392,3 +1392,11 @@ footer .bottom .copy p {
   margin: 0;
   font-family: "Futura PT";
 }
+
+.modal-footer span {
+  color: #333;
+}
+
+.modal-backdrop.fade.in {
+  z-index: 0;
+}
