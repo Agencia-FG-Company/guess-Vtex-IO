@@ -1,49 +1,47 @@
-import React, { useEffect, useState } from 'react'
+/* eslint-disable prettier/prettier */
+import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
+import './styles.css' // Certifique-se que esse arquivo exista
 
 interface CustomTextSliderProps {
-  texts: { text: string }[] // Atualizado para refletir o novo tipo
+  texts: { text: string }[]
   transitionTime: number
   textColor: string
   backgroundColor: string
 }
 
-export const CSS_HANDLES = ['textSliderContainer', 'textSliderItem'] as const
+export const CSS_HANDLES = ['textSliderContainer', 'textSliderTrack'] as const
 
- export const CustomTextSlider: React.FC<CustomTextSliderProps> & { schema?: object } = ({
+export const CustomTextSlider: React.FC<CustomTextSliderProps> & { schema?: object } = ({
   texts,
   transitionTime,
   textColor,
   backgroundColor
 }) => {
-  const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const { handles } = useCssHandles(CSS_HANDLES)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length)
-    }, transitionTime)
-
-    return () => clearInterval(interval)
-  }, [texts, transitionTime])
+  const separator = ' \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0•\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ' // usa espaços não quebráveis e o bullet (•)
+  const combinedText = texts.map(t => t.text).join(separator)
+  const repeatedText = Array(20).fill(combinedText).join(separator)
 
   return (
     <div
       className={handles.textSliderContainer}
-      style={{ backgroundColor }}
+      style={{
+        backgroundColor,
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+      }}
     >
-      {texts.map((item, index) => (
-        <p
-          key={index}
-          className={`${handles.textSliderItem} ${index === currentTextIndex ? 'active' : ''}`}
-          style={{
-            color: textColor,
-            opacity: index === currentTextIndex ? 1 : 0
-          }}
-        >
-          {item.text}
-        </p>
-      ))}
+      <div
+        className={handles.textSliderTrack}
+        style={{
+          color: textColor,
+          animationDuration: `${transitionTime}ms`,
+        }}
+      >
+        {repeatedText}
+      </div>
     </div>
   )
 }
@@ -53,18 +51,18 @@ CustomTextSlider.defaultProps = {
     { text: 'Promoção de Frete Grátis válido para as regiões Sul, Sudeste e Centro-oeste do país' },
     { text: 'Frete grátis nas compras acima de R$ 499,00' }
   ],
-  transitionTime: 3000,
+  transitionTime: 300000,
   textColor: '#000000',
   backgroundColor: '#FFFFFF'
 }
 
 CustomTextSlider.schema = {
   title: 'TopBar Slider',
-  description: 'A slider with customizable texts, colors, and transition time.',
+  description: 'A marquee with customizable texts, colors, and transition time.',
   type: 'object',
   properties: {
     texts: {
-      title: 'Texts for Slider',
+      title: 'Texts for Marquee',
       type: 'array',
       items: {
         type: 'object',
@@ -75,16 +73,12 @@ CustomTextSlider.schema = {
             default: 'New text'
           }
         }
-      },
-      default: [
-        { text: 'Promoção de Frete Grátis válido para as regiões Sul, Sudeste e Centro-oeste do país' },
-        { text: 'Frete grátis nas compras acima de R$ 499,00' }
-      ]
+      }
     },
     transitionTime: {
-      title: 'Transition Time (ms)',
+      title: 'Loop Duration (ms)',
       type: 'number',
-      default: 3000,
+      default: 300000
     },
     textColor: {
       title: 'Text Color',
@@ -104,4 +98,3 @@ CustomTextSlider.schema = {
     }
   }
 }
-

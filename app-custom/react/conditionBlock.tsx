@@ -1,3 +1,4 @@
-import { ConditionBlock } from './components/ConditionBlock'
+/* eslint-disable prettier/prettier */
+import { ConditionBlock } from './components/conditionBlock'
 
 export default ConditionBlock
