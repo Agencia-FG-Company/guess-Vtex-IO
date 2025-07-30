@@ -60,6 +60,7 @@ const CSS_HANDLES = [
   "goToCart",
   "goToCheckout",
   "empty",
+  "minicartCloseMobile"
 ] as const;
 
 export const CustomMinicart: FC<CustomMinicartProps> = ({
@@ -111,6 +112,7 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
             href: "/checkout#/cart",
           },
         })
+        setTimeout(() => { openDrawer() }, 300)
         setInitialItemsCount(totalItems)
       } else if (initialItemsCount === 0 && totalItems === 1) {
         showToast({
@@ -121,6 +123,7 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
             href: "/checkout#/cart",
           },
         })
+        setTimeout(() => { openDrawer() }, 300)
         setInitialItemsCount(totalItems)
       }
     }
@@ -158,6 +161,26 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
             <div className={handles.cartHeader}>
               <p className={handles.cartTitle}>Meu Carrinho</p>
               <p className={handles.cartSegure}>Compra 100% segura</p>
+              {isMobile && (
+                <button
+                  className={handles.minicartCloseMobile}
+                  onClick={() => setIsDrawerOpen(false)}
+                  aria-label="Fechar minicart"
+                  style={{
+                    position: "absolute",
+                    fontSize: "30px",
+                    top: "3px",
+                    right: "6px",
+                    transform: "rotate(45deg)",
+                    background: "transparent",
+                    border: "none",
+                    cursor: "pointer",
+                    lineHeight: "1",
+                  }}
+                >
+                  +
+                </button>
+              )}
             </div>
             <div className={handles.cartItems}>
               {items.map((item: any, index: any) => (

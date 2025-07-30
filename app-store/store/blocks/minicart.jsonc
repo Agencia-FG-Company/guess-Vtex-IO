@@ -3,7 +3,7 @@
     "props": {
       "addToCartFeedback": "customEvent",
       "customPixelEventId": "add-to-cart-button",
-      "isOneClickBuy":true
+      "isOneClickBuy":false
     }
   }
 }

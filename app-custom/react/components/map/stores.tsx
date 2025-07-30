@@ -130,6 +130,71 @@ export const stores = [
       },
       phone: "(11) 3750-4780",
       coordinates: { latitude: -22.782587, longitude: -43.307225 }
+    },
+    {
+      id: "pointofsale-option-18",
+      name: "Guess Shopping Vila Olímpia",
+      address: {
+        streetAddress: "R. Olimpíadas, 360 - Vila Olímpia, São Paulo - SP, 04551-000",
+        city: "São Paulo",
+        state: "SP"
+      },
+      phone: "(11) 3750-4780",
+      coordinates: { latitude: -23.5954475, longitude: -46.689169 }
+    },
+    {
+      id: "pointofsale-option-19",
+      name: "Guess Santa Maria Outlet",
+      address: {
+        streetAddress: "Rodovia Anhanguera (SP-330), km 298+6, Cravinhos - SP, 14140-000",
+        city: "Cravinhos",
+        state: "SP"
+      },
+      phone: "(11) 3750-4780",
+      coordinates: { latitude: -21.2834343, longitude: -47.7540976 }
+    },
+    {
+      id: "pointofsale-option-20",
+      name: "Guess Recife Outlet",
+      address: {
+        streetAddress: "Rod. Luiz Gonzaga, S/N - KM 20 BR 232 - Moreno, PE, 54803-901",
+        city: "Moreno",
+        state: "PE"
+      },
+      phone: "(11) 3750-4780",
+      coordinates: { latitude: -8.0949883, longitude: -35.0706338 }
+    },
+    {
+      id: "pointofsale-option-21",
+      name: "Guess Outlet Premium Salvador",
+      address: {
+        streetAddress: "Estr. do Coco, Km 12,5 - Vila de Abrantes, Camaçari - BA, 42827-970",
+        city: "Camaçari",
+        state: "BA"
+      },
+      phone: "(11) 3750-4780",
+      coordinates: { latitude: -12.8250519, longitude: -38.2701161 }
+    },
+    {
+      id: "pointofsale-option-22",
+      name: "Guess Outlet Premium Grande São Paulo",
+      address: {
+        streetAddress: "Estr. de São Bento, 9550 - Jardim Josely, Itaquaquecetuba - SP, 08590-315",
+        city: "Itaquaquecetuba",
+        state: "SP"
+      },
+      phone: "(11) 3750-4780",
+      coordinates: { latitude: -23.433114, longitude: -46.2750782 }
+    },
+    {
+      id: "pointofsale-option-23",
+      name: "Guess Outlet Premium Brasília",
+      address: {
+        streetAddress: "360 Highway, BR-060 - KM21 - Alexânia, GO, 72920-000",
+        city: "Alexânia",
+        state: "GO"
+      },
+      phone: "(11) 3750-4780",
+      coordinates: { latitude: -16.1210236, longitude: -48.401125 }
     }
   ];
-  

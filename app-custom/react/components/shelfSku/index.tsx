@@ -328,7 +328,7 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                 } else {
                   setInfoerror(false);
                   handleAddToCart(addToCartSku);
-                  window.location.href = "/checkout#/cart";
+                  //window.location.href = "/checkout#/cart";
                 }
               }}
               className={handles["similar__products-addtocart"]}
