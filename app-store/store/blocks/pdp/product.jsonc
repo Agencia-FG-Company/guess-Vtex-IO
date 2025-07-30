@@ -249,5 +249,10 @@
       "blockClass": "message-availability"
     },
     "children": ["availability-subscriber"]
+  },
+  "add-to-cart-button": {
+    "props": {
+      "isOneClickBuy": false
+    }
   }
 }

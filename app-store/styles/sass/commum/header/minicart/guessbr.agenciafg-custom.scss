@@ -40,6 +40,9 @@
 
   .minicartContainer {
     width: 420px;
+    @media(max-width: 767px) {
+      width: 100vw;
+    }
     background-color: white;
     position: absolute;
     border: 1px solid #eee;
@@ -78,7 +81,7 @@
       padding: 10px;
       max-height: 400px;
       overflow: auto;
-  
+
     }
 
     .cartItem {
@@ -174,7 +177,7 @@
     }
     .cartFooter {
       padding: 10px;
-     
+
       .minicartTotalizer {
         display: block;
         text-align: end;

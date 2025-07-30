@@ -1116,6 +1116,11 @@
   z-index: 999999999;
   overflow-y: auto;
 }
+@media (max-width: 767px) {
+  .minicartWrapper .minicartContainer {
+    width: 100vw;
+  }
+}
 .minicartWrapper .minicartContainer .cartHeader .cartTitle {
   display: block;
   font-family: Futura;
