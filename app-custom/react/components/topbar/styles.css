@@ -1,0 +1,34 @@
+.textSliderTrack {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 14px;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-name: marquee;
+}
+
+.textSliderContainer {
+    display: flex;
+    align-items: anchor-center;
+}
+
+@media (max-width: 767px) {
+  .textSliderTrack {
+    animation-duration: 300000ms !important;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
