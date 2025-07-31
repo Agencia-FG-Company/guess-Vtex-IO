@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .productHighlightWrapper {
   font-size: 0;
   background: unset;
@@ -6,6 +7,7 @@
   order: 1 !important;
   width: fit-content !important;
 }
+
 .productHighlightWrapper .productHighlightText[data-highlight-id="138"],
 .productHighlightWrapper .productHighlightText[data-highlight-id="157"],
 .productHighlightWrapper .productHighlightText[data-highlight-id="159"],
@@ -27,6 +29,7 @@
   height: 22px;
   margin: 0;
 }
+
 .productHighlightWrapper .productHighlightText[data-highlight-id="138"]::after,
 .productHighlightWrapper .productHighlightText[data-highlight-id="157"]::after,
 .productHighlightWrapper .productHighlightText[data-highlight-id="159"]::after,
@@ -40,6 +43,7 @@
   text-align: center;
   color: #808080;
 }
+
 .productHighlightWrapper .productHighlightText[data-highlight-id="211"] {
   order: 1;
   background: #f2f2f2;
@@ -59,6 +63,7 @@
   height: 22px;
   margin: 0;
 }
+
 .productHighlightWrapper .productHighlightText[data-highlight-id="211"]::after {
   content: "Desconto Progressivo";
   font-family: "Futura";
@@ -73,6 +78,7 @@
 .productHighlightWrapper--collection {
   order: unset;
 }
+
 .productHighlightWrapper--collection .productHighlightText[data-highlight-name=sustentavel] {
   background: #f3f3f3;
   color: #018002;
@@ -89,13 +95,16 @@
   gap: 5px;
   width: 84px;
 }
+
 .productHighlightWrapper--collection .productHighlightText[data-highlight-name=sustentavel]::before {
   content: "Sustentável";
   font-size: 14px;
 }
+
 .productHighlightWrapper--collection .productHighlightText[data-highlight-name=sustentavel]::after {
   content: url(assets/icons/shelf/icon-leaf.png);
 }
+
 .productHighlightWrapper--collection {
   .productHighlightText[data-highlight-name="#MyValentine"] {
     background: #FFEBF0;
@@ -112,6 +121,32 @@
 
     &::before {
       content: "#MyValentine";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      min-width: 89px;
+      min-height: 21px;
+    }
+  }
+}
+
+.productHighlightWrapper--collection {
+  .productHighlightText[data-highlight-name="Semana do Cliente"] {
+    background: #f9f8f8;
+    color: #303030;
+    font-size: 0px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 4px;
+    display: block;
+    min-width: 89px;
+    min-height: 21px;
+    letter-spacing: 0.6px;
+
+    &::before {
+      content: "Extra 15% OFF";
       display: flex;
       align-items: center;
       justify-content: center;

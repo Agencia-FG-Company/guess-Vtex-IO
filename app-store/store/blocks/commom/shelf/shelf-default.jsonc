@@ -7,10 +7,10 @@
     "children": [
       "stack-layout#shelf",
       "product-specification-badges",
-      "flex-layout.row#flags-shelf",
       "product-summary-name#shelf",
       "flex-layout.row#selling-price-savings",
-      "product-installments#summary"
+      "product-installments#summary",
+      "flex-layout.row#flags-shelf"
       // "add-to-cart-button"
     ]
   },
@@ -103,6 +103,7 @@
     },
     "children": ["product-highlight-wrapper"]
   },
+  
   "product-list-price": {
     "title": "Preço de lista do produto",
     "props": {
