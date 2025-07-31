@@ -79,6 +79,11 @@
 .gallery--grid .galleryItem--grid :global(.vtex-product-summary-2-x-image) {
   object-fit: cover !important;
 }
+@media (max-width: 767px) {
+  .gallery--grid .galleryItem--grid {
+    max-width: 197px !important;
+  }
+}
 
 .container--layout--lp__banners_laterais-result .buttonShowMore--layout {
   margin-top: 60px;
@@ -402,5 +407,23 @@
     content: "Aplicar Filtros";
     white-space: nowrap;
     font-size: 14px;
+  }
+}
+
+.galleryItem--normal {
+  position: relative;
+}
+.galleryItem--normal :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+  position: absolute;
+  bottom: 13%;
+  right: 5%;
+}
+.galleryItem--normal :global(.vtex-wish-list-1-x-wishlistIconContainer) :global(.vtex-button__label)::after {
+  content: initial;
+}
+@media (max-width: 767px) {
+  .galleryItem--normal :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+    right: 1%;
+    bottom: 20%;
   }
 }

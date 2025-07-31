@@ -27,6 +27,24 @@
   padding: 0 !important;
 }
 
+.slideChildrenContainer--shelf {
+  position: relative;
+}
+.slideChildrenContainer--shelf :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+  position: absolute;
+  bottom: 7%;
+  right: 2%;
+}
+.slideChildrenContainer--shelf :global(.vtex-wish-list-1-x-wishlistIconContainer) :global(.vtex-button__label)::after {
+  content: initial;
+}
+@media (max-width: 767px) {
+  .slideChildrenContainer--shelf :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+    bottom: 15%;
+    right: 0%;
+  }
+}
+
 @media (max-width: 1025px) {
   .sliderLayoutContainer--carousel :global(.vtex-store-components-3-x-imageElementLink--slider__home) {
     width: 100%;
