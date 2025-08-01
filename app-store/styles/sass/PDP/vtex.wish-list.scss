@@ -1,6 +1,10 @@
 .wishlistIconContainer{
+  width: auto !important;
+    &:hover {
+      background-color: red;
+    }
     @include tablet{
-        padding: 0 15px;
+        padding: 0 0px 0 15px;
     }
     :global(.vtex-button__label){
         display: flex;

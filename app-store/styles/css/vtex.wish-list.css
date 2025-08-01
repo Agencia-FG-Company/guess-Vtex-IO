@@ -1,6 +1,14 @@
+.wishlistIconContainer {
+  width: auto !important;
+}
+
+.wishlistIconContainer:hover .outline{
+  background-image: url(/arquivos/icon-wishlist-hover.png)
+}
+
 @media (max-width: 1025px) {
   .wishlistIconContainer {
-    padding: 0 15px;
+    padding: 0 0px 0 15px;
   }
 }
 .wishlistIconContainer :global(.vtex-button__label) {
@@ -17,11 +25,15 @@
 .wishlistIconContainer :global(.vtex-button) {
   border: none;
 }
+
+.wishlistIconContainer :global(.vtex-wish-list-1-x-fill) {
+  background-image: url(/arquivos/icon-wishlist-selected.png) !important;
+}
 .wishlistIconContainer .outline {
-  background-image: url(assets/icons/cashback/Heart.svg);
+  background-image: url(/arquivos/icon-wishlist-new.png);
 }
 .wishlistIconContainer .wishlistIcon {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   background-repeat: no-repeat;
 }

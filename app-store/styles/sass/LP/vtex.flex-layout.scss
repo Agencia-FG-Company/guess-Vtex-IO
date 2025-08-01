@@ -307,14 +307,14 @@
 }
 
 .flexRow--LP {
-  margin-top: 50px !important;  
+  margin-top: 50px !important;
 }
 
 .flexRowContent--LP {
   gap: 50px;
 
   :global(.vtex-store-components-3-x-imageElement) {
-    
+
   }
 
   @media(max-width:1440px) {
@@ -325,7 +325,7 @@
 
   .flexColChild--grid_product {
     :global(.vtex-list-context-0-x-list) {
-      
+
 
       .flexRow--flags-shelf {
         display: none;
@@ -333,7 +333,7 @@
     }
   }
 
-  
+
 }
 
 
@@ -346,7 +346,7 @@
       height: 32px;
     }
 
-   
+
   }
 
   .flexRowContent--LP {
@@ -355,7 +355,7 @@
 
     :global(.vtex-store-components-3-x-imageElement) {
       width: 90% !important;
-    }    
+    }
   }
 
   .flexCol--grid_product-LP--mobile {
@@ -384,7 +384,7 @@
       height: auto;
     }
 
-    
+
 
     .pr6 {
       padding-right: 0px !important;
@@ -401,7 +401,7 @@
         display: none;
       }
 
-      
+
     }
   }
 
@@ -416,8 +416,34 @@
   }
 }
 
+.flexColChild--grid_product-LP--mobile {
+  :global(.vtex-product-summary-2-x-containerNormal) {
+    :global(.vtex-wish-list-1-x-wishlistIconContainer){
+      :global(.vtex-button__label)::after{
+        content: initial;
+      }
+    }
+  }
+}
+
+
+.flexRowContent--grid_product-home {
+  :global(.vtex-product-summary-2-x-containerNormal) {
+    position: relative;
+    :global(.vtex-wish-list-1-x-wishlistIconContainer){
+      position: absolute;
+      top: 0;
+      z-index: 99;
+      right: 10px;
+      :global(.vtex-button__label)::after{
+        content: initial;
+      }
+    }
+  }
+}
+
 .flexRowContent--LP :global(.vtex-product-summary-2-x-nameContainer--shelf) {
-  display: block !important;
+  display: flex !important;
 }
 .flexRow--LP .flexRow--selling-price-savings {
   display: block !important;
@@ -446,7 +472,7 @@
   :global(.vtex-list-context-0-x-list),
   :global(.vtex-product-summary-2-x-containerNormal) {
     max-height: 100% !important;
-    } 
+    }
   }
 }
 
@@ -475,10 +501,10 @@
 }
 
 @media(max-width:1920px) {
-  .flexColChild--grid_product-LP--mobile { 
+  .flexColChild--grid_product-LP--mobile {
     :global(.vtex-list-context-0-x-list) {
       gap: 10px;
-    }    
+    }
   }
   .flexRow--LP {
     margin-bottom: 50px !important;

@@ -474,18 +474,9 @@
 }
 
 .galleryItem--normal {
-  position: relative;
   :global(.vtex-wish-list-1-x-wishlistIconContainer){
-    position: absolute;
-    bottom: 13%;
-    right: 5%;
     :global(.vtex-button__label)::after{
       content: initial;
-    }
-
-    @media (max-width: 767px) {
-      right: 1%;
-      bottom: 20%;
     }
   }
 }
