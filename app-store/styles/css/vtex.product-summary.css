@@ -27,6 +27,11 @@
 }
 @media (max-width: 767px) {
   .nameContainer--shelf .productBrand--shelf {
-    width: 130px;
+    width: 105px;
+  }
+}
+@media (max-width: 767px) {
+  .nameContainer--shelf {
+    padding-top: 0 !important;
   }
 }

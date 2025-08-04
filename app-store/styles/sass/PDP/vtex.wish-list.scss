@@ -1,10 +1,7 @@
 .wishlistIconContainer{
   width: auto !important;
-    &:hover {
-      background-color: red;
-    }
     @include tablet{
-        padding: 0 0px 0 15px;
+        padding: 0 0px 0 0px;
     }
     :global(.vtex-button__label){
         display: flex;
@@ -21,11 +18,22 @@
         border: none;
     }
     .outline{
-        background-image: url(assets/icons/cashback/Heart.svg);
+        background-image: url(/arquivos/icon-wishlist-new.png);
     }
     .wishlistIcon{
-        width: 18px;
-        height: 18px;
+        width: 22px;
+        height: 22px;
         background-repeat: no-repeat;
+    }
+    @media (min-width: 768px) {
+      &:hover {
+        .outline {
+          background-image: url(/arquivos/icon-wishlist-hover.png)
+        }
+      }
+    }
+
+    :global(.vtex-wish-list-1-x-fill) {
+      background-image: url(/arquivos/icon-wishlist-selected.png) !important;
     }
 }

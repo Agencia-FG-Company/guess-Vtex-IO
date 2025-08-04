@@ -48,6 +48,7 @@
       ],
       "props": {
         "colSizing":"auto",
+        "preserveLayoutOnMobile": true,
         "blockClass": ["name-wishlist"]
       }
     },

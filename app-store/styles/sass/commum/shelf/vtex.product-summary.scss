@@ -22,7 +22,10 @@
     }
 
     @media (max-width: 767px) {
-      width: 130px;
+      width: 105px;
     }
+  }
+  @media (max-width: 767px) {
+    padding-top: 0 !important;
   }
 }
