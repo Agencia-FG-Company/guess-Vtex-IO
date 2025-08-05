@@ -266,3 +266,11 @@
     }
   }
 }
+
+.flexRowContent--product-main {
+  @media (max-width: 767px) {
+    :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+      padding: 0 0px 0 15px;
+    }
+  }
+}
