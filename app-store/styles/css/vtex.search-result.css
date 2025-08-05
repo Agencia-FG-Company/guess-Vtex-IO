@@ -72,6 +72,7 @@
   flex-basis: 0 !important;
   flex-shrink: 1;
   max-width: 350px !important;
+  position: relative;
 }
 .gallery--grid .galleryItem--grid :global(.vtex-stack-layout-0-x-stackContainer--shelf) {
   overflow: hidden;

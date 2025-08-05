@@ -6,11 +6,11 @@
       },
       "children": [
         "stack-layout#shelf__home",
+        "flex-layout.row#flags-shelf",
         "product-specification-badges",
         "product-summary-name#shelf__home",
         "flex-layout.row#selling-price-savings",
-        "product-installments#summary",
-        "flex-layout.row#flags-shelf"
+        "product-installments#summary"
         // "add-to-cart-button"
       ]
     },

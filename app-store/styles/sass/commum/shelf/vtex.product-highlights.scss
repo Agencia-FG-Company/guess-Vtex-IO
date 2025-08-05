@@ -131,6 +131,24 @@
   }
 }
 
+:global(.vtex-flex-layout-0-x-flexRowContent--flags-shelf) {
+  .productHighlightText[data-highlight-name="Semana do Cliente"] {
+    position: absolute;
+    bottom: 0px;
+    // left: 0;
+  }
+}
+:global(.vtex-flex-layout-0-x-flexColChild--product__right-col) {
+  .productHighlightText[data-highlight-name="Semana do Cliente"] {
+    position: relative;
+  }
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--product-main) {
+  .productHighlightText[data-highlight-name="Semana do Cliente"] {
+    position: relative;
+  }
+}
+
 .productHighlightWrapper--collection {
   .productHighlightText[data-highlight-name="Semana do Cliente"] {
     background: #f9f8f8;
