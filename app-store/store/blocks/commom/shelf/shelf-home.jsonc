@@ -48,6 +48,16 @@
         "tag": "h3"
       }
     },
+
+    "flex-layout.col#shelf_name_wishlist" : {
+      "props": {
+        "blockClass": ["shelf_name_wishlist"]
+      },
+      "children": [
+        "product-summary-name#shelf__home",
+        "add-to-list-btn"
+      ]
+    },
     "product-summary-image#shelf__home": {
       "title": "Imagem do produto na prateleira",
       "props": {

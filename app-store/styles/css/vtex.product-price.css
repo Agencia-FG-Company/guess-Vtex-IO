@@ -29,39 +29,40 @@
   width: fit-content !important;
 }
 .sellingPrice--shelf .currencyContainer--shelf {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 16px;
 }
 @media (max-width: 1025px) {
   .sellingPrice--shelf .currencyContainer--shelf {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
 .savings--shelf {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-  color: black;
+  color: #4964B6;
   width: fit-content !important;
 }
 @media (max-width: 1025px) {
   .savings--shelf {
     padding-left: 5px;
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
 .installments--shelf {
   width: fit-content !important;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   text-align: start;
 }
 @media (max-width: 1025px) {
   .installments--shelf {
-    font-size: 11px;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
@@ -69,14 +70,16 @@
   width: auto !important;
 }
 .listPrice--shelf .currencyContainer--shelf {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   color: #71767F;
 }
 @media (max-width: 1025px) {
   .listPrice--shelf .currencyContainer--shelf {
-    font-size: 12px;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
   }
 }
 @media (max-width: 1025px) {
@@ -84,4 +87,8 @@
     width: 100% !important;
     display: flex;
   }
+}
+
+.listPriceValue--shelf {
+  color: #71767F;
 }

@@ -8,7 +8,7 @@
       "stack-layout#shelf",
       "product-specification-badges",
       "flex-layout.row#flags-shelf",
-      "product-summary-name#shelf",
+      "product-summary-name#shelf__home",
       "flex-layout.row#selling-price-savings",
       "product-installments#summary"
       // "add-to-cart-button"
@@ -22,6 +22,15 @@
     },
     "children": ["Container-lp#shelf"]
   },
+  "flex-layout.col#shelf_name_wishlist" : {
+      "props": {
+        "blockClass": ["shelf_name_wishlist"]
+      },
+      "children": [
+        "product-summary-name#shelf__home",
+        "add-to-list-btn"
+      ]
+    },
 
   "Container-lp#shelf": {
     "props":{
@@ -79,7 +88,7 @@
   "product-installments#summary": {
     "title": "Parcelamento do produto",
     "props": {
-      "message": "ou {installmentsNumber}x sem juros de {installmentValue} no cartão de crédito",
+      "message": "ou {installmentsNumber}x sem juros de {installmentValue} no cartão",
       "blockClass": "shelf"
     }
   },

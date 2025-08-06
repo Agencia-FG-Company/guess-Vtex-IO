@@ -3,46 +3,49 @@
     justify-content: start;
     width: fit-content !important;
   .currencyContainer--shelf {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 16px;
     @include tablet{
-      font-size: 12px;
+      font-size: 16px;
     }
   }
 }
 
 .savings--shelf{
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-  color: black;
+  color: #4964B6;
   width: fit-content !important;
   @include tablet{
     padding-left: 5px;
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
 .installments--shelf{
   width: fit-content !important;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   text-align: start;
   @include tablet{
-    font-size: 11px;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
 .listPrice--shelf{
   width: auto !important;
   .currencyContainer--shelf{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 16px;
     color: #71767F;
     @include tablet{
-      font-size: 12px;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 5px;
     }
   }
 
@@ -50,4 +53,8 @@
     width: 100% !important;
     display: flex;
   }
+}
+
+.listPriceValue--shelf {
+    color: #71767F;
 }

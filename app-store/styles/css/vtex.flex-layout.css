@@ -715,6 +715,10 @@
   }
 }
 
+.flexRowContent--flags-shelf {
+  margin-top: 7px;
+}
+
 .flexRow .stretchChildrenWidth {
   display: contents;
 }
@@ -876,7 +880,7 @@
 }
 @media (max-width: 1025px) {
   .flexRow--selling-price-savings .flexRowContent {
-    margin-block-end: 0px;
+    margin-block-end: 3px;
     gap: 0px;
     display: flex;
     flex-wrap: wrap;
