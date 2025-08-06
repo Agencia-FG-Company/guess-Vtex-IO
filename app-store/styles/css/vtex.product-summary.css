@@ -2,7 +2,7 @@
   justify-content: start;
   padding: 0;
   margin-block-end: 8px;
-  margin-top: 7px;
+  margin-top: 0px;
   padding-top: 5px;
   padding-block-start: 12px;
   margin-block-end: 8px;
@@ -11,7 +11,7 @@
 @media (max-width: 1025px) {
   .nameContainer--shelf {
     margin-block-end: 0;
-    margin-top: 16px;
+    margin-top: 4px;
   }
 }
 .nameContainer--shelf .productBrand--shelf {
@@ -21,7 +21,7 @@
   width: 100%;
   display: inline-block;
   text-align: left;
-  width: 241px;
+  width: 160px;
 }
 @media (max-width: 1025px) {
   .nameContainer--shelf .productBrand--shelf {

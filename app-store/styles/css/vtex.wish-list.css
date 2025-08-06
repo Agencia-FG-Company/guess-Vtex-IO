@@ -3,7 +3,12 @@
 }
 @media (max-width: 1025px) {
   .wishlistIconContainer {
-    padding: 0 0px 0 0px;
+    padding: 0 0 0 15px;
+  }
+}
+@media (max-width: 767px) {
+  .wishlistIconContainer {
+    padding: 0 0 0 15px;
   }
 }
 .wishlistIconContainer :global(.vtex-button__label) {

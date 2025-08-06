@@ -8,7 +8,6 @@
         "stack-layout#shelf__home",
         "flex-layout.row#flags-shelf",
         "product-specification-badges",
-        "product-summary-name#shelf__home",
         "flex-layout.row#name-wishlist",
         "flex-layout.row#selling-price-savings",
         "product-installments#summary"

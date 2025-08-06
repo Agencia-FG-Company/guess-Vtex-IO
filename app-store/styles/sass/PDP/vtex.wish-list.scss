@@ -1,7 +1,10 @@
 .wishlistIconContainer{
   width: auto !important;
     @include tablet{
-        padding: 0 0px 0 0px;
+      padding: 0 0 0 15px;
+    }
+    @media (max-width: 767px) {
+      padding: 0 0 0 15px;
     }
     :global(.vtex-button__label){
         display: flex;
