@@ -25,3 +25,20 @@
 .sliderLayoutContainer--shelf {
   padding: 0 !important;
 }
+
+
+.slideChildrenContainer--shelf {
+  position: relative;
+  :global(.vtex-wish-list-1-x-wishlistIconContainer){
+    position: absolute;
+    bottom: 7%;
+    right: 2%;
+    :global(.vtex-button__label)::after{
+      content: initial;
+    }
+    @media (max-width: 767px) {
+      bottom: 15%;
+      right: 0%;
+    }
+  }
+}

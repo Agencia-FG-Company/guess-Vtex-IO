@@ -80,6 +80,11 @@
 .gallery--grid .galleryItem--grid :global(.vtex-product-summary-2-x-image) {
   object-fit: cover !important;
 }
+@media (max-width: 767px) {
+  .gallery--grid .galleryItem--grid {
+    max-width: 197px !important;
+  }
+}
 
 .container--layout--lp__banners_laterais-result .buttonShowMore--layout {
   margin-top: 60px;
@@ -404,4 +409,8 @@
     white-space: nowrap;
     font-size: 14px;
   }
+}
+
+.galleryItem--normal :global(.vtex-wish-list-1-x-wishlistIconContainer) :global(.vtex-button__label)::after {
+  content: initial;
 }

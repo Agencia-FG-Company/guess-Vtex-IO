@@ -83,6 +83,10 @@
     :global(.vtex-product-summary-2-x-image) {
       object-fit: cover !important;
     }
+
+    @media (max-width: 767px) {
+      max-width: 197px !important;
+    }
   }
 }
 
@@ -466,6 +470,14 @@
           font-size: 14px;
         }
       }
+    }
+  }
+}
+
+.galleryItem--normal {
+  :global(.vtex-wish-list-1-x-wishlistIconContainer){
+    :global(.vtex-button__label)::after{
+      content: initial;
     }
   }
 }
