@@ -197,3 +197,39 @@
   min-width: 89px;
   min-height: 21px;
 }
+
+:global(.vtex-flex-layout-0-x-flexRowContent--flags-shelf) .productHighlightText[data-highlight-name="Semana do Cliente"] {
+  position: absolute;
+  bottom: 0px;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--product__right-col) .productHighlightText[data-highlight-name="Semana do Cliente"] {
+  position: relative;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--product-main) .productHighlightText[data-highlight-name="Semana do Cliente"] {
+  position: relative;
+}
+
+.productHighlightWrapper--collection .productHighlightText[data-highlight-name="Semana do Cliente"] {
+  background: #f9f8f8;
+  color: #303030;
+  font-size: 0px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 4px;
+  display: block;
+  min-width: 89px;
+  min-height: 21px;
+  letter-spacing: 0.6px;
+}
+.productHighlightWrapper--collection .productHighlightText[data-highlight-name="Semana do Cliente"]::before {
+  content: "Extra 15% OFF";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  min-width: 89px;
+  min-height: 21px;
+}

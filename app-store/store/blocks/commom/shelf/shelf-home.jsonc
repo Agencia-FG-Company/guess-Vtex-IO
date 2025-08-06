@@ -6,8 +6,8 @@
       },
       "children": [
         "stack-layout#shelf__home",
-        "product-specification-badges",
         "flex-layout.row#flags-shelf",
+        "product-specification-badges",
         "product-summary-name#shelf__home",
         "flex-layout.row#selling-price-savings",
         "product-installments#summary"
