@@ -79,122 +79,6 @@ var addHtmlContentAfter = function (selector, html) {
   }
 };
 
-
-// const sellerCode = {
-//   addForm: function () {
-//     $('.full-cart .summary-totalizers.cart-totalizers').prepend(`
-//         <div class="sellerCode">
-//             <form class="sellerCode__form">
-//                 <div class="sellerCode__label">
-//                     <label for="sellerCode">Código do vendedor</label>
-//                 </div>
-//                 <div class="sellerCode__input">
-//                     <input type="text" name="sellerCode" id="sellerCode" placeholder="Código" />
-//                     <button type="submit" id="sellerCode__btn" class="btn">OK</button>
-//                 </div>
-//                 <div class="sellerCode__result">
-//                     <div class="sellerCode__resultName"></div>
-//                     <a href="#" class="sellerCode__clear">
-//                         excluir
-//                     </a>
-//                 </div>
-//             </form>
-//         </div>
-//     `)
-//   },
-
-//   fetchVendedor: function (code) {
-//     console.log('fetched Vendedor')
-//     fetch('/api/dataentities/CV/search?_fields=code,name,email&_where=code=' + code, {
-//       headers: {
-//         Accept: 'application/vnd.vtex.ds.v10+json',
-//         'Content-Type': 'application/json; charset=utf-8',
-//       },
-//     })
-//       .then(function (response) {
-//         return response.json()
-//       })
-//       .then(function (data) {
-//         if (data.length) {
-//           let codigoVendedor = data[0].code
-//           let nomeVendedor = data[0].name
-
-//           vtexjs.checkout.getOrderForm().then(function (orderForm) {
-//             let newMarketingData = orderForm.marketingData || {}
-//             newMarketingData.utmiCampaign = 'vendedorestoryburch'
-//             newMarketingData.utmiPart = codigoVendedor
-
-//             $('.sellerCode__resultName').text(nomeVendedor)
-//             $('.sellerCode__input').hide()
-//             $('.sellerCode__result').css('display', 'flex')
-
-//             localStorage.setItem('sellerInfo', JSON.stringify(data[0]))
-
-//             vtexjs.checkout.sendAttachment('marketingData', newMarketingData)
-//           })
-//         } else {
-//           $('.sellerCode__input').addClass('error')
-//           if (!$('.errorText').length) {
-//             $('.sellerCode__input').append('<span class="errorText">Código não encontrado</span>')
-//           }
-//         }
-//       })
-//   },
-
-//   checkVendedor: function () {
-//     $('.sellerCode__input').removeClass('error')
-//     $('.errorText').remove()
-
-//     vtexjs.checkout.getOrderForm().then(function (orderForm) {
-//       let newMarketingData = orderForm.marketingData || {}
-//       newMarketingData.utmiCampaign = null
-//       newMarketingData.utmiPart = null
-//       vtexjs.checkout.sendAttachment('marketingData', newMarketingData)
-//     })
-
-//     const sellerInfo = localStorage.getItem('sellerInfo')
-//     let input = document.querySelector('#sellerCode')
-
-//     if (sellerInfo) {
-//       sellerCode.fetchVendedor(JSON.parse(sellerInfo).code)
-//     } else {
-//       document.querySelector('.sellerCode__form').addEventListener('submit', function (e) {
-//         e.preventDefault()
-
-//         let code = input.value
-
-//         sellerCode.fetchVendedor(code)
-//       })
-//     }
-//   },
-
-//   removeCodVendedor: function () {
-//     document.querySelector('.sellerCode__clear').addEventListener('click', function (e) {
-//       e.preventDefault()
-//       vtexjs.checkout.getOrderForm().then(function (orderForm) {
-//         let newMarketingData = orderForm.marketingData || {}
-//         newMarketingData.utmiCampaign = null
-//         newMarketingData.utmiPart = null
-//         vtexjs.checkout.sendAttachment('marketingData', newMarketingData).done(function () {
-//           $('#sellerCode').val('')
-//           $('.sellerCode__input').show()
-//           $('.sellerCode__result').hide()
-
-//           localStorage.removeItem('sellerInfo')
-//           sellerCode.checkVendedor()
-//         })
-//       })
-//     })
-//   },
-
-//   init: function () {
-//     sellerCode.addForm()
-//     sellerCode.checkVendedor()
-//     sellerCode.removeCodVendedor()
-//   },
-// }
-
-
 $(document).ready(function () {
 
   // sellerCode.init()
@@ -302,209 +186,181 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-$.ajax({
-  url: "/api/catalog_system/pub/products/search?fq=productId:54",
-  method: "GET",
-  success: function(products) {
-    if (products.length > 0) {
-      const skuId = products[0].items[0].itemId;
-      console.log(skuId)
-
-      // 2. Verifica o estoque do SKU
-      $.ajax({
-        url: `/api/catalog/pvt/product/54`,
-        method: "GET",
-        success: function(skuData) {
-          const availableQuantity = skuData.IsActive;
-
-          if (availableQuantity > 0) {
-            (function isPresent() {
-
-              const waitForElement = function (selector, callback) {
-                const element = $(selector)
-
-                if (element.length) {
-                  callback(element)
-                  return
-                }
-                setTimeout(function () {
-                  waitForElement(selector, callback)
-                }, 50)
-              }
-
-
-              waitForElement('.product-item', function (element) {
-                $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
-
-                  $('.cart-template-holder .product-name').append('<div class="present-container"><img src="/arquivos/icon-giftCheckout.png" /><p class="present">Adicionar embalagem para presente</p><div>')
-
-                  $('tr[data-sku="53"] .present-container').remove()
-
-                  $('.body-cart .present').each(function () {
-                    $(this).on('click', function () {
-
-                      $('.my-modal-gift').show();
-
-
-                      $('body').on('click', '.btn-content .btn-presente', function () {
-
-                        let idSku = $(this).parents('.modal-items-main').attr('data-id')
-                        const increment = 1;
-
-                        vtexjs.checkout.getOrderForm().done(function(orderForm) {
-                          const items = orderForm.items;
-                          const existingItem = items.find((item, index) => item.id === idSku);
-
-                          if (existingItem) {
-                            const newQuantity = existingItem.quantity + increment;
-
-                            vtexjs.checkout.updateItems([
-                              {
-                                index: items.findIndex(item => item.id === idSku),
-                                quantity: newQuantity
-                              }
-                            ], null, false).done(function(updatedOrderForm) {
-                              alert('Quantidade atualizada!');
-                            });
-                          } else {
-
-                            const item = {
-                              id: idSku,
-                              quantity: increment,
-                              seller: '1'
-                            };
-
-                            vtexjs.checkout.addToCart([item], null).done(function(orderForm) {
-                              alert('Item adicionado ao carrinho!');
-                            });
-                          }
-                        });
-
-                      })
-                      // }
-
-                    })
-                  })
-                });
-              });
-            })();
-
-            let selectedSku = null;
-            // Variável global para armazenar o SKU do produto que acionou o modal
-
-            // Captura o clique no botão "É para presente?" e armazena o SKU do produto selecionado
-            $('body').on('click', '.table.cart-items td.product-name .present', function() {
-                $('.my-modal-gift').show();
-                const parentItem = $(this).closest('tr');
-                // Pegando a linha do produto no carrinho
-                selectedSku = parentItem.data('sku');
-                // Pegando o SKU do produto (precisa estar no HTML)
-
-                if (!selectedSku) {
-                    console.error('⚠️ Erro: SKU do produto não encontrado no clique do botão de presente.');
-                } else {
-                    console.log('✅ Produto selecionado para presente:', selectedSku);
-                }
-            });
-
-            (function closeModal() {
-              const waitForElement = function (selector, callback) {
-                const element = $(selector)
-
-                if (element.is(':visible')) {
-                  callback(element)
-                  return
-                }
-                setTimeout(function () {
-                  waitForElement(selector, callback)
-                }, 50)
-              }
-
-              waitForElement('#myModal', function () {
-                $('#myModal .close, #myModal .btn-presente').on('click', function () {
-                  $('.my-modal-gift').hide();
-                })
-              });
-            })();
-
-            // Captura o clique no botão "Adicionar Presente" dentro do modal
-            $('body').on('click', '.modal-items .btn-content .btn-presente-v2', function(evt) {
-                evt.preventDefault();
-
-                if (!selectedSku) {
-                    console.error('⚠️ Nenhum produto selecionado para adicionar presente.');
-                    return;
-                }
-
-                console.log('📦 Adicionando presente para o SKU:', selectedSku);
-                $('.present-container').remove()
-
-                const itemPresente = {
-                    id: 53,
-                    // SKU do presente
-                    seller: '1',
-                    quantity: 1
-                };
-
-                // Verifica se o item de presente já está no carrinho
-                vtexjs.checkout.getOrderForm().done( (orderForm) => {
-                    const existingItem = orderForm.items.find(item => item.id === '53');
-                    // Procura o item de presente no carrinho
-
-                    if (existingItem) {
-                        const itemIndex = orderForm.items.indexOf(existingItem);
-                        // Encontra o índice do item
-                        const newQuantity = existingItem.quantity + 1;
-
-                        const itemUpdate = {
-                            index: itemIndex,
-                            // Adiciona o index aqui
-                            quantity: newQuantity
-                        };
-
-                        vtexjs.checkout.updateItems([itemUpdate], null, true).done( (updatedOrderForm) => {
-                            console.log('✅ Quantidade do presente atualizada!', updatedOrderForm);
-                            $('.my-modal-gift').hide();
-                            selectedSku = null;
-                            // Resetando a variável após a ação
-                        }
-                        ).fail( (error) => {
-                            console.error('❌ Erro ao atualizar a quantidade do item no carrinho:', error);
-                        }
-                        );
-                    } else {
-                        // Se o item não existir, adiciona o item ao carrinho
-                        vtexjs.checkout.addToCart([itemPresente], null, 1).done( (orderForm) => {
-                            console.log('✅ Item de presente adicionado!', orderForm);
-                            $('tr[data-sku="53"] .present-container').remove()
-                            $('.my-modal-gift').hide();
-                            selectedSku = null;
-                            // Resetando a variável após a ação
-                        }
-                        ).fail( (error) => {
-                            console.error('❌ Erro ao adicionar item ao carrinho:', error);
-                        }
-                        );
-                    }
-                }
-                ).fail( (error) => {
-                    console.error('❌ Erro ao buscar o carrinho:', error);
-                }
-                );
-            });
+(function () {
+  if (window.innerWidth > 768) return;
+  const btn = document.createElement('button');
+  btn.className = 'floating-checkout-btn';
+  btn.innerText = 'FINALIZAR COMPRA';
+  btn.addEventListener('click', () => {
+    const realBtn = document.getElementById('cart-to-orderform');
+    if (realBtn) {
+      realBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      alert('Botão de finalizar não encontrado.');
+    }
+  });
+  document.body.appendChild(btn);
+  const waitForFooter = setInterval(() => {
+    const footer = document.querySelector('footer');
+    if (footer) {
+      clearInterval(waitForFooter);
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const isVisible = entries[0].isIntersecting;
+          if (isVisible) {
+            btn.classList.add('hidden');
           } else {
-            console.log("Produto sem estoque.");
+            btn.classList.remove('hidden');
           }
         },
-        error: function(error) {
-          console.error("Erro ao verificar estoque:", error);
+        {
+          root: null, // viewport padrão
+          threshold: 0.1,
         }
-      });
-    } else {
-      console.log("Produto com ID 53 não existe.");
+      );
+      observer.observe(footer);
     }
-  },
-  error: function(error) {
-    console.error("Erro ao buscar o produto:", error);
+  }, 300);
+})();
+
+$(document).ready(function () {
+  // Objeto de configuração para fácil manutenção
+  const config = {
+    giftCheckerId: '54', // ID do produto que habilita a funcionalidade
+    giftWrapSkuId: '53', // SKU da embalagem de presente a ser adicionada
+    giftWrapSelector: '.present-container',
+    modalSelector: '.my-modal-gift',
+    openModalSelector: '.present',
+    confirmGiftSelector: '.btn-presente-v2' // Use um seletor claro para o botão de confirmação
+  };
+
+  // Função principal assíncrona
+  async function initGiftWrapFeature() {
+    try {
+      // 1. Verifica se o produto que habilita a funcionalidade está ativo
+      const giftProductData = await $.ajax({
+        url: `/api/catalog_system/pub/products/search?fq=productId:${config.giftCheckerId}`,
+        method: "GET"
+      });
+
+      if (!giftProductData || giftProductData.length === 0) {
+        console.log(`Produto de verificação (ID: ${config.giftCheckerId}) não encontrado.`);
+        return;
+      }
+
+      const isGiftFeatureActive = giftProductData[0].items[0].sellers[0].sellerId !== '';
+      if (!isGiftFeatureActive) {
+        console.log("A funcionalidade de presente está desativada.");
+        return;
+      }
+
+      // 2. Anexa os listeners de evento UMA ÚNICA VEZ usando delegação
+      attachEventListeners();
+
+      // 3. Atualiza a UI pela primeira vez
+      const initialOrderForm = await vtexjs.checkout.getOrderForm();
+      updateGiftWrapButtons(initialOrderForm);
+
+      // 4. Escuta por futuras atualizações do carrinho
+      $(window).on('orderFormUpdated.vtex', function(evt, orderForm) {
+        console.log('🛒 Carrinho atualizado, verificando botões de presente...');
+        updateGiftWrapButtons(orderForm);
+      });
+
+    } catch (error) {
+      console.error("❌ Erro na inicialização da funcionalidade de presente:", error);
+    }
   }
+
+  // Adiciona o botão "Adicionar embalagem" aos itens do carrinho que precisam
+  function updateGiftWrapButtons(orderForm) {
+    if (!orderForm || !orderForm.items) return;
+
+    // Remove todos os botões existentes para evitar duplicatas
+    $(config.giftWrapSelector).remove();
+
+    orderForm.items.forEach(item => {
+      // Não adiciona o botão no próprio item de presente
+      if (item.id === config.giftWrapSkuId) {
+        return;
+      }
+
+      // Encontra a linha do produto no DOM e adiciona o botão se não existir
+      const productRow = $(`tr.product-item[data-sku="${item.id}"]`);
+      if (productRow.length > 0 && productRow.find(config.giftWrapSelector).length === 0) {
+        const giftButtonHtml = `
+          <div class="present-container">
+            <img src="/arquivos/icon-giftCheckout.png" alt="Ícone de presente" />
+            <p class="present">Adicionar embalagem para presente</p>
+          </div>`;
+        productRow.find('.product-name').append(giftButtonHtml);
+      }
+    });
+  }
+
+  // Anexa todos os listeners de eventos necessários
+  function attachEventListeners() {
+    const $body = $('body');
+
+    // Abre o modal e armazena qual SKU o acionou
+    $body.on('click', config.openModalSelector, function() {
+      const parentSku = $(this).closest('.product-item').data('sku');
+      if (parentSku) {
+        console.log(`🎁 Abrindo modal de presente para o SKU: ${parentSku}`);
+        $(config.modalSelector).show().data('parent-sku', parentSku); // Armazena o SKU no modal
+      } else {
+        console.error('⚠️ SKU do produto pai não encontrado.');
+      }
+    });
+
+    // Fecha o modal
+    $body.on('click', `${config.modalSelector} .close, ${config.modalSelector} .btn-secondary`, function() {
+        $(config.modalSelector).hide().removeData('parent-sku');
+    });
+
+    // Ação de adicionar o presente ao carrinho
+    $body.on('click', config.confirmGiftSelector, async function(evt) {
+      evt.preventDefault();
+      const parentSku = $(config.modalSelector).data('parent-sku');
+
+      if (!parentSku) {
+        console.error('⚠️ Nenhum SKU pai selecionado para adicionar o presente.');
+        return;
+      }
+
+      console.log(`📦 Adicionando embalagem de presente (SKU: ${config.giftWrapSkuId})`);
+
+      try {
+        const orderForm = await vtexjs.checkout.getOrderForm();
+        const giftItem = orderForm.items.find(item => item.id === config.giftWrapSkuId);
+
+        if (giftItem) {
+          // Se já existe, atualiza a quantidade
+          const itemUpdate = {
+            index: orderForm.items.indexOf(giftItem),
+            quantity: giftItem.quantity + 1,
+          };
+          await vtexjs.checkout.updateItems([itemUpdate], null, false);
+          console.log('✅ Quantidade da embalagem de presente atualizada!');
+        } else {
+          // Se não existe, adiciona ao carrinho
+          const itemToAdd = {
+            id: config.giftWrapSkuId,
+            quantity: 1,
+            seller: '1'
+          };
+          await vtexjs.checkout.addToCart([itemToAdd], null, false);
+          console.log('✅ Embalagem de presente adicionada ao carrinho!');
+        }
+
+        $(config.modalSelector).hide().removeData('parent-sku'); // Fecha o modal e limpa o dado
+
+      } catch (error) {
+        console.error("❌ Erro ao adicionar/atualizar a embalagem de presente:", error);
+      }
+    });
+  }
+
+  // Inicia a funcionalidade
+  initGiftWrapFeature();
 });
