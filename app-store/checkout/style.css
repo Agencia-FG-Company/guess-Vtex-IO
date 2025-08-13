@@ -59,6 +59,12 @@ cart-template th.product {
   display: flex;
 }
 
+@media (max-width: 767px) {
+  .table.cart-items tbody tr.product-item {
+    margin: 20px 0;
+  }
+}
+
 .new-carrinho .wrapper .logo {
   width: 200px;
   display: -webkit-box;
@@ -1399,4 +1405,28 @@ footer .bottom .copy p {
 
 .modal-backdrop.fade.in {
   z-index: 0;
+}
+
+.floating-checkout-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  z-index: 9999;
+  cursor: pointer;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.floating-checkout-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
