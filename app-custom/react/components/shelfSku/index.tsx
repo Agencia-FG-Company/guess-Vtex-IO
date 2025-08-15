@@ -183,7 +183,16 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
       quantity: 1,
       seller: "1",
     };
+    
     addItem([itemToAdd]);
+    const closeBtn = (document.querySelector(
+    ".guessbr-agenciafg-custom-0-x-modal-content--button"
+    ) as HTMLButtonElement | null) ||
+    (document.querySelector(
+      ".vtex-modal-layout-0-x-closeButton"
+    ) as HTMLButtonElement | null);
+
+    closeBtn?.click();
     setIsModalVisible(true);
     setTimeout(() => {
       setIsModalVisible(false);
