@@ -811,11 +811,6 @@
     max-width: 410px;
   }
 }
-@media (max-width: 1025px) {
-  .flexRow--footer__wrapper .flexRowContent .flexCol--footer__newsletter {
-    margin-top: 20px;
-  }
-}
 @media (max-width: 768px) {
   .flexRow--footer__wrapper .flexRowContent .flexCol--footer__newsletter {
     padding: 26px 20px 20px;
@@ -1317,4 +1312,50 @@
     grid-template-columns: 1fr 1fr;
     padding: 0 10px;
   }
+}
+
+
+.flexRowContent--container-cronometro {
+  background-image: url(/arquivos/background-bf-2025-new.png);
+  background-color: black;
+}
+
+.flexCol--container-cronometro {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .flexCol--container-cronometro {
+    margin-bottom: 0;
+    padding: 0 15px;
+  }
+  .flexRowContent--section-textSeo {
+    padding: 35px 0;
+  }
+  .flexCol--section-textSeo {
+    margin: 0 15px !important;
+    width: auto !important;
+  }
+}
+
+.flexRow--black-friday-cronometro-container,
+.flexRowContent--bf-form-container,
+.flexRowContent--section-shelf,
+.flexRowContent--section-textSeo {
+  background-color: #000;
+}
+
+.flexRowContent--section-textSeo {
+  padding: 50px 0;
+}
+
+.flexCol--section-textSeo {
+  margin: 0 30px;
+}
+
+.flexColChild--section-shelf :global(.vtex-product-summary-2-x-brandName--shelf),
+.flexColChild--section-shelf :global(.vtex-product-price-1-x-currencyContainer--shelf),
+.flexColChild--section-shelf :global(.vtex-product-price-1-x-installments--shelf),
+.flexColChild--section-shelf :global(.vtex-product-price-1-x-savings--shelf){
+  color: #FDFBFB !important;
 }

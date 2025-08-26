@@ -68,6 +68,15 @@
   "Breadcrumb": {
     "component": "breadcrumb"
   },
+  "Countdown-bf": {
+    "component": "Countdown-bf"
+  },
+  "Form-bf": {
+    "component": "FormBF"
+  },
+  "CollapseText": {
+    "component": "CollapseText"
+  },
   "Container-lp": {
     "component": "Container-lp",
     "composition": "children"

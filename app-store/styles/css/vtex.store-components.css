@@ -226,3 +226,9 @@
 :global(.vtex-store-components-3-x-sizeMobile) {
   max-width: 106px;
 }
+
+@media (max-width: 767px) {
+  .imageElement--image-logo {
+    width: 240px;
+  }
+}

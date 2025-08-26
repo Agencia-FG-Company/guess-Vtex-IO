@@ -65,3 +65,15 @@
     color: black;
   }
 }
+
+
+.imageElement--section-images:hover {
+  filter: brightness(1.1);
+}
+
+@media (max-width: 767px) {
+  .slide--section-images {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+  }
+}
