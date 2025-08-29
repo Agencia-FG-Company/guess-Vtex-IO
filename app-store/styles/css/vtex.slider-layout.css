@@ -71,9 +71,16 @@
   filter: brightness(1.1);
 }
 
+.sliderTrack--section-images {
+  gap: 7px;
+}
+
 @media (max-width: 767px) {
   .slide--section-images {
     margin-left: 3px !important;
     margin-right: 3px !important;
+  }
+  .sliderTrack--section-images {
+    gap: 0px;
   }
 }

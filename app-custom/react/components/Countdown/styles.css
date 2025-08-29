@@ -49,7 +49,7 @@
 }
 
 .countdownTitle {
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 400;
   font-family: "Inter", sans-serif;
   color: #fff;
@@ -162,5 +162,16 @@
   }
   .countdownTitle {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 345px) {
+  .flipCard {
+    --w: 30px;
+    --h: 60px;
+  }
+  .containerNumbers {
+    gap: 12px;
+    padding: 20px 0;
   }
 }

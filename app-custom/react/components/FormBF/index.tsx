@@ -1,14 +1,15 @@
 /* eslint-disable prettier/prettier */
-import React, { useState } from "react"
-import type { BlockComponent } from "vtex.render-runtime"
-import axios from "axios"
+import React, { useState } from 'react'
+import type { BlockComponent } from 'vtex.render-runtime'
+import axios from 'axios'
+
 import styles from './styles.css'
 
 const BlackFridayForm: BlockComponent = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    tel: "",
+    name: '',
+    email: '',
+    tel: '',
     category: [] as string[],
   })
 
@@ -16,14 +17,14 @@ const BlackFridayForm: BlockComponent = () => {
   const [error, setError] = useState(false)
 
   const categoriesList = [
-    "Feminino",
-    "Masculino",
-    "Bolsas",
-    "Camisetas",
-    "Vestidos",
-    "Jeans",
-    "Polos",
-    "Acessórios",
+    'Feminino',
+    'Masculino',
+    'Bolsas',
+    'Camisetas',
+    'Vestidos',
+    'Jeans',
+    'Polos',
+    'Acessórios',
   ]
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,12 +32,12 @@ const BlackFridayForm: BlockComponent = () => {
   }
 
   const handleCategoryClick = (category: string) => {
-    setFormData((prev) => {
+    setFormData(prev => {
       const exists = prev.category.includes(category)
       return {
         ...prev,
         category: exists
-          ? prev.category.filter((c) => c !== category)
+          ? prev.category.filter(c => c !== category)
           : [...prev.category, category],
       }
     })
@@ -46,15 +47,15 @@ const BlackFridayForm: BlockComponent = () => {
     e.preventDefault()
 
     try {
-      await axios.post("/api/dataentities/BF/documents", {
+      await axios.post('/api/dataentities/BF/documents', {
         name: formData.name,
         email: formData.email,
         tel: formData.tel,
-        category: formData.category.join(", "),
+        category: formData.category.join(', '),
       })
       setSuccess(true)
       setError(false)
-      setFormData({ name: "", email: "", tel: "", category: [] })
+      setFormData({ name: '', email: '', tel: '', category: [] })
     } catch (err) {
       setError(true)
       setSuccess(false)
@@ -63,12 +64,11 @@ const BlackFridayForm: BlockComponent = () => {
 
   return (
     <div className={styles.containerFormBF}>
-      <form
-        className={styles.containerForm}
-        onSubmit={handleSubmit}
-      >
+      <form className={styles.containerForm} onSubmit={handleSubmit}>
         <p className={styles.containerFormTitle}>
-          Cadastre-se para receber ofertas e benefícios exclusivos antes de todo<br/>mundo na Black Friday GUESS.
+          Cadastre-se para receber ofertas e benefícios exclusivos antes de todo
+          <br />
+          mundo na Black Friday GUESS.
         </p>
 
         <div className={styles.containerFormInput}>
@@ -101,34 +101,53 @@ const BlackFridayForm: BlockComponent = () => {
           />
         </div>
 
-        <p className={styles.categoriesTitle}>Quais categorias você deseja receber ofertas?</p>
+        <p className={styles.categoriesTitle}>
+          Quais categorias você deseja receber ofertas?
+        </p>
 
         <div className={styles.categoriesOptions}>
-          {categoriesList.map((category) => (
-            <button
-              type="button"
-              key={category}
-              onClick={() => handleCategoryClick(category)}
-              className={`${
-                formData.category.includes(category)
-                  ? styles.inputSelected
-                  : styles.input
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+          <div className={styles.categoriesOptionsColumn}>
+            {categoriesList.slice(0, 3).map(category => (
+              <button
+                type="button"
+                key={category}
+                onClick={() => handleCategoryClick(category)}
+                className={
+                  formData.category.includes(category)
+                    ? styles.inputSelected
+                    : styles.input
+                }
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          <div className={styles.categoriesOptionsColumn}>
+            {categoriesList.slice(3).map(category => (
+              <button
+                type="button"
+                key={category}
+                onClick={() => handleCategoryClick(category)}
+                className={
+                  formData.category.includes(category)
+                    ? styles.inputSelected
+                    : styles.input
+                }
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
 
         <p className={styles.acceptTerms}>
-          *Ao clicar em ENVIAR, declaro que li e concordo com<br/>as Políticas de
-          Privacidade e os Termos e condições de uso.
+          *Ao clicar em ENVIAR, declaro que li e concordo com
+          <br />
+          as Políticas de Privacidade e os Termos e condições de uso.
         </p>
 
-        <button
-          type="submit"
-          className={styles.buttonSend}
-        >
+        <button type="submit" className={styles.buttonSend}>
           ENVIAR
         </button>
 
@@ -146,9 +165,9 @@ const BlackFridayForm: BlockComponent = () => {
 }
 
 BlackFridayForm.schema = {
-  title: "Formulário Black Friday",
-  description: "Formulário de cadastro para a Black Friday",
-  type: "object",
+  title: 'Formulário Black Friday',
+  description: 'Formulário de cadastro para a Black Friday',
+  type: 'object',
   properties: {},
 }
 

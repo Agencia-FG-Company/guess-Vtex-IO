@@ -7,11 +7,17 @@
 /* eslint-disable import/order */
 /* eslint-disable prettier/prettier */
 
-import React, { useEffect, useState, useRef } from "react"
-import styles from "./styles.css"
+import React, { useEffect, useState, useRef } from 'react'
+import styles from './styles.css'
 
 interface CountdownProps {
-  targetDate: string // ex: "2025-11-28T00:00:00"
+  targetDate: string
+  countdownTitle?: string
+}
+
+// 🔥 Aqui estendemos React.FC para aceitar schema
+type CountdownComponent = React.FC<CountdownProps> & {
+  schema?: Record<string, unknown>
 }
 
 const DigitFlip = ({ value }: { value: number }) => {
@@ -22,10 +28,8 @@ const DigitFlip = ({ value }: { value: number }) => {
   //@ts-ignore
   useEffect(() => {
     if (value !== prevValue) {
-      // Reinicia a animação removendo e readicionando a classe
       if (flipRef.current) {
         flipRef.current.classList.remove(styles.play)
-        // Força um reflow
         void flipRef.current.offsetWidth
         flipRef.current.classList.add(styles.play)
       }
@@ -45,28 +49,27 @@ const DigitFlip = ({ value }: { value: number }) => {
     <div className={styles.flipContainer}>
       <div
         ref={flipRef}
-        className={`${styles.flipCard} ${animating ? styles.play : ""}`}
+        className={`${styles.flipCard} ${animating ? styles.play : ''}`}
       >
-        {/* Parte superior - mostra o valor atual */}
-        <div className={styles.top}><span>{prevValue}</span></div>
-
-        {/* Parte inferior - mostra o próximo valor */}
-        <div className={styles.bottom}><span>{value}</span></div>
-
-        {/* Lâmina superior - animação */}
-        <div className={styles.flipFront}><span>{prevValue}</span></div>
-
-        {/* Lâmina inferior - animação */}
-        <div className={styles.flipBack}><span>{value}</span></div>
+        <div className={styles.top}>
+          <span>{prevValue}</span>
+        </div>
+        <div className={styles.bottom}>
+          <span>{value}</span>
+        </div>
+        <div className={styles.flipFront}>
+          <span>{prevValue}</span>
+        </div>
+        <div className={styles.flipBack}>
+          <span>{value}</span>
+        </div>
       </div>
     </div>
   )
 }
 
-// Componente que renderiza um grupo (dias, horas, etc.)
 const FlipUnit = ({ value, label }: { value: number; label: string }) => {
-  // transforma em string com pelo menos 2 dígitos
-  const digits = value.toString().padStart(2, "0").split("").map(Number)
+  const digits = value.toString().padStart(2, '0').split('').map(Number)
 
   return (
     <div className={styles.flipGroup}>
@@ -80,7 +83,7 @@ const FlipUnit = ({ value, label }: { value: number; label: string }) => {
   )
 }
 
-const CountdownFlip: React.FC<CountdownProps> = ({ targetDate }) => {
+const CountdownFlip: CountdownComponent = ({ targetDate, countdownTitle }) => {
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date()
     let timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 }
@@ -108,7 +111,10 @@ const CountdownFlip: React.FC<CountdownProps> = ({ targetDate }) => {
   return (
     <div className={styles.countdown}>
       <div className={styles.containerTitle}>
-        <span className={styles.countdownTitle}>A Black Friday de 2025 acontecerá no dia 28 de Novembro:</span>
+        <span className={styles.countdownTitle}>
+          {countdownTitle ??
+            'A Black Friday de 2025 acontecerá no dia 28 de Novembro:'}
+        </span>
       </div>
       <div className={styles.containerNumbers}>
         <FlipUnit value={timeLeft.days} label="Dias" />
@@ -118,6 +124,28 @@ const CountdownFlip: React.FC<CountdownProps> = ({ targetDate }) => {
       </div>
     </div>
   )
+}
+
+// 🔥 Definição do schema para o Site Editor
+CountdownFlip.schema = {
+  title: 'Countdown Flip',
+  description:
+    'Contador regressivo animado para datas especiais (ex: Black Friday)',
+  type: 'object',
+  properties: {
+    targetDate: {
+      title: 'Data alvo',
+      description: 'Data final do contador (ex: 2025-11-28T00:00:00)',
+      type: 'string',
+      default: '2025-11-28T00:00:00',
+    },
+    countdownTitle: {
+      title: 'Título do contador',
+      description: 'Texto exibido acima do contador',
+      type: 'string',
+      default: 'A Black Friday de 2025 acontecerá no dia 28 de Novembro:',
+    },
+  },
 }
 
 export default CountdownFlip
