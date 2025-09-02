@@ -1,18 +1,16 @@
 .flexRow {
   &--grid_product-home {
     margin-bottom: 40px;
-    max-width: 1800px;
     margin: auto;
+    @media (min-width: 1025px) {
+      :global(.vtex-store-components-3-x-imageElement) {
+        width: 238vh;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
     .flexRowContent {
       display: flex;
-      :global(.vtex-store-components-3-x-imageElement) {
-        width: 60%;
-        height: auto;
-        object-fit: cover;
-        @include tablet{
-          width: 50%;
-        }
-      }
     }
 
     :global(.vtex-product-summary-2-x-element) {
@@ -20,17 +18,11 @@
     }
 
     :global(.vtex-product-summary-2-x-nameContainer--shelf),
+    :global(.vtex-flex-layout-0-x-flexRow--flags-shelf),
     :global(.vtex-flex-layout-0-x-flexRow--selling-price-savings),
     :global(.vtex-product-price-1-x-installments) {
       display: none;
     }
-  }
-}
-
-.flexCol--grid_product{
-  @include tablet{
-    width: 50% !important;
-
   }
 }
 
@@ -81,5 +73,14 @@
 
   :global(.vtex-product-highlights-2-x-productHighlightWrapper){
     display: none;
+  }
+}
+
+.flexCol--grid_product  {
+  @media (min-width: 1025px) and (max-width: 1599px) {
+    width: calc(100% - 321px) !important;
+  }
+  @media (min-width: 1600px) and (max-width: 1980px) {
+    width: calc(100% - 275px) !important;
   }
 }

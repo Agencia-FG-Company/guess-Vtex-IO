@@ -5,8 +5,11 @@
         height: 100%;
         :global(.vtex-product-summary-2-x-image){
             object-fit: cover !important;
-            aspect-ratio: 139 / 203;
+            aspect-ratio: 196 / 203;
             z-index: 99;
+            @media (max-width: 1024px) {
+              aspect-ratio: 151 / 203;
+            }
         }
     }
     .stackItem--shelf--fast-buy{
