@@ -1,0 +1,22 @@
+{
+  "store.custom#landing-page-black-friday-geral":{
+    "blocks": [
+      "flex-layout.row#bf-geral-container"
+    ]
+  },
+  "flex-layout.row#bf-geral-container": {
+    "children": [
+      "flex-layout.col#bf-geral-container"
+    ],
+    "props": {
+      "blockClass": ["bf-geral-container"]
+    }
+  },
+  "flex-layout.col#bf-geral-container": {
+    "children": [
+    ],
+    "props": {
+      "blockClass": ["bf-geral-container"]
+    }
+  }
+}
