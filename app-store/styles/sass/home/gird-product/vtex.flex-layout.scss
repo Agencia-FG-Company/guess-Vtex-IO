@@ -4,8 +4,8 @@
     margin: auto;
     @media (min-width: 1025px) {
       :global(.vtex-store-components-3-x-imageElement) {
-        width: 238vh;
-        height: 107vh;
+        width: calc(100% - 0px) !important;
+        height: calc(100% - -1px) !important;
         object-fit: cover;
       }
     }
@@ -77,10 +77,13 @@
 }
 
 .flexCol--grid_product  {
-  @media (min-width: 1025px) and (max-width: 1599px) {
+  @media (min-width: 1025px) and (max-width: 1399px) {
+    width: calc(100% - 413px) !important;
+  }
+  @media (min-width: 1400px) and (max-width: 1599px) {
     width: calc(100% - 763px) !important;
   }
   @media (min-width: 1600px) and (max-width: 1980px) {
-    width: calc(100% - 891px) !important;
+    width: calc(100% - 1112px) !important;
   }
 }

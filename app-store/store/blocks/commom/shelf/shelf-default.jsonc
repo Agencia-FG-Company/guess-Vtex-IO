@@ -130,11 +130,4 @@
       "blockClass": "product-list-price__category"
     }
   }
-  // "add-to-cart-button": {
-  //   "title": "Botão de adicionar ao carrinho",
-  //   "props": {
-  //     "onClickBehavior": "go-to-product-page",
-  //     "text": "Comprar"
-  //   }
-  // }
 }

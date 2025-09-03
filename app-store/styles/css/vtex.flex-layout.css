@@ -952,8 +952,8 @@
 }
 @media (min-width: 1025px) {
   .flexRow--grid_product-home :global(.vtex-store-components-3-x-imageElement) {
-    width: 238vh;
-    height: 107vh;
+    width: calc(100% - 0px) !important;
+    height: calc(100% + 1px) !important;
     object-fit: cover;
   }
 }
@@ -1007,14 +1007,19 @@
   display: none;
 }
 
-@media (min-width: 1025px) and (max-width: 1599px) {
+@media (min-width: 1025px) and (max-width: 1399px) {
+  .flexCol--grid_product {
+    width: calc(100% - 413px) !important;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1599px) {
   .flexCol--grid_product {
     width: calc(100% - 763px) !important;
   }
 }
 @media (min-width: 1600px) and (max-width: 1980px) {
   .flexCol--grid_product {
-    width: calc(100% - 891px) !important;
+    width: calc(100% - 1112px) !important;
   }
 }
 
