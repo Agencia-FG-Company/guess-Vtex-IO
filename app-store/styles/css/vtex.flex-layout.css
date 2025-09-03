@@ -950,12 +950,10 @@
   margin-bottom: 40px;
   margin: auto;
 }
-@media (min-width: 1025px) {
-  .flexRow--grid_product-home :global(.vtex-store-components-3-x-imageElement) {
-    width: calc(100% - 0px) !important;
-    height: calc(100% + 1px) !important;
-    object-fit: cover;
-  }
+.flexRow--grid_product-home :global(.vtex-store-components-3-x-imageElement) {
+  width: calc(100% - 0px) !important;
+  height: calc(100% + 1px) !important;
+  object-fit: cover;
 }
 .flexRow--grid_product-home .flexRowContent {
   display: flex;

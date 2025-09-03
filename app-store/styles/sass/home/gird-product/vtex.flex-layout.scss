@@ -2,12 +2,10 @@
   &--grid_product-home {
     margin-bottom: 40px;
     margin: auto;
-    @media (min-width: 1025px) {
-      :global(.vtex-store-components-3-x-imageElement) {
-        width: calc(100% - 0px) !important;
-        height: calc(100% - -1px) !important;
-        object-fit: cover;
-      }
+    :global(.vtex-store-components-3-x-imageElement) {
+      width: calc(100% - 0px) !important;
+      height: calc(100% - -1px) !important;
+      object-fit: cover;
     }
     .flexRowContent {
       display: flex;
