@@ -161,7 +161,7 @@
       },
       "infinite": true,
       "showNavigationArrows":"never",
-      "showPaginationDots":"never",
+      "showPaginationDots":"mobileOnly",
       "centerMode":{
         "desktop": "disabled",
         "phone": "center"

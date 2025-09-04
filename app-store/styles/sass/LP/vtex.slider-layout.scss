@@ -1,0 +1,18 @@
+.paginationDotsContainer{
+  &--section-images {
+    bottom: -17px;
+  }
+}
+
+.paginationDot{
+  &--section-images {
+    height: 2px !important;
+    width: 85px !important;
+    border-radius: 0;
+    padding: 0px;
+
+    &--isActive {
+      background-color: #fff;
+    }
+  }
+}
