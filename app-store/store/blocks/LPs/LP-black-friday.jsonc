@@ -48,6 +48,10 @@
       "blockClass": ["container-cronometro"]
     }
   },
+  "Countdown-bf":{
+    "props":{
+    }
+  },
   "rich-text#title-cronometro": {
     "title":"Sessão Cronômetro - Titulo",
     "props": {
