@@ -41,17 +41,11 @@
       "rich-text#title-cronometro",
       "image#logo-guess",
       "rich-text#text-cronometro",
-      "Countdown-bf#bf"
+      "Countdown-bf"
     ],
     "props": {
       "horizontalAlign": "center",
       "blockClass": ["container-cronometro"]
-    }
-  },
-  "Countdown-bf#bf": {
-    "props": {
-      "title": "A Black Friday de 2025 acontecerá no dia 28 de novembro:",
-      "targetDate": "2025-11-28T00:00:00"
     }
   },
   "rich-text#title-cronometro": {
