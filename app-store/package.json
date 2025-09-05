@@ -20,5 +20,8 @@
     "custom": "gulp custom"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "framer-motion": "^12.23.12"
+  }
 }

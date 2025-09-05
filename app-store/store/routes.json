@@ -41,12 +41,18 @@
   "store.custom#landing-page-livelo": {
     "path": "/livelo"
   },
+  "store.custom#landing-page-black-friday": {
+    "path": "/black-friday-2025"
+  },
+  "store.custom#landing-page-black-friday-geral": {
+    "path": "/black-friday-2025-geral"
+  },
   "store.custom#CsvPreview": {
     "path": "/redirect"
   },
   "store.custom#contact-us": {
     "path": "/fale-conosco"
-  },  
+  },
   "store.custom#LPnew-v2": {
     "path": "/lp-new"
   },

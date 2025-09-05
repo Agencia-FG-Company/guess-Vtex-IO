@@ -3,12 +3,8 @@
   "compilerOptions": {
     "jsx": "react",
     "noEmitOnError": false,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "DOM"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["DOM"],
     "module": "esnext",
     "target": "es2017",
     "moduleResolution": "node"
@@ -24,9 +20,8 @@
     "Map.jsx",
     "components/map/index.tsx",
     "components/minicart/index.jsx",
-    "ShippingSimulator.js"
+    "ShippingSimulator.js",
+    "Countdown-bf.js"
   ],
-  "types": [
-    "googlemaps"
-  ]
+  "types": ["googlemaps"]
 }

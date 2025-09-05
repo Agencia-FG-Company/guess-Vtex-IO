@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 .container--filter .paragraph {
   font-weight: 400;
   font-size: 16px;
@@ -1343,4 +1345,58 @@
   margin: 10px 0;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.headingLevel1--title-cronometro {
+  color: #fff;
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  font-family: "Inter", sans-serif;
+}
+
+.paragraph--subtitle-cronometro {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.container--section-title {
+  justify-content: center;
+}
+
+.paragraph--section-title {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+.paragraph--section-textSeo-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0;
+}
+
+
+@media (max-width: 767px) {
+  .headingLevel1--title-cronometro {
+    font-size: 38px;
+    margin-bottom: 25px;
+  }
+  .paragraph--subtitle-cronometro {
+    font-size: 18px;
+  }
+  .paragraph--section-title {
+    font-size: 28px;
+    margin: 20px 0 35px;
+  }
+  .paragraph--section-textSeo-title {
+    font-size: 18px;
+  }
 }

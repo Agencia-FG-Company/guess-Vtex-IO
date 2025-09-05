@@ -1,0 +1,177 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.flipCard { --w: 63px; --h: 96px; --radius: 8px; }
+
+
+.countdown {
+  margin-top: 40px;
+}
+
+.containerTitle {
+  text-align: center;
+}
+
+.containerNumbers{
+  display:flex; gap:20px; justify-content:center; align-items:center;
+  font-family: Arial, Helvetica, sans-serif; padding:20px;
+}
+.flipContainer{ display:flex; flex-direction:column; align-items:center; }
+
+.flipGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flipGroupNumbers {
+  display: flex;
+  gap: 5px;
+}
+
+.flipGroup > div {
+  margin: 0 2px;
+}
+
+.flipCard{
+  position:relative; width:var(--w); height:var(--h);
+  perspective: 800px;
+  background:#fff; color:#000; border-radius:var(--radius);
+  overflow:hidden; font-weight:700; font-size: calc(var(--h) * .58);
+  box-shadow: 0 2px 0 rgba(0,0,0,.12);
+}
+
+.flipCard::after{
+  content:""; position:absolute; left:0; right:0; top:50%;
+  height:1px; background:#dedede; transform: translateY(-.5px);
+  z-index: 3;
+  pointer-events:none;
+}
+
+.countdownTitle {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+.top, .bottom, .flipFront, .flipBack{
+  position:absolute; left:0; width:100%; height:50%; overflow:hidden;
+  text-align:center; backface-visibility:hidden;
+  display:flex; justify-content:center; align-items:center;
+}
+
+.top{
+  top:0;
+  z-index:1;
+  background: #f5f5f5;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.bottom{
+  bottom:0;
+  z-index:1;
+  background: #fff;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.top > span,
+.flipFront > span,
+.bottom > span,
+.flipBack > span{
+  position:absolute;
+  left:0; right:0;
+  height: var(--h);
+  line-height: var(--h);
+}
+
+.top > span, .flipFront > span{
+  top: 0;
+}
+
+.bottom > span, .flipBack > span{
+  top: calc(-1 * var(--h) / 2);
+}
+
+.flipFront{
+  top:0;
+  transform-origin: bottom;
+  z-index:2;
+  background: #f5f5f5;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.flipBack{
+  bottom:0;
+  transform-origin: top;
+  transform: rotateX(180deg);
+  z-index:2;
+  background: #fff;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.play .flipFront{
+  animation: flipTop 0.2s ease-in forwards;
+}
+
+.play .flipBack{
+  animation: flipBottom 0.5s ease-out forwards;
+}
+
+@keyframes flipTop{
+  0%{
+    transform: rotateX(0deg);
+  }
+  100%{
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes flipBottom{
+  0%{
+    transform: rotateX(180deg);
+  }
+  100%{
+    transform: rotateX(0deg);
+  }
+}
+
+.label{
+  margin-top:8px;
+  font-size:14px;
+  color:#fff;
+  font-weight: 600;
+}
+
+
+@media (max-width: 767px) {
+  .flipCard {
+    --w: 35px;
+    --h: 65px;
+  }
+  .countdown {
+    margin-top: 15px;
+  }
+  .containerNumbers {
+    gap: 15px;
+    padding: 20px 0;
+  }
+  .countdownTitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 345px) {
+  .flipCard {
+    --w: 30px;
+    --h: 60px;
+  }
+  .containerNumbers {
+    gap: 12px;
+    padding: 20px 0;
+  }
+}

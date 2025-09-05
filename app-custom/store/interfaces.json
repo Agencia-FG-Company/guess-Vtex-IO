@@ -68,6 +68,29 @@
   "Breadcrumb": {
     "component": "breadcrumb"
   },
+  "Countdown-bf": {
+    "component": "Countdown-bf",
+    "render": "client",
+    "description": "Componente de contagem regressiva Black Friday",
+    "props": {
+      "targetDate": {
+        "title": "Data alvo",
+        "type": "string",
+        "default": "2025-11-28T00:00:00"
+      },
+      "countdownTitle": {
+        "title": "Título do contador",
+        "type": "string",
+        "default": "A Black Friday de 2025 acontecerá no dia 28 de Novembro:"
+      }
+    }
+  },
+  "Form-bf": {
+    "component": "FormBF"
+  },
+  "CollapseText": {
+    "component": "CollapseText"
+  },
   "Container-lp": {
     "component": "Container-lp",
     "composition": "children"
