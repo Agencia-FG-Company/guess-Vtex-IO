@@ -525,7 +525,12 @@
   }
 }
 
-.flexRowContent--black-friday-cronometro-container {
+.flexCol--container-cronometro {
+  position: relative;
+  overflow: hidden;
+}
+
+.flexRowContent--black-friday-container {
   background-color: #000;
 
   :global(.vtex-product-summary-2-x-brandName--shelf){

@@ -9,7 +9,7 @@
     "title":"Black Friday - Container",
     "children": ["flex-layout.col#black-friday-container"],
     "props": {
-      "blockClass": ["black-friday-cronometro-container"]
+      "blockClass": ["black-friday-container"]
     }
   },
 
@@ -23,7 +23,7 @@
       "flex-layout.row#black-friday-section-textSeo"
     ],
     "props": {
-      "blockClass": ["black-friday-cronometro-container"]
+      "blockClass": ["black-friday-container"]
     }
   },
 
@@ -38,6 +38,7 @@
   "flex-layout.col#black-friday-cronometro": {
     "title":"Sessão Cronômetro",
     "children": [
+      "image#background-cronometro",
       "rich-text#title-cronometro",
       "image#logo-guess",
       "rich-text#text-cronometro",
@@ -46,6 +47,14 @@
     "props": {
       "horizontalAlign": "center",
       "blockClass": ["container-cronometro"]
+    }
+  },
+
+  "image#background-cronometro": {
+    "title":"Sessão Cronômetro - Background",
+    "props": {
+      "blockClass": ["background-cronometro"],
+      "src": "/arquivos/background-lpblack.png"
     }
   },
   "Countdown-bf":{

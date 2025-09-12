@@ -2,3 +2,19 @@
     width: 100%;
 }
 
+.imageElement--background-cronometro {
+  position: absolute;
+  left: 0;
+
+  @media (max-width: 1025px) {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+.imageElement--image-logo {
+  @media (max-width: 1025px) {
+    max-width: 250px;
+  }
+}

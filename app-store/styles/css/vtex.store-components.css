@@ -2,6 +2,23 @@
   width: 100%;
 }
 
+.imageElement--background-cronometro {
+  position: absolute;
+  left: 0;
+}
+@media (max-width: 1025px) {
+  .imageElement--background-cronometro {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1025px) {
+  .imageElement--image-logo {
+    max-width: 250px;
+  }
+}
+
 .carouselGaleryThumbs {
   display: block;
   padding: 0 15px;
@@ -225,10 +242,4 @@
 
 :global(.vtex-store-components-3-x-sizeMobile) {
   max-width: 106px;
-}
-
-@media (max-width: 767px) {
-  .imageElement--image-logo {
-    width: 240px;
-  }
 }

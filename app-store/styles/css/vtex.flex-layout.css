@@ -498,20 +498,25 @@
   }
 }
 
-.flexRowContent--black-friday-cronometro-container {
+.flexCol--container-cronometro {
+  position: relative;
+  overflow: hidden;
+}
+
+.flexRowContent--black-friday-container {
   background-color: #000;
 }
-.flexRowContent--black-friday-cronometro-container :global(.vtex-product-summary-2-x-brandName--shelf) {
+.flexRowContent--black-friday-container :global(.vtex-product-summary-2-x-brandName--shelf) {
   color: #FDFBFB !important;
   width: auto !important;
 }
-.flexRowContent--black-friday-cronometro-container :global(.vtex-product-price-1-x-currencyContainer--shelf) {
+.flexRowContent--black-friday-container :global(.vtex-product-price-1-x-currencyContainer--shelf) {
   color: #FDFBFB !important;
 }
-.flexRowContent--black-friday-cronometro-container :global(.vtex-product-price-1-x-installments--shelf) {
+.flexRowContent--black-friday-container :global(.vtex-product-price-1-x-installments--shelf) {
   color: #FDFBFB !important;
 }
-.flexRowContent--black-friday-cronometro-container :global(.vtex-product-price-1-x-savings--shelf) {
+.flexRowContent--black-friday-container :global(.vtex-product-price-1-x-savings--shelf) {
   color: #FDFBFB !important;
 }
 
