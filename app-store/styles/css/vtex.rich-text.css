@@ -391,6 +391,21 @@
 .headingLevel2--section-textSeo-title {
   font-size: 30px;
   font-weight: 600;
+  margin-bottom: 0;
+}
+
+.wrapper--section-textSeo-text {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.headingLevel2--section-textSeo-text {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.paragraph--section-textSeo-text {
+  font-size: 22px;
 }
 
 .container--promotion__delivery {

@@ -280,10 +280,19 @@
     "title":"Sessão Texto SEO",
     "children": [
       "rich-text#section-textSeo-title",
-      "CollapseText"
+      "CollapseText#textSeo"
     ],
     "props": {
       "blockClass": ["section-textSeo"]
+    }
+  },
+  "CollapseText#textSeo":{
+    "children": ["rich-text#conteudoSEO"]
+  },
+  "rich-text#conteudoSEO": {
+    "props": {
+      "text": "### Título em Markdown\n\n- Item 1\n- Item 2\n\n[Link](https://example.com)",
+      "blockClass": ["section-textSeo-text"]
     }
   },
   "rich-text#section-textSeo-title": {
