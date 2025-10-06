@@ -11,8 +11,15 @@
 }
 
 .menuItem {
-  /* position: relative; */
-  padding: 10px;
+  padding: 0;
+}
+
+.hoverMenuItem {
+  border-bottom: 2px solid #fff;
+}
+
+.hoverMenuItem:hover {
+  border-bottom: 2px solid #000;
 }
 
 .menuLink {
@@ -73,7 +80,7 @@
     display: block;
   }
 
-  
+
 }
 
 .submenuWrapper {
@@ -147,10 +154,10 @@
 
   .submenuWrapper.level-1 {
     display: none;
-    
+
   }
   .submenuWrapper.level-1.openSubmenu {
     display: block;
-    
+
   }
 }
