@@ -14,9 +14,350 @@
   },
   "flex-layout.col#bf-geral-container": {
     "children": [
+      "flex-layout.row#black-friday-cronometro-geral",
+      "flex-layout.row#black-friday-section-images-geral",
+      "flex-layout.row#black-friday-section-shelf-geral",
+      "flex-layout.col#black-friday-section-banner-geral",
+      "flex-layout.row#black-friday-section-images-geral-2",
+      "responsive-layout.phone#1",
+      "flex-layout.row#black-friday-section-textSeo"
     ],
     "props": {
       "blockClass": ["bf-geral-container"]
+    }
+  },
+  
+"responsive-layout.phone#1": {
+  "children": ["list-context.image-list#section-images-mobile"]
+},
+
+  "list-context.image-list#section-images-mobile": {
+    "title":"Sessão Images - Images",
+    "children": ["rich-text#section-images-title", "slider-layout#section-images-mobile"],
+    "props": {
+      "blockClass":"images-mobile-banners",
+      "preload": true,
+      "images": [
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#section-images-mobile": {
+    "props": {
+      "blockClass":"images-mobile-banners",
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 1,
+        "phone": 5
+      },
+      "infinite": true,
+      "showNavigationArrows":"never",
+      "showPaginationDots":"never",
+      "centerMode":{
+        "desktop": "disabled",
+        "phone": "disabled"
+      }
+    }
+  },
+  "flex-layout.row#black-friday-section-shelf-geral": {
+    "title":"Sessão Shelf",
+    "children": [
+      "flex-layout.col#black-friday-section-shelf-geral"
+    ],
+    "props": {
+      "blockClass": ["section-shelf"]
+    }
+  },
+
+  "flex-layout.col#black-friday-section-shelf-geral": {
+    "title":"Sessão Shelf",
+    "children": [
+      "rich-text#section-shelf-title",
+      "list-context.product-list#bf_first__shelf"
+    ],
+    "props": {
+      "blockClass": ["section-shelf"]
+    }
+  },
+
+  "flex-layout.row#black-friday-section-textSeo": {
+  "title": "Sessão Texto SEO",
+  "children": [
+    "flex-layout.col#black-friday-section-textSeo"
+  ],
+  "props": {
+    "blockClass": ["section-textSeo"]
+  }
+},
+"flex-layout.col#black-friday-section-textSeo": {
+  "title": "Sessão Texto SEO",
+  "children": [
+    "rich-text#section-textSeo-title",
+    "CollapseText"
+  ],
+  "props": {
+    "blockClass": ["section-textSeo"]
+  }
+},
+"rich-text#section-textSeo-title": {
+  "title": "Sessão Seo - Titulo",
+  "props": {
+    "blockClass": ["section-textSeo-title"],
+    "font": "t-body",
+    "text": "TEXTO SEO"
+  }
+},
+
+  "flex-layout.row#black-friday-section-images-geral": {
+    "title":"Sessão Images",
+    "children": [
+      "flex-layout.col#black-friday-section-images-geral"
+    ],
+    "props": {
+      "blockClass": ["bf-form-container"]
+    }
+  },
+  "flex-layout.col#black-friday-section-images-geral": {
+    "title":"Sessão Images",
+    "children": [
+      "rich-text#section-images-title",
+      "list-context.image-list#section-images-geral"
+    ],
+    "props": {
+      "blockClass": ["bf-section-images"]
+    }
+  },
+
+  "rich-text#section-images-title": {
+    "title":"Sessão Images - Titulo",
+    "props": {
+      "blockClass": ["section-title"],
+      "font": "t-body",
+      "text": "Lorem Ipsum dolor"
+    }
+  },
+  "list-context.image-list#section-images-geral": {
+    "title":"Sessão Images - Images",
+    "children": ["slider-layout#section-images"],
+    "props": {
+      "blockClass":"section-images",
+      "preload": true,
+      "images": [
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        }
+      ]
+    }
+  },
+
+    "flex-layout.row#black-friday-section-images-geral-2": {
+    "title":"Sessão Images",
+    "children": [
+      "flex-layout.col#black-friday-section-images-geral"
+    ],
+    "props": {
+      "blockClass": ["bf-form-container","container-custom"]
+    }
+  },
+  "flex-layout.col#black-friday-section-images-geral-2": {
+    "title":"Sessão Images",
+    "children": [
+      "rich-text#section-images-title",
+      "list-context.image-list#section-images-geral"
+    ],
+    "props": {
+      "blockClass": ["bf-section-images"]
+    }
+  },
+
+    "rich-text#section-images-title-2": {
+    "title":"Sessão Images - Titulo",
+    "props": {
+      "blockClass": ["section-title"],
+      "font": "t-body",
+      "text": "Lorem Ipsum dolor"
+    }
+  },
+  "list-context.image-list#section-images-geral-2": {
+    "title":"Sessão Images - Images",
+    "children": ["slider-layout#section-images"],
+    "props": {
+      "blockClass":"section-images",
+      "preload": true,
+      "images": [
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        }
+      ]
+    }
+  },
+
+
+  "flex-layout.col#black-friday-section-banner-geral": {
+    "children": [
+      "image#section-banner-geral"
+    ],
+    "props": {
+      "blockClass": ["bf-section-images"]
+    }
+  },
+
+  "image#section-banner-geral": {
+    "props": {
+      "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/82e53c17-eb75-4c35-a5ea-cdcb38c19efe___0cfc134066e282d1c06803b7735dcbaa.png",
+      "alt": "Banner Black Friday Guess",
+      "blockClass": ["section-images"],
+      "loading": "eager"
+    }
+  },
+
+
+
+  "slider-layout#section-images": {
+    "props": {
+      "blockClass":"section-images",
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 1,
+        "phone": 2
+      },
+      "infinite": true,
+      "showNavigationArrows":"never",
+      "showPaginationDots":"never",
+      "centerMode":{
+        "desktop": "disabled",
+        "phone": "center"
+      }
+    }
+  },
+
+  "flex-layout.row#black-friday-cronometro-geral": {
+    "title":"Sessão Cronômetro",
+    "children": ["flex-layout.col#black-friday-cronometro-geral"],
+    "props": {
+      "blockClass": ["container-cronometro-geral"]
+    }
+  },
+
+  "flex-layout.col#black-friday-cronometro-geral": {
+    "title":"Sessão Cronômetro",
+    "children": [
+      "rich-text#title-cronometro-geral",
+      "image#logo-guess-geral",
+      "rich-text#text-cronometro-geral",
+      "flex-layout.row#botao-desconto"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["container-cronometro-geral"]
+    }
+  },
+  "flex-layout.row#botao-desconto": {
+    "title":"Sessão Cronômetro",
+    "children": [
+      "link.product#botao-desconto1",
+      "link.product#botao-desconto2",
+      "link.product#botao-desconto3"            
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["container-link"],
+      "colSizing": "auto"
+    }
+  },
+  "link.product#botao-desconto1": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "Feminino até xx%",
+      "blockClass": ["link-custom"]
+    }
+  },
+  "link.product#botao-desconto2": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "Bolsas até xx%",
+      "blockClass": ["link-custom"]
+    }
+  },
+  "link.product#botao-desconto3": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "Masculino até xx%",
+      "blockClass": ["link-custom"]
+    }
+  },
+  "rich-text#title-cronometro-geral": {
+    "title":"Sessão Cronômetro - Titulo",
+    "props": {
+      "blockClass": ["title-cronometro-geral"],
+      "font": "t-body",
+      "text": "# Black Friday",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base",
+      "textPosition": "CENTER"
+    }
+  },
+  "image#logo-guess-geral": {
+    "title":"Sessão Cronômetro - Logo",
+    "props": {
+      "blockClass": ["image-logo"],
+      "src": "/arquivos/logo-guess-bf.png"
+    }
+  },
+  "rich-text#text-cronometro-geral": {
+    "title":"Sessão Cronômetro - Texto",
+    "props": {
+      "blockClass": ["subtitle-cronometro-geral"],
+      "font": "t-body",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat volutpat risus",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base",
+      "textPosition": "CENTER"
     }
   }
 }

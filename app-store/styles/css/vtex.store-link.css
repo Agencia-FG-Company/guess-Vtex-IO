@@ -1,0 +1,21 @@
+.link--link-custom {
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  border-radius: 25px;
+  width: 100%;
+  padding: 5px 15px;
+  display: flex;
+  white-space: nowrap;
+  column-gap: 40px;
+  font-size: 30px !important;
+}
+@media (max-width: 767px) {
+  .link--link-custom {
+    font-size: 18px !important;
+  }
+}
+
+.sliderTrack--section-images {
+  gap: 15px !important;
+}

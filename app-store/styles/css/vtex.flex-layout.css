@@ -484,6 +484,32 @@
     margin-bottom: 50px !important;
   }
 }
+.flexRowContent--container-cronometro-geral {
+  background-color: #D9D9D9;
+}
+
+.flexRowContent--container-link {
+  column-gap: 40px;
+  margin-bottom: 10%;
+}
+@media (max-width: 767px) {
+  .flexRowContent--container-link {
+    font-size: 5px;
+  }
+}
+
+.flexCol--section-shelf {
+  background-color: black;
+}
+
+.flexRowContent--bf-geral-container {
+  background-color: #000;
+}
+
+.flexCol--bf-geral-container {
+  gap: 30px;
+}
+
 .flexRow--product-main {
   max-width: 1800px;
   padding: 0 20px;
@@ -732,6 +758,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .flexRowContent--product-main :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+    padding: 0 0px 0 15px;
+  }
+}
+
 .flexRow .stretchChildrenWidth {
   display: contents;
 }
@@ -809,6 +841,11 @@
 @media (min-width: 1025px) {
   .flexRow--footer__wrapper .flexRowContent .flexCol--footer__newsletter {
     max-width: 410px;
+  }
+}
+@media (max-width: 1025px) {
+  .flexRow--footer__wrapper .flexRowContent .flexCol--footer__newsletter {
+    margin-top: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -1312,50 +1349,4 @@
     grid-template-columns: 1fr 1fr;
     padding: 0 10px;
   }
-}
-
-
-.flexRowContent--container-cronometro {
-  background-image: url(/arquivos/background-bf-2025-new.png);
-  background-color: black;
-}
-
-.flexCol--container-cronometro {
-  margin-bottom: 30px;
-}
-
-@media (max-width: 767px) {
-  .flexCol--container-cronometro {
-    margin-bottom: 0;
-    padding: 0 15px;
-  }
-  .flexRowContent--section-textSeo {
-    padding: 35px 0;
-  }
-  .flexCol--section-textSeo {
-    margin: 0 15px !important;
-    width: auto !important;
-  }
-}
-
-.flexRow--black-friday-cronometro-container,
-.flexRowContent--bf-form-container,
-.flexRowContent--section-shelf,
-.flexRowContent--section-textSeo {
-  background-color: #000;
-}
-
-.flexRowContent--section-textSeo {
-  padding: 50px 0;
-}
-
-.flexCol--section-textSeo {
-  margin: 0 30px;
-}
-
-.flexColChild--section-shelf :global(.vtex-product-summary-2-x-brandName--shelf),
-.flexColChild--section-shelf :global(.vtex-product-price-1-x-currencyContainer--shelf),
-.flexColChild--section-shelf :global(.vtex-product-price-1-x-installments--shelf),
-.flexColChild--section-shelf :global(.vtex-product-price-1-x-savings--shelf){
-  color: #FDFBFB !important;
 }

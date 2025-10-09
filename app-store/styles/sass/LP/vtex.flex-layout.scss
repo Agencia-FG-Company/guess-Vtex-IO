@@ -511,3 +511,25 @@
   }
 }
 
+.flexRowContent--container-cronometro-geral{
+  background-color: #D9D9D9;
+}
+
+.flexRowContent--container-link{
+    column-gap: 40px;
+    margin-bottom: 10%;
+    @media (max-width: 767px) {    
+    font-size: 5px;  
+  }
+}
+
+.flexCol--section-shelf{
+  background-color: black;
+}
+.flexRowContent--bf-geral-container {
+  background-color: #000;
+}
+
+.flexCol--bf-geral-container{
+  gap:30px;
+}
