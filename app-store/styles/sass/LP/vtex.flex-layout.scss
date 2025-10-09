@@ -516,10 +516,13 @@
 }
 
 .flexRowContent--container-link{
-    column-gap: 40px;
+    column-gap: 10px;
+    row-gap: 10px;
     margin-bottom: 10%;
-    @media (max-width: 767px) {    
-    font-size: 5px;  
+    @media (max-width: 767px) {
+      font-size: 5px;
+      display: flex;
+      flex-wrap: wrap;
   }
 }
 
@@ -562,5 +565,11 @@
   }
   :global(.vtex-product-price-1-x-savings--shelf){
     color: #FDFBFB !important;
+  }
+}
+
+@media (max-width: 1025px) {
+  .flexRow--container-custom {
+    display: none;
   }
 }

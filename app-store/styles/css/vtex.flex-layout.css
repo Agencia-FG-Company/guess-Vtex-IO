@@ -489,12 +489,15 @@
 }
 
 .flexRowContent--container-link {
-  column-gap: 40px;
+  column-gap: 10px;
+  row-gap: 10px;
   margin-bottom: 10%;
 }
 @media (max-width: 767px) {
   .flexRowContent--container-link {
     font-size: 5px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -541,6 +544,11 @@
   color: #FDFBFB !important;
 }
 
+@media (max-width: 1025px) {
+  .flexRow--container-custom {
+    display: none;
+  }
+}
 .flexRow--product-main {
   max-width: 1800px;
   padding: 0 20px;

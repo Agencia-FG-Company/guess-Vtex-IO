@@ -26,7 +26,7 @@
       "blockClass": ["bf-geral-container"]
     }
   },
-  
+
 "responsive-layout.phone#1": {
   "children": ["list-context.image-list#section-images-mobile"]
 },
@@ -251,7 +251,7 @@
     "props": {
       "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/82e53c17-eb75-4c35-a5ea-cdcb38c19efe___0cfc134066e282d1c06803b7735dcbaa.png",
       "alt": "Banner Black Friday Guess",
-      "blockClass": ["section-images"],
+      "blockClass": ["section-images-banner"],
       "loading": "eager"
     }
   },
@@ -302,7 +302,7 @@
     "children": [
       "link.product#botao-desconto1",
       "link.product#botao-desconto2",
-      "link.product#botao-desconto3"            
+      "link.product#botao-desconto3"
     ],
     "props": {
       "horizontalAlign": "center",

@@ -39,3 +39,20 @@
     }
   }
 }
+
+
+.sliderTrack--images-mobile-banners {
+  @media (max-width:1025px) {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    transform: none !important;
+    gap: 15px;
+  }
+}
+
+.slide--images-mobile-banners {
+  @media (max-width: 1025px) {
+    width: 100% !important;
+  }
+}

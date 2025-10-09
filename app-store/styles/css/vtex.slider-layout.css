@@ -36,6 +36,22 @@
   filter: brightness(107%);
 }
 
+@media (max-width: 1025px) {
+  .sliderTrack--images-mobile-banners {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    transform: none !important;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .slide--images-mobile-banners {
+    width: 100% !important;
+  }
+}
+
 .sliderLayoutContainer--shelf {
   max-width: 1800px;
   margin: auto;

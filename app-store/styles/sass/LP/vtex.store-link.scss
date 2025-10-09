@@ -3,14 +3,14 @@
     color: #fff;
     background-color: #000;
     border-radius: 25px;
-    width: 100%;
-    padding: 5px 15px; 
+    width: 42% !important;
+    padding: 5px 15px;
     display: flex;
     white-space: nowrap;
     column-gap: 40px;
     font-size: 30px!important;
-        @media (max-width: 767px) {    
-    font-size: 18px !important;  
+        @media (max-width: 767px) {
+    font-size: 18px !important;
   }
 }
 
