@@ -508,6 +508,35 @@
 
 .flexCol--bf-geral-container {
   gap: 30px;
+@media (max-width: 1025px) {
+  .flexCol--section-shelf {
+    margin-top: 20px;
+  }
+}
+.flexCol--section-textSeo {
+  padding: 10px 5px 30px;
+}
+@media (max-width: 1025px) {
+  .flexCol--section-textSeo {
+    padding: 10px 5px 30px;
+  }
+}
+
+.flexRowContent--black-friday-cronometro-container {
+  background-color: #000;
+}
+.flexRowContent--black-friday-cronometro-container :global(.vtex-product-summary-2-x-brandName--shelf) {
+  color: #FDFBFB !important;
+  width: auto !important;
+}
+.flexRowContent--black-friday-cronometro-container :global(.vtex-product-price-1-x-currencyContainer--shelf) {
+  color: #FDFBFB !important;
+}
+.flexRowContent--black-friday-cronometro-container :global(.vtex-product-price-1-x-installments--shelf) {
+  color: #FDFBFB !important;
+}
+.flexRowContent--black-friday-cronometro-container :global(.vtex-product-price-1-x-savings--shelf) {
+  color: #FDFBFB !important;
 }
 
 .flexRow--product-main {

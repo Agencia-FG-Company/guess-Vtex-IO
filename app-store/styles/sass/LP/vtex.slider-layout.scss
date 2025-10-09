@@ -1,0 +1,41 @@
+.paginationDotsContainer{
+  &--section-images {
+    bottom: -17px;
+  }
+}
+
+.paginationDot{
+  &--section-images {
+    height: 2px !important;
+    width: 85px !important;
+    border-radius: 0;
+    padding: 0px;
+
+    &--isActive {
+      background-color: #fff;
+    }
+  }
+}
+
+.sliderTrack{
+  &--section-images {
+    @media (min-width:1025px) {
+      gap: 5px;
+    }
+  }
+}
+
+.slide{
+  &--section-images {
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+  }
+}
+
+.imageElement{
+  &--section-images {
+    &:hover {
+      filter: brightness(107%);
+    }
+  }
+}
