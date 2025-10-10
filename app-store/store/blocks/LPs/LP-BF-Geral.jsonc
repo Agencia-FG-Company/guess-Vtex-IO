@@ -130,6 +130,7 @@
   "CollapseText#textSeo-bfgeral":{
     "children": ["rich-text#conteudoSEO-bfgeral"]
   },
+
   "rich-text#conteudoSEO-bfgeral": {
     "props": {
       "text": "### Título em Markdown\n\n- Item 1\n- Item 2\n\n[Link](https://example.com)",

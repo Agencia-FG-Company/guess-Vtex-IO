@@ -313,10 +313,6 @@
 .flexRowContent--LP {
   gap: 50px;
 
-  :global(.vtex-store-components-3-x-imageElement) {
-
-  }
-
   @media(max-width:1440px) {
     :global(.vtex-store-components-3-x-imageElement) {
       width: 47% !important;

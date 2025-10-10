@@ -25,7 +25,7 @@
   .flexRow--container-custom .flexRowContent--container-custom {
     display: none;
   }
-  .flexRow--container-custom .flexRowContent--container-custom .flexRowContent--container-custom .paragraph--section-title {
+  .flexRowContent--container-custom .paragraph--section-title {
     display: none !important;
   }
 }
