@@ -294,7 +294,7 @@
 
     @media (max-width: 767px) {
       font-size: 1.5rem;
-    }   
+    }
 
   }
 }
@@ -307,17 +307,17 @@
   line-height: 100%;
   letter-spacing: 24px;
   text-transform: uppercase;
-  @media (max-width: 767px) {    
+  @media (max-width: 767px) {
     font-size: 40px !important;
-    letter-spacing: 7px;     
+    letter-spacing: 7px;
   }
 }
 
 .paragraph--subtitle-cronometro-geral{
   color: #ffffff;
   font-size: 30px;
-  @media (max-width: 767px) {    
-    font-size: 20px !important;  
+  @media (max-width: 767px) {
+    font-size: 20px !important;
   }
 }
 
@@ -325,10 +325,10 @@
 .paragraph--section-title{
   color: #ffffff;
   font-family: 'inter';
-  font-size: 64px;  
+  font-size: 64px;
   margin: 5px;
-    @media (max-width: 767px) {    
-    font-size: 40px !important;  
+    @media (max-width: 767px) {
+    font-size: 40px !important;
   }
 }
 
@@ -337,3 +337,23 @@
   text-align: center;
 }
 
+.headingLevel2--section-textSeo-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.wrapper--section-textSeo-text {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.headingLevel2--section-textSeo-text {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.paragraph--section-textSeo-text {
+  font-size: 22px;
+}

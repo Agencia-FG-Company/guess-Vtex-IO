@@ -1,41 +1,58 @@
 /* eslint-disable import/order */
 /* eslint-disable prettier/prettier */
-import React, { useState, useRef, useEffect } from "react"
-import styles from "./styles.css"
+import React, { useState, useRef, useEffect } from 'react'
+import styles from './styles.css'
 
 interface CollapseTextProps {
-  text: string
   lines?: number
+  children?: React.ReactNode
 }
 
 const CollapseText: StorefrontFunctionComponent<CollapseTextProps> = ({
-  text = "",
+  children,
   lines = 2,
-}) => {
+}: CollapseTextProps) => {
   const [expanded, setExpanded] = useState(false)
   const [showButton, setShowButton] = useState(false)
   const textRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (textRef.current) {
-      const hasOverflow =
-        textRef.current.scrollHeight > textRef.current.clientHeight
-      setShowButton(hasOverflow)
+    const node = textRef.current
+    if (!node) return
+
+    const lineHeight = parseFloat(getComputedStyle(node).lineHeight || '24') // pega o line-height real
+    const maxHeight = lineHeight * lines
+
+    const checkOverflow = () => {
+      if (!node) return
+      const isOverflowing = node.scrollHeight > maxHeight
+      setShowButton(isOverflowing)
     }
-  }, [text])
+
+    checkOverflow()
+
+    const observer = new MutationObserver(checkOverflow)
+    observer.observe(node, { childList: true, subtree: true })
+
+    window.addEventListener('resize', checkOverflow)
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', checkOverflow)
+    }
+  }, [children, lines])
 
   return (
     <div className={styles.container}>
       <div
         ref={textRef}
-        className={`${styles.text} ${
-          expanded ? styles.expanded : styles.collapsed
-        }`}
+        className={styles.text}
         style={{
-          WebkitLineClamp: expanded ? "unset" : lines,
+          maxHeight: !expanded ? `${lines * 2.6}em` : 'none', // line-height aproximado em em
+          overflow: !expanded ? 'hidden' : 'visible',
         }}
       >
-        {text}
+        {children}
       </div>
 
       {showButton && (
@@ -43,7 +60,7 @@ const CollapseText: StorefrontFunctionComponent<CollapseTextProps> = ({
           className={styles.button}
           onClick={() => setExpanded(!expanded)}
         >
-          {expanded ? "Mostrar menos" : "Mostrar mais"}
+          {expanded ? 'Mostrar menos' : 'Mostrar mais'}
         </button>
       )}
     </div>
@@ -51,24 +68,18 @@ const CollapseText: StorefrontFunctionComponent<CollapseTextProps> = ({
 }
 
 CollapseText.schema = {
-  title: "Collapse Text",
-  description: "Exibe texto com colapso de linhas",
-  type: "object",
+  title: 'Collapse Text',
+  description:
+    'Exibe texto com colapso de linhas (suporta rich-text como filho)',
+  type: 'object',
   properties: {
-    text: {
-      title: "Texto",
-      type: "string",
-      widget: {
-        "ui:widget": "textarea", // habilita edição de texto no Site Editor
-      },
-    },
     lines: {
-      title: "Número de linhas",
-      type: "number",
+      title: 'Número de linhas',
+      type: 'number',
       default: 2,
     },
   },
+  children: true,
 }
 
 export default CollapseText
-

@@ -89,7 +89,8 @@
     "component": "FormBF"
   },
   "CollapseText": {
-    "component": "CollapseText"
+    "component": "CollapseText",
+    "composition": "children"
   },
   "Container-lp": {
     "component": "Container-lp",

@@ -111,14 +111,14 @@
 "flex-layout.col#black-friday-section-textSeo": {
   "title": "Sessão Texto SEO",
   "children": [
-    "rich-text#section-textSeo-title",
-    "CollapseText"
+    "rich-text#section-textSeo-title-bfgeral",
+    "CollapseText#textSeo-bfgeral"
   ],
   "props": {
     "blockClass": ["section-textSeo"]
   }
 },
-"rich-text#section-textSeo-title": {
+"rich-text#section-textSeo-title-bfgeral": {
   "title": "Sessão Seo - Titulo",
   "props": {
     "blockClass": ["section-textSeo-title"],
@@ -126,6 +126,16 @@
     "text": "TEXTO SEO"
   }
 },
+
+  "CollapseText#textSeo-bfgeral":{
+    "children": ["rich-text#conteudoSEO-bfgeral"]
+  },
+  "rich-text#conteudoSEO-bfgeral": {
+    "props": {
+      "text": "### Título em Markdown\n\n- Item 1\n- Item 2\n\n[Link](https://example.com)",
+      "blockClass": ["section-textSeo-text"]
+    }
+  },
 
   "flex-layout.row#black-friday-section-images-geral": {
     "title":"Sessão Images",
