@@ -17,10 +17,6 @@
   max-height: 80% !important;
 }
 
-.sliderTrack--section-images {
-  gap: 15px !important;
-}
-
 @media (max-width: 767px) {
   .flexRow--container-custom .flexRowContent--container-custom {
     display: none;
