@@ -509,10 +509,6 @@
   background-color: #000;
 }
 
-.flexCol--bf-geral-container {
-  gap: 30px;
-}
-
 @media (max-width: 1025px) {
   .flexCol--section-shelf {
     margin-top: 20px;

@@ -423,6 +423,7 @@
 @media (max-width: 767px) {
   .paragraph--section-title {
     font-size: 40px !important;
+    margin: 10px !important;
   }
 }
 
