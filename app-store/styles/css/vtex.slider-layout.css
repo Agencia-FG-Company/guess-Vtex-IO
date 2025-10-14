@@ -60,6 +60,11 @@
 .sliderLayoutContainer--shelf {
   margin-top: 40px !important;
 }
+@media (max-width: 1025px) {
+  .sliderLayoutContainer--shelf {
+    margin-top: 0;
+  }
+}
 
 .sliderLayoutContainer--shelf {
   max-width: 1800px;

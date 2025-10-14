@@ -65,6 +65,9 @@
 
 .sliderLayoutContainer--shelf{
   margin-top: 40px!important;
+  @media (max-width:1025px) {
+    margin-top: 0;
+  }
 }
 
 .imageElement--images-mobile-banners{
