@@ -1,4 +1,4 @@
-.brandName--shelf {
+:global(.vtex-flex-layout-0-x-flexColChild--black-friday-container) .brandName--shelf {
   color: #fff;
 }
 
