@@ -313,10 +313,6 @@
 .flexRowContent--LP {
   gap: 50px;
 
-  :global(.vtex-store-components-3-x-imageElement) {
-
-  }
-
   @media(max-width:1440px) {
     :global(.vtex-store-components-3-x-imageElement) {
       width: 47% !important;
@@ -511,6 +507,28 @@
   }
 }
 
+.flexRowContent--container-cronometro-geral{
+  background-color: #D9D9D9;
+}
+
+.flexRowContent--container-link{
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 10%;
+    @media (max-width: 767px) {
+      font-size: 5px;
+      display: flex;
+      flex-wrap: wrap;
+  }
+}
+
+.flexCol--section-shelf{
+  background-color: black;
+}
+.flexRowContent--bf-geral-container {
+  background-color: #000;
+}
+
 .flexCol{
   &--section-shelf {
     @media (max-width: 1025px) {
@@ -545,5 +563,11 @@
   }
   :global(.vtex-product-price-1-x-savings--shelf){
     color: #FDFBFB !important;
+  }
+}
+
+@media (max-width: 1025px) {
+  .flexRow--container-custom {
+    display: none;
   }
 }

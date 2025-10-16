@@ -39,3 +39,38 @@
     }
   }
 }
+
+
+.sliderTrack--images-mobile-banners {
+  @media (max-width:1025px) {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    transform: none !important;
+  }
+}
+
+.slide--images-mobile-banners {
+  @media (max-width: 1025px) {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  :global(.vtex-slider-layout-0-x-imageElement--images-mobile-banners){
+    max-height: 250px !important;
+    margin-top: 10px !important;
+  }
+}
+
+.sliderLayoutContainer--shelf{
+  margin-top: 40px!important;
+  @media (max-width:1025px) {
+    margin-top: 0;
+  }
+}
+
+.imageElement--images-mobile-banners{
+   @media (max-width: 1025px) {
+   }
+}

@@ -299,11 +299,62 @@
   }
 }
 
+.headingLevel1--title-cronometro-geral{
+  color: #ffffff;
+  font-weight: 700;
+  font-family: 'Inter';
+  font-size: 105px;
+  line-height: 100%;
+  letter-spacing: 24px;
+  text-transform: uppercase;
+  @media (max-width: 767px) {
+    font-size: 40px !important;
+    letter-spacing: 7px;
+  }
+}
+
+.paragraph--subtitle-cronometro-geral{
+  color: #ffffff;
+  font-size: 30px;
+  @media (max-width: 767px) {
+    font-size: 20px !important;
+  }
+}
+
+
+.paragraph--section-title{
+  color: #ffffff;
+  font-family: 'inter';
+  font-size: 64px;
+  margin: 5px;
+    @media (max-width: 767px) {
+    font-size: 40px !important;
+    margin: 0 !important;
+  }
+}
+
+.wrapper--section-title{
+   @media (max-width: 767px) {
+    margin: 20px 0;
+   }
+}
+
+.paragraph--section-title{
+  @media (max-width: 767px) {
+    margin: 0!important;
+  }
+}
+
+.container--section-title{
+  justify-content: center;
+  text-align: center;
+}
+
 .headingLevel2--section-textSeo-title {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 0;
-
+  color: #fff;
 }
 
 .wrapper--section-textSeo-text {
@@ -318,4 +369,11 @@
 
 .paragraph--section-textSeo-text {
   font-size: 22px;
+}
+
+.paragraph--subtitle-cronometro {
+  color: #fff;
+}
+.headingLevel1--title-cronometro {
+  color: #fff;
 }
