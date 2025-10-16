@@ -5,6 +5,7 @@
 .imageElement--background-cronometro {
   position: absolute;
   left: 0;
+  width: 100%;
 }
 @media (max-width: 1025px) {
   .imageElement--background-cronometro {
@@ -42,6 +43,10 @@
     display: none !important;
   }
 }
+.imageElement--section-images-banner {
+  width: 100%;
+}
+
 .carouselGaleryThumbs {
   display: block;
   padding: 0 15px;
