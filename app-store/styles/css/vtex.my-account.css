@@ -1,0 +1,5 @@
+@media (max-width: 1020px) {
+  :global(.aviso-banner-injetado) {
+    max-height: 380px;
+  }
+}
