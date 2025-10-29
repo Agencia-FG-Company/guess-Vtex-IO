@@ -23,6 +23,8 @@
 .imageElement--image-logo {
   width: 379px;
   height: 78px;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 767px) {
   .imageElement--image-logo {
@@ -45,6 +47,22 @@
 }
 .imageElement--section-images-banner {
   width: 100%;
+}
+
+.imageElement--background-bf-geral {
+  max-height: 550px;
+  object-fit: cover;
+  z-index: 1;
+}
+@media (max-width: 1025px) {
+  .imageElement--background-bf-geral {
+    max-height: 365px;
+  }
+}
+@media (min-width: 344px) and (max-width: 345px) {
+  .imageElement--background-bf-geral {
+    max-height: 397px;
+  }
 }
 
 .carouselGaleryThumbs {

@@ -14,6 +14,7 @@
   .link--link-custom {
     font-size: 18px !important;
     border: solid 2px #fff;
+    justify-content: center;
   }
 }
 

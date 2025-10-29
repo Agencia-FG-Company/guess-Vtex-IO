@@ -473,6 +473,12 @@
   color: #fff;
 }
 
+.container--subtitle-cronometro-geral,
+.container--title-cronometro-geral {
+  position: relative;
+  z-index: 2;
+}
+
 .container--promotion__delivery {
   justify-content: center;
   border: 1px solid black;

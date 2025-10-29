@@ -298,6 +298,7 @@
   "flex-layout.col#black-friday-cronometro-geral": {
     "title":"Sessão Cronômetro",
     "children": [
+      "image#background-cronometro-geral",
       "rich-text#title-cronometro-geral",
       "image#logo-guess-geral",
       "rich-text#text-cronometro-geral",
@@ -306,6 +307,13 @@
     "props": {
       "horizontalAlign": "center",
       "blockClass": ["container-cronometro-geral"]
+    }
+  },
+  "image#background-cronometro-geral": {
+    "title":"Sessão Cronômetro - Background",
+    "props": {
+      "blockClass": ["background-cronometro", "background-bf-geral"],
+      "src": "/arquivos/background-lpblack.png"
     }
   },
   "flex-layout.row#botao-desconto": {

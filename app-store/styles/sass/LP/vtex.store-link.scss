@@ -9,9 +9,10 @@
     white-space: nowrap;
     column-gap: 40px;
     font-size: 30px!important;
-        @media (max-width: 767px) {
-    font-size: 18px !important;
-    border: solid 2px #fff;
+    @media (max-width: 767px) {
+      font-size: 18px !important;
+      border: solid 2px #fff;
+      justify-content: center;
   }
 }
 

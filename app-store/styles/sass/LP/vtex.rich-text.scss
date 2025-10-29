@@ -377,3 +377,9 @@
 :global(.vtex-flex-layout-0-x-flexColChild--black-friday-container) .headingLevel1--title-cronometro {
   color: #fff;
 }
+
+.container--subtitle-cronometro-geral,
+.container--title-cronometro-geral {
+  position: relative;
+  z-index: 2;
+}

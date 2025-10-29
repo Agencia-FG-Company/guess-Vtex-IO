@@ -550,6 +550,11 @@
     display: none;
   }
 }
+.flexRow--container-link {
+  position: relative;
+  z-index: 2;
+}
+
 .flexRow--product-main {
   max-width: 1800px;
   padding: 0 20px;
