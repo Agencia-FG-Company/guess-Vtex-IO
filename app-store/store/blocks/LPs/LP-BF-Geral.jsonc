@@ -298,7 +298,8 @@
   "flex-layout.col#black-friday-cronometro-geral": {
     "title":"Sessão Cronômetro",
     "children": [
-      "image#background-cronometro-geral",
+      "responsive-layout.desktop#background-lp-geral",
+      "responsive-layout.phone#background-lp-geral",
       "rich-text#title-cronometro-geral",
       "image#logo-guess-geral",
       "rich-text#text-cronometro-geral",
@@ -309,8 +310,22 @@
       "blockClass": ["container-cronometro-geral"]
     }
   },
+
+  "responsive-layout.desktop#background-lp-geral": {
+    "children": ["image#background-cronometro-geral"]
+  },
+  "responsive-layout.phone#background-lp-geral": {
+    "children": ["image#background-cronometro-geral-mobile"]
+  },
   "image#background-cronometro-geral": {
-    "title":"Sessão Cronômetro - Background",
+    "title":"Sessão Cronômetro - Background Desktop",
+    "props": {
+      "blockClass": ["background-cronometro", "background-bf-geral"],
+      "src": "/arquivos/background-lpblack.png"
+    }
+  },
+  "image#background-cronometro-geral-mobile": {
+    "title":"Sessão Cronômetro - Background Mobile",
     "props": {
       "blockClass": ["background-cronometro", "background-bf-geral"],
       "src": "/arquivos/background-lpblack.png"
