@@ -1,0 +1,701 @@
+{
+  "store.custom#landing-page-black-friday-categorias":{
+    "blocks": [
+      "flex-layout.row#bf-categorias-container"
+    ]
+  },
+  "flex-layout.row#bf-categorias-container": {
+    "children": [
+      "flex-layout.col#bf-categorias-container"
+    ],
+    "props": {
+      "blockClass": ["bf-categorias-container"]
+    }
+  },
+  "flex-layout.col#bf-categorias-container": {
+    "children": [
+      "flex-layout.col#black-friday-section-banner-categorias",
+      "flex-layout.row#black-friday-section-images-categorias",
+      "flex-layout.col#black-friday-section-banner-categorias-2",
+      "flex-layout.row#black-friday-section-shelf-categorias",
+      "flex-layout.row#black-friday-section-shelf-categorias",
+      "flex-layout.row#black-friday-section-shelf-categorias",
+      "flex-layout.row#black-friday-section-shelf-categorias",
+      
+      //"responsive-layout.phone#1",
+      "flex-layout.row#black-friday-section-textSeo"
+    ],
+    "props": {
+      "blockClass": ["bf-categorias-container"]
+    }
+  },
+
+
+  "flex-layout.col#bf-categorias-container": {
+    "children": [
+      "flex-layout.col#black-friday-section-banner-categorias",
+      "flex-layout.row#black-friday-section-images-categorias",
+      "flex-layout.col#black-friday-section-banner-categorias-2",
+      "flex-layout.row#black-friday-section-shelf-categorias-1",
+      "flex-layout.row#black-friday-section-shelf-categorias",
+      "flex-layout.row#black-friday-section-shelf-categorias-3",
+      "flex-layout.row#black-friday-section-shelf-categorias",
+      "flex-layout.row#black-friday-section-textSeo"
+    ],
+    "props": {
+      "blockClass": ["bf-categorias-container"]
+    }
+  },
+
+  /* ---------- 1ª FILEIRA (Imagem + 3 produtos) ---------- */
+  "flex-layout.row#black-friday-section-shelf-categorias-1": {
+    "children": [
+      "image#bf-shelf-image-left",
+      "list-context.product-list#bf_shelf_1"
+    ],
+    "props": {
+      "blockClass": ["section-shelf", "shelf-row-1"]
+    }
+  },
+
+  /* ---------- 2ª FILEIRA (4 produtos) ---------- */
+  "flex-layout.row#black-friday-section-shelf-categorias": {
+    "children": [
+      "list-context.product-list#bf_shelf_2"
+    ],
+    "props": {
+      "blockClass": ["section-shelf", "shelf-row-2"]
+    }
+  },
+
+  /* ---------- 3ª FILEIRA (3 produtos + imagem) ---------- */
+  "flex-layout.row#black-friday-section-shelf-categorias-3": {
+    "children": [
+      "list-context.product-list#bf_shelf_3",
+      "image#bf-shelf-image-right"
+    ],
+    "props": {
+      "blockClass": ["section-shelf", "shelf-row-3"]
+    }
+  },
+
+  /* ---------- 4ª FILEIRA (4 produtos) ---------- */
+  "flex-layout.row#black-friday-section-shelf-categorias": {
+    "children": [
+      "list-context.product-list#bf_shelf_4"
+    ],
+    "props": {
+      "blockClass": ["section-shelf", "shelf-row-4"]
+    }
+  },
+
+  /* ---------- IMAGENS ---------- */
+  "image#bf-shelf-image-left": {
+    "props": {
+      "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/35f3a515-2b2e-4a33-9f4b-81ae19395c34___cfd91b97098492c99f05c15cb3080a3d.png",
+      "maxWidth": "25%",
+      "blockClass": "shelf-image-left"
+    }
+  },
+  "image#bf-shelf-image-right": {
+    "props": {
+      "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/6a1e7892-919f-4bdd-b8c2-ac5ede73eb87___f0d63a0564d72e47bc1cf245b510ea4f.png",
+      "maxWidth": "50%",
+      "blockClass": "shelf-image-right"
+    }
+  },
+
+  /* ---------- LISTAS DE PRODUTOS ---------- */
+  "list-context.product-list#bf_shelf_1": {
+    "children": ["slider-layout#bf__shelf-3items"],
+    "blocks": ["product-summary.shelf#bf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+  "list-context.product-list#bf_shelf_2": {
+    "children": ["slider-layout#bf__shelf-4items"],
+    "blocks": ["product-summary.shelf#bf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+  "list-context.product-list#bf_shelf_3": {
+    "children": ["slider-layout#bf__shelf-2items"],
+    "blocks": ["product-summary.shelf#bf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+  "list-context.product-list#bf_shelf_4": {
+    "children": ["slider-layout#bf__shelf-4items"],
+    "blocks": ["product-summary.shelf#bf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+
+  /* ---------- SLIDERS ---------- */
+  "slider-layout#bf__shelf-4items": {
+    "props": {
+      "itemsPerPage": { "desktop": 4, "tablet": 2, "phone": 2 },
+      "infinite": true,
+      "showPaginationDots": "never",
+      "blockClass": "shelf"
+    }
+  },
+  "slider-layout#bf__shelf-3items": {
+    "props": {
+      "itemsPerPage": { "desktop": 3, "tablet": 2, "phone": 2 },
+      "infinite": true,
+      "showPaginationDots": "never",
+      "blockClass": "shelf"
+    }
+  },
+    "slider-layout#bf__shelf-2items": {
+    "props": {
+      "itemsPerPage": { "desktop": 2, "tablet": 2, "phone": 2 },
+      "infinite": true,
+      "showPaginationDots": "never",
+      "blockClass": "shelf"
+    } 
+  },
+
+  /* ---------- PRODUTO (reaproveitado) ---------- */
+  "product-summary.shelf#bf": {
+    "props": {
+      "blockClass": "shelf-bf"
+    },
+    "children": [
+      "stack-layout#shelf__home",
+      "flex-layout.row#flags-shelf",
+      "product-specification-badges",
+      "flex-layout.row#name-wishlist",
+      "flex-layout.row#selling-price-savings",
+      "product-installments#summary"
+    ]
+  },
+
+   "flex-layout.row#black-friday-section-shelf": {
+    "title":"Sessão Shelf",
+    "children": [
+      "flex-layout.col#black-friday-section-shelf"
+    ],
+    "props": {
+      "blockClass": ["section-shelf"]
+    }
+  },
+
+  "flex-layout.col#black-friday-section-shelf": {
+    "title":"Sessão Shelf",
+    "children": [
+      "rich-text#section-shelf-title",
+      "list-context.product-list#bf_first__shelf",
+      "list-context.product-list#bf_second__shelf"
+    ],
+    "props": {
+      "blockClass": ["section-shelf"]
+    }
+  },
+
+  "rich-text#section-shelf-title": {
+    "title":"Sessão Shelf - Titulo",
+    "props": {
+      "blockClass": ["section-title"],
+      "font": "t-body",
+      "text": "Lorem Ipsum dolor"
+    }
+  },
+
+  "slider-layout#bf__shelf": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 2
+      },
+      "showPaginationDots": "never",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf",
+        "centerMode": {
+      "desktop": "disabled",
+      "phone": "to-the-left"
+    },
+    "centerModeSlidesGap": 8
+    }
+  },
+  "list-context.product-list#bf_first__shelf": {
+    "blocks": [ "product-summary.shelf#bf-1"],
+    "children": ["slider-layout#bf__shelf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+  "list-context.product-list#bf_second__shelf": {
+    "blocks": [ "product-summary.shelf#bf-2"],
+    "children": ["slider-layout#bf__shelf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+  "product-summary.shelf#bf-1": {
+    "title": "Resumo do produto na prateleira - 1",
+    "props": {
+      "blockClas": "shelf-bf"
+    },
+    "children": [
+      "stack-layout#shelf__home",
+      "flex-layout.row#flags-shelf",
+      "product-specification-badges",
+      "flex-layout.row#name-wishlist",
+      "flex-layout.row#selling-price-savings",
+      "product-installments#summary"
+    ]
+  },
+  "product-summary.shelf#bf-2": {
+    "title": "Resumo do produto na prateleira - 2",
+    "props": {
+      "blockClas": "shelf-bf"
+    },
+    "children": [
+      "stack-layout#shelf__home",
+      "flex-layout.row#flags-shelf",
+      "product-specification-badges",
+      "flex-layout.row#name-wishlist",
+      "flex-layout.row#selling-price-savings",
+      "product-installments#summary"
+    ]
+  },
+
+"responsive-layout.phone#1": {
+  "children": ["list-context.image-list#section-images-mobile"]
+},
+
+  "list-context.image-list#section-images-mobile": {
+    "title":"Sessão Images - Images",
+    "children": ["rich-text#section-images-title", "slider-layout#section-images-mobile"],
+    "props": {
+      "blockClass":"images-mobile-banners",
+      "preload": true,
+      "images": [
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#section-images-mobile": {
+    "props": {
+      "blockClass":"images-mobile-banners",
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 1,
+        "phone": 5
+      },
+      "infinite": true,
+      "showNavigationArrows":"never",
+      "showPaginationDots":"never",
+      "centerMode":{
+        "desktop": "disabled",
+        "phone": "disabled"
+      }
+    }
+  },
+  "flex-layout.row#black-friday-section-shelf-categorias": {
+    "title":"Sessão Shelf",
+    "children": [
+      "flex-layout.col#black-friday-section-shelf-categorias"
+    ],
+    "props": {
+      "blockClass": ["section-shelf"]
+    }
+  },
+
+  "flex-layout.col#black-friday-section-shelf-categorias": {
+    "title":"Sessão Shelf",
+    "children": [
+      "list-context.product-list#bf_first__shelf"
+    ],
+    "props": {
+      "blockClass": ["section-shelf"]
+    }
+  },
+
+  "slider-layout#bf__shelf": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 2
+      },
+      "showPaginationDots": "never",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf",
+        "centerMode": {
+      "desktop": "disabled",
+      "phone": "to-the-left"
+    },
+    "centerModeSlidesGap": 8
+    }
+  },
+
+  "flex-layout.row#black-friday-section-textSeo": {
+  "title": "Sessão Texto SEO",
+  "children": [
+    "flex-layout.col#black-friday-section-textSeo"
+  ],
+  "props": {
+    "blockClass": ["section-textSeo"]
+  }
+},
+"flex-layout.col#black-friday-section-textSeo": {
+  "title": "Sessão Texto SEO",
+  "children": [
+    "rich-text#section-textSeo-title-bfcategorias",
+    "CollapseText#textSeo-bfcategorias"
+  ],
+  "props": {
+    "blockClass": ["section-textSeo"]
+  }
+},
+"rich-text#section-textSeo-title-bfcategorias": {
+  "title": "Sessão Seo - Titulo",
+  "props": {
+    "blockClass": ["section-textSeo-title"],
+    "font": "t-body",
+    "text": "TEXTO SEO"
+  }
+},
+
+  "CollapseText#textSeo-bfcategorias":{
+    "children": ["rich-text#conteudoSEO-bfcategorias"]
+  },
+
+  "rich-text#conteudoSEO-bfcategorias": {
+    "props": {
+      "text": "### Título em Markdown\n\n- Item 1\n- Item 2\n\n[Link](https://example.com)",
+      "blockClass": ["section-textSeo-text"]
+    }
+  },
+
+  "flex-layout.row#black-friday-section-images-categorias": {
+    "title":"Sessão Images",
+    "children": [
+      "flex-layout.col#black-friday-section-images-categorias"
+    ],
+    "props": {
+      "blockClass": ["bf-form-container"]
+    }
+  },
+  "flex-layout.col#black-friday-section-images-categorias": {
+    "title":"Sessão Images",
+    "children": [
+      "rich-text#section-images-title",
+      "list-context.image-list#section-images-categorias",
+      "rich-text#section-images-title",
+      "flex-layout.row#botao-tamanho",
+      "flex-layout.row#botao-tamanho-num"
+    ],
+    "props": {
+      "blockClass": ["bf-section-images"]
+    }
+  },
+
+  "flex-layout.row#botao-tamanho": {
+    "title":"Sessão Cronômetro",
+    "children": [
+      "link.product#botao-tamanho-pp",
+      "link.product#botao-tamanho-p",
+      "link.product#botao-tamanho-m",
+      "link.product#botao-tamanho-g",
+      "link.product#botao-tamanho-gg"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["container-link-tamanho"],
+      "colSizing": "auto"
+    }
+  },
+  "link.product#botao-tamanho-pp": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "PP",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+  "link.product#botao-tamanho-p": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "P",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+  "link.product#botao-tamanho-m": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "M",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-g": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "G",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-gg": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "GG",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+
+  "flex-layout.row#botao-tamanho-num": {
+    "title":"Sessão Cronômetro",
+    "children": [
+      "link.product#botao-tamanho-34",
+      "link.product#botao-tamanho-36",
+      "link.product#botao-tamanho-38",
+      "link.product#botao-tamanho-40",
+      "link.product#botao-tamanho-42",
+      "link.product#botao-tamanho-44",
+      "link.product#botao-tamanho-46"
+
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["container-link-tamanho-num"],
+      "colSizing": "auto"
+    }
+  },
+  "link.product#botao-tamanho-34": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "34",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+  "link.product#botao-tamanho-36": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "36",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+  "link.product#botao-tamanho-38": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "38",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-40": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "40",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-42": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "42",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+      "link.product#botao-tamanho-44": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "44",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+      "link.product#botao-tamanho-46": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "46",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+
+
+  "rich-text#section-images-title": {
+    "title":"Sessão Images - Titulo",
+    "props": {
+      "blockClass": ["section-title"],
+      "font": "t-body",
+      "text": "Lorem _Ipsum_ dolor"
+    }
+  },
+  "list-context.image-list#section-images-categorias": {
+    "title":"Sessão Images - Images",
+    "children": ["slider-layout#section-images"],
+    "props": {
+      "blockClass":"section-images",
+      "preload": true,
+      "images": [
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        }
+      ]
+    }
+  },
+
+    "flex-layout.row#black-friday-section-images-categorias-2": {
+    "title":"Sessão Images",
+    "children": [
+      "flex-layout.col#black-friday-section-images-categorias"
+    ],
+    "props": {
+      "blockClass": ["bf-form-container","container-custom"]
+    }
+  },
+  "flex-layout.col#black-friday-section-images-categorias-2": {
+    "title":"Sessão Images",
+    "children": [
+      "rich-text#section-images-title",
+      "list-context.image-list#section-images-categorias"
+    ],
+    "props": {
+      "blockClass": ["bf-section-images"]
+    }
+  },
+
+    "rich-text#section-images-title-2": {
+    "title":"Sessão Images - Titulo",
+    "props": {
+      "blockClass": ["section-title"],
+      "font": "t-body",
+      "text": "Lorem _Ipsum_ dolor"
+    }
+  },
+  "list-context.image-list#section-images-categorias-2": {
+    "title":"Sessão Images - Images",
+    "children": ["slider-layout#section-images"],
+    "props": {
+      "blockClass":"section-images",
+      "preload": true,
+      "images": [
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        }
+      ]
+    }
+  },
+
+
+  "flex-layout.col#black-friday-section-banner-categorias": {
+    "children": [
+      "image#section-banner-categorias"
+    ],
+    "props": {
+      "blockClass": ["bf-section-images"]
+    }
+  },
+
+  "image#section-banner-categorias": {
+    "props": {
+      "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/82e53c17-eb75-4c35-a5ea-cdcb38c19efe___0cfc134066e282d1c06803b7735dcbaa.png",
+      "alt": "Banner Black Friday Guess",
+      "blockClass": ["section-images-banner-2"],
+      "loading": "eager"
+    }
+  },
+    "flex-layout.col#black-friday-section-banner-categorias-2": {
+    "children": [
+      "image#section-banner-categorias-2"
+    ],
+    "props": {
+      "blockClass": ["bf-section-images"]
+    }
+  },
+
+  "image#section-banner-categorias-2": {
+    "props": {
+      "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/a2143e5c-cd99-4fb9-ab77-dc74cdcdd347___ac352ce35cf0fd1a6f4aca774ed92efe.png",
+      "alt": "Banner Black Friday Guess",
+      "blockClass": ["section-images-banner"],
+      "loading": "eager"
+    }
+  },
+
+
+
+  "slider-layout#section-images": {
+    "props": {
+      "blockClass":"section-images",
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 1,
+        "phone": 2
+      },
+      "infinite": true,
+      "showNavigationArrows":"never",
+      "showPaginationDots":"never",
+      "centerMode":{
+        "desktop": "disabled",
+        "phone": "center"
+      }
+    }
+  }
+}
+
+  
+

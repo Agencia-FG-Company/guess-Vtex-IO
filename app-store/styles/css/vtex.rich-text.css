@@ -465,6 +465,16 @@
   font-size: 22px;
 }
 
+.link--section-textSeo-text {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 68px 30px;
+}
+
+.flexCol--section-textSeo {
+  padding: 10px 68px 30px;
+}
+
 .container--promotion__delivery {
   justify-content: center;
   border: 1px solid black;

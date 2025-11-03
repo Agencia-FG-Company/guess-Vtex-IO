@@ -13,9 +13,35 @@
 @media (max-width: 767px) {
   .link--link-custom {
     font-size: 18px !important;
+    border: solid 2px #fff;
   }
 }
 
+.link--link-custom-tamanho {
+  column-gap: 15px;
+  text-decoration: none !important;
+  color: #fff;
+  border: 3px solid #fff;
+  font-size: 30px;
+  border-radius: 55px;
+  width: 3.5% !important;
+  padding: 15px;
+  display: flex;
+  font-size: 25px !important;
+  margin: 20px;
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .link--link-custom-tamanho {
+    display: inline-flex !important;
+    width: 15% !important;
+    column-gap: 10px !important;
+    margin: 5px !important;
+    font-size: 22px !important;
+    justify-content: center !important;
+    align-items: center;
+  }
+}
 .sliderTrack--section-images {
   gap: 15px !important;
 }
