@@ -21,7 +21,7 @@
       "flex-layout.row#black-friday-section-shelf-categorias",
       "flex-layout.row#black-friday-section-shelf-categorias",
       "flex-layout.row#black-friday-section-shelf-categorias",
-      
+
       //"responsive-layout.phone#1",
       "flex-layout.row#black-friday-section-textSeo"
     ],
@@ -54,6 +54,7 @@
       "list-context.product-list#bf_shelf_1"
     ],
     "props": {
+      "preserveLayoutOnMobile":true,
       "blockClass": ["section-shelf", "shelf-row-1"]
     }
   },
@@ -75,6 +76,7 @@
       "image#bf-shelf-image-right"
     ],
     "props": {
+      "preserveLayoutOnMobile":true,
       "blockClass": ["section-shelf", "shelf-row-3"]
     }
   },
@@ -162,7 +164,7 @@
       "infinite": true,
       "showPaginationDots": "never",
       "blockClass": "shelf"
-    } 
+    }
   },
 
   /* ---------- PRODUTO (reaproveitado) ---------- */
@@ -697,5 +699,5 @@
   }
 }
 
-  
+
 

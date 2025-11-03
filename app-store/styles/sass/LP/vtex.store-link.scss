@@ -16,25 +16,28 @@
 }
 
 .link--link-custom-tamanho{
-    column-gap: 15px;
-    text-decoration:none!important;
-    color: #fff;
-    border: 3px solid #fff;
-    font-size: 30px;
-    border-radius: 55px;
-    width: 3.5%!important;
-    padding: 15px;
-    display: flex;
-    font-size: 25px!important;
-    margin: 20px;
-    justify-content: center;
-    }
+  column-gap: 15px;
+  text-decoration:none!important;
+  color: #fff;
+  border: 3px solid #fff;
+  font-size: 30px;
+  border-radius: 55px;
+  width: 3.5%!important;
+  padding: 15px;
+  display: flex;
+  font-size: 25px!important;
+  margin: 20px;
+  justify-content: center;
+}
 
 @media (max-width: 1366px) {
   .link--link-custom-tamanho {
-  border-radius: 35px;
-  width: 5%!important;
-  margin: 20px;
+    border-radius: 35px;
+    width: 38px !important;
+    height: 38px;
+    margin: 0px;
+    padding: 7px 0;
+    font-size: 16px !important;
   }
 }
 
