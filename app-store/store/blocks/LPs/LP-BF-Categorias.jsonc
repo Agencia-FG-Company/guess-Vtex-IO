@@ -144,7 +144,7 @@
   /* ---------- SLIDERS ---------- */
   "slider-layout#bf__shelf-4items": {
     "props": {
-      "itemsPerPage": { "desktop": 4, "tablet": 2, "phone": 2 },
+      "itemsPerPage": { "desktop": 4, "tablet": 2, "phone": 1 },
       "infinite": true,
       "showPaginationDots": "never",
       "blockClass": "shelf"
@@ -152,7 +152,7 @@
   },
   "slider-layout#bf__shelf-3items": {
     "props": {
-      "itemsPerPage": { "desktop": 3, "tablet": 2, "phone": 2 },
+      "itemsPerPage": { "desktop": 3, "tablet": 2, "phone": 1 },
       "infinite": true,
       "showPaginationDots": "never",
       "blockClass": "shelf"
@@ -160,7 +160,15 @@
   },
     "slider-layout#bf__shelf-2items": {
     "props": {
-      "itemsPerPage": { "desktop": 2, "tablet": 2, "phone": 2 },
+      "itemsPerPage": { "desktop": 2, "tablet": 2, "phone": 1 },
+      "infinite": true,
+      "showPaginationDots": "never",
+      "blockClass": "shelf"
+    }
+  },
+    "slider-layout#bf__shelf-1items": {
+    "props": {
+      "itemsPerPage": { "desktop": 4, "tablet": 2, "phone": 1 },
       "infinite": true,
       "showPaginationDots": "never",
       "blockClass": "shelf"
@@ -209,7 +217,7 @@
     "props": {
       "blockClass": ["section-title"],
       "font": "t-body",
-      "text": "Lorem Ipsum dolor"
+      "text": "Lorem <i>Ipsum<i> dolor"
     }
   },
 
@@ -217,7 +225,7 @@
     "props": {
       "itemsPerPage": {
         "desktop": 4,
-        "tablet": 3,
+        "tablet": 2,
         "phone": 2
       },
       "showPaginationDots": "never",
@@ -553,7 +561,7 @@
     "props": {
       "blockClass": ["section-title"],
       "font": "t-body",
-      "text": "Lorem _Ipsum_ dolor"
+      "text": "Lorem <i>Ipsum<i> dolor"
     }
   },
   "list-context.image-list#section-images-categorias": {
@@ -612,7 +620,7 @@
     "props": {
       "blockClass": ["section-title"],
       "font": "t-body",
-      "text": "Lorem _Ipsum_ dolor"
+      "text": "Lorem <i>Ipsum<i> dolor"
     }
   },
   "list-context.image-list#section-images-categorias-2": {

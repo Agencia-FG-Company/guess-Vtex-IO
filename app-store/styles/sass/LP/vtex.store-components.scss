@@ -11,7 +11,7 @@
  }
 }
   .imageElement--section-images{
-    max-height: 80%!important;
+    max-height: 100%!important;
   }
 
   .imageElement--section-images-categorias{
@@ -26,4 +26,24 @@
        display: none!important;
     }
  }
+
+ .imageElement--section-images-banner{
+  margin-top: 35px;
+  margin-bottom: 70px;
+ }
  
+ .imageElement--shelf-image-left{
+      max-height: 753px;
+ }
+
+ .imageElement--shelf-image-right{
+    max-width: 947px;
+    max-height: 766px;
+ }
+
+ @media (max-width: 767px) {
+.imageElement--shelf-image-left{
+  max-width: 50%;
+    max-height: 350px;
+  }
+}

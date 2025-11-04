@@ -41,11 +41,14 @@
     padding: 7px 0;
     font-size: 16px !important;
   }
+  .link--link-custom-tamanho:hover {
+    background-color: #474747;
+    color: white;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1366px) {
   .link--link-custom-tamanho {
     display: inline-flex !important;
-    width: 15% !important;
     column-gap: 10px !important;
     margin: 5px !important;
     font-size: 22px !important;

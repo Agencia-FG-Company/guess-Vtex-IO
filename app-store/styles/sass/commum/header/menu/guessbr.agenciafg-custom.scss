@@ -125,7 +125,7 @@
             width: 100%;
             max-width: 250px;
             @include tablet {
-              max-width: 100%;
+              max-width: 100%; 
             }
             .menuLink {
               color: #000;
