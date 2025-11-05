@@ -348,8 +348,11 @@
 .container--section-title{
   justify-content: center;
   text-align: center;
-  margin-top: 15px!important;
-  margin-bottom: 27px!important;
+  margin-top: 15px;
+  margin-bottom: 27px;
+  @media (max-width: 1025px) {
+    margin-bottom: 5px;
+  }
 }
 
 .headingLevel2--section-textSeo-title {

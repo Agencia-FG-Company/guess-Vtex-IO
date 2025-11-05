@@ -118,7 +118,7 @@
     "props": {
       "blockClass": ["section-title"],
       "font": "t-body",
-      "text": "Lorem Ipsum dolor"
+      "text": "Lorem _Ipsum_ dolor"
     }
   },
   "list-context.image-list#section-images": {
@@ -196,7 +196,7 @@
     "props": {
       "blockClass": ["section-title"],
       "font": "t-body",
-      "text": "Lorem Ipsum dolor"
+      "text": "Lorem _Ipsum_ dolor"
     }
   },
 

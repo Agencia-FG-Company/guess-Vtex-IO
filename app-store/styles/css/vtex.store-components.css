@@ -33,6 +33,12 @@
   margin-top: 35px;
   margin-bottom: 70px;
 }
+@media (max-width: 1025px) {
+  .imageElement--section-images-banner {
+    margin-bottom: 20px;
+    margin-top: 17px;
+  }
+}
 
 .imageElement--shelf-image-left {
   max-height: 753px;
@@ -44,13 +50,17 @@
 }
 
 @media (max-width: 767px) {
-  .imageElement--shelf-image-left {
-    max-width: 50% !important;
-    max-height: 350px;
-  }
   .imageElement--section-images-banner {
-    max-width: 1024px;
-    max-height: 128px;
+    max-width: 100%;
+    height: 128px;
+  }
+}
+@media (max-width: 1025px) {
+  .imageElement--shelf-image-right {
+    max-width: 100% !important;
+  }
+  .imageElement--shelf-image-left {
+    width: 48%;
   }
 }
 .carouselGaleryThumbs {

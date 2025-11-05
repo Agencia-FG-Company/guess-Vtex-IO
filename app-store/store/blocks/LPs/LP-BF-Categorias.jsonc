@@ -6,7 +6,7 @@
   },
   "flex-layout.row#bf-categorias-container": {
     "children": [
-      "flex-layout.col#bf-categorias-container"
+      "flex-layout.col#bf-categorias-container-categorias"
     ],
     "props": {
       "blockClass": ["bf-categorias-container"]
@@ -21,8 +21,6 @@
       "flex-layout.row#black-friday-section-shelf-categorias",
       "flex-layout.row#black-friday-section-shelf-categorias",
       "flex-layout.row#black-friday-section-shelf-categorias",
-
-      //"responsive-layout.phone#1",
       "flex-layout.row#black-friday-section-textSeo"
     ],
     "props": {
@@ -31,16 +29,16 @@
   },
 
 
-  "flex-layout.col#bf-categorias-container": {
+  "flex-layout.col#bf-categorias-container-categorias": {
     "children": [
       "flex-layout.col#black-friday-section-banner-categorias",
       "flex-layout.row#black-friday-section-images-categorias",
       "flex-layout.col#black-friday-section-banner-categorias-2",
       "flex-layout.row#black-friday-section-shelf-categorias-1",
-      "flex-layout.row#black-friday-section-shelf-categorias",
-      "flex-layout.row#black-friday-section-shelf-categorias-3-desktop",
-      "flex-layout.row#black-friday-section-shelf-categorias-3-mobile",
-      "flex-layout.row#black-friday-section-shelf-categorias",
+      "flex-layout.row#black-friday-section-shelf-categorias-02-fileira",
+      "flex-layout.row#black-friday-section-shelf-categorias-03-fileira",
+      "flex-layout.row#black-friday-section-image-banner",
+      "flex-layout.row#black-friday-section-shelf-categorias-04-fileira",
       "flex-layout.row#black-friday-section-textSeo"
     ],
     "props": {
@@ -61,7 +59,7 @@
   },
 
   /* ---------- 2ª FILEIRA (4 produtos) ---------- */
-  "flex-layout.row#black-friday-section-shelf-categorias": {
+  "flex-layout.row#black-friday-section-shelf-categorias-02-fileira": {
     "children": [
       "list-context.product-list#bf_shelf_2"
     ],
@@ -71,10 +69,10 @@
   },
 
   /* ---------- 3ª FILEIRA (3 produtos + imagem) ---------- */
-  "flex-layout.row#black-friday-section-shelf-categorias-3-desktop": {
+  "flex-layout.row#black-friday-section-shelf-categorias-03-fileira": {
     "children": [
       "list-context.product-list#bf_shelf_3",
-      "image#bf-shelf-image-right"
+      "responsive-layout.desktop#image-right"
     ],
     "props": {
       "preserveLayoutOnMobile":true,
@@ -82,25 +80,30 @@
     }
   },
 
-  "flex-layout.row#black-friday-section-shelf-categorias-3-mobile": {
-  "children": [
-    "list-context.product-list#bf_shelf_3",
-    "image#bf-shelf-image-right"
-  ],
-  "props": {
-    "preserveLayoutOnMobile": false,
-    "blockClass": ["section-shelf", "shelf-row-3-mobile"],
-    "visibility": {
-      "desktop": "hidden",
-      "tablet": "hidden",
-      "phone": "visible"
+  "flex-layout.row#black-friday-section-image-banner": {
+    "children": [
+      "responsive-layout.mobile#image-banner"
+    ],
+    "props": {
+      "blockClass": ["black-friday-section-image-banner"]
     }
-  }
-},
+  },
 
+  "responsive-layout.mobile#image-banner": {
+    "children": [
+      "image#bf-image-banner"
+    ]
+  },
+
+  "image#bf-image-banner": {
+    "props": {
+      "blockClass": ["bf-image-banner"],
+      "src": "/arquivos/banner-mobile-lp.png"
+    }
+  },
 
   /* ---------- 4ª FILEIRA (4 produtos) ---------- */
-  "flex-layout.row#black-friday-section-shelf-categorias": {
+  "flex-layout.row#black-friday-section-shelf-categorias-04-fileira": {
     "children": [
       "list-context.product-list#bf_shelf_4"
     ],
@@ -109,18 +112,20 @@
     }
   },
 
+  "responsive-layout.desktop#image-right": {
+    "children": ["image#bf-shelf-image-right"]
+  },
+
   /* ---------- IMAGENS ---------- */
   "image#bf-shelf-image-left": {
     "props": {
       "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/35f3a515-2b2e-4a33-9f4b-81ae19395c34___cfd91b97098492c99f05c15cb3080a3d.png",
-      "maxWidth": "25%",
       "blockClass": "shelf-image-left"
     }
   },
   "image#bf-shelf-image-right": {
     "props": {
       "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/6a1e7892-919f-4bdd-b8c2-ac5ede73eb87___f0d63a0564d72e47bc1cf245b510ea4f.png",
-      "maxWidth": "50%",
       "blockClass": "shelf-image-right"
     }
   },
@@ -162,10 +167,11 @@
   /* ---------- SLIDERS ---------- */
   "slider-layout#bf__shelf-4items": {
     "props": {
-      "itemsPerPage": { "desktop": 4, "tablet": 2, "phone": 1 },
+      "itemsPerPage": { "desktop": 4, "tablet": 2, "phone": 2 },
       "infinite": true,
       "showPaginationDots": "never",
-      "blockClass": "shelf"
+      "showNavigationArrows": "never",
+      "blockClass": "shelf-lpbf-categorias"
     }
   },
   "slider-layout#bf__shelf-3items": {
@@ -173,15 +179,17 @@
       "itemsPerPage": { "desktop": 3, "tablet": 2, "phone": 1 },
       "infinite": true,
       "showPaginationDots": "never",
-      "blockClass": "shelf"
+      "showNavigationArrows": "never",
+      "blockClass": "shelf-3items"
     }
   },
     "slider-layout#bf__shelf-2items": {
     "props": {
-      "itemsPerPage": { "desktop": 2, "tablet": 2, "phone": 1 },
+      "itemsPerPage": { "desktop": 2, "tablet": 2, "phone": 2 },
       "infinite": true,
       "showPaginationDots": "never",
-      "blockClass": "shelf"
+      "showNavigationArrows": "never",
+      "blockClass": "shelf-lpbf-categorias"
     }
   },
     "slider-layout#bf__shelf-1items": {
@@ -189,6 +197,7 @@
       "itemsPerPage": { "desktop": 4, "tablet": 2, "phone": 1 },
       "infinite": true,
       "showPaginationDots": "never",
+      "showNavigationArrows": "never",
       "blockClass": "shelf"
     }
   },
@@ -235,7 +244,7 @@
     "props": {
       "blockClass": ["section-title"],
       "font": "t-body",
-      "text": "Lorem <i>Ipsum<i> dolor"
+      "text": "Lorem _Ipsum_ dolor"
     }
   },
 
@@ -579,7 +588,7 @@
     "props": {
       "blockClass": ["section-title"],
       "font": "t-body",
-      "text": "Lorem <i>Ipsum<i> dolor"
+      "text": "Lorem _Ipsum_ dolor"
     }
   },
   "list-context.image-list#section-images-categorias": {
@@ -638,7 +647,7 @@
     "props": {
       "blockClass": ["section-title"],
       "font": "t-body",
-      "text": "Lorem <i>Ipsum<i> dolor"
+      "text": "Lorem _Ipsum_ dolor"
     }
   },
   "list-context.image-list#section-images-categorias-2": {
@@ -716,7 +725,7 @@
       "showPaginationDots":"never",
       "centerMode":{
         "desktop": "disabled",
-        "phone": "center"
+        "phone": "disabled"
       }
     }
   }

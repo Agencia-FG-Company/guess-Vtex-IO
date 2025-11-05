@@ -579,7 +579,44 @@
   .flexRow--container-custom {
     display: none;
   }
+  .flexRowContent--shelf-row-1 {
+    padding: 0 10px;
+    gap: 10px;
+  }
+  .flexRowContent--section-shelf {
+    margin-top: 20px;
+    padding: 0 10px;
+    justify-content: center;
+  }
+  .flexRow--bf-categorias-container :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+    display: none;
+  }
+  .flexRow--black-friday-section-image-banner {
+    padding: 0 12px;
+  }
+  .flexRow--bf-categorias-container :global(.vtex-product-summary-2-x-nameContainer--shelf) {
+    margin-top: 0;
+  }
+  .flexRow--bf-categorias-container :global(.vtex-product-summary-2-x-productBrand--shelf) {
+    width: 100% !important;
+  }
 }
+.flexRow--bf-categorias-container :global(.vtex-product-summary-2-x-brandName--shelf) {
+  color: #fff;
+}
+
+.flexRow--bf-categorias-container :global(.vtex-product-price-1-x-sellingPrice--shelf) {
+  color: #fff;
+}
+
+.flexRow--bf-categorias-container :global(.vtex-product-price-1-x-installments--shelf) {
+  color: #fff;
+}
+
+.flexRow--bf-categorias-container :global(.vtex-product-price-1-x-savings--shelf) {
+  color: #fff;
+}
+
 .flexRow--product-main {
   max-width: 1800px;
   padding: 0 20px;

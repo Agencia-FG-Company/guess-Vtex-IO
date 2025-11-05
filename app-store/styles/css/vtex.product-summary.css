@@ -1,7 +1,17 @@
-.brandName--shelf {
-  color: #fff;
+@media (max-width: 1025px) {
+  .element--shelf-bf {
+    padding-top: 0 !important;
+  }
+}
+.containerNormal--shelf-bf {
+  border-radius: 0 !important;
 }
 
+@media (min-width: 1026px) {
+  .containerNormal--shelf-bf {
+    max-width: 100% !important;
+  }
+}
 .nameContainer--shelf {
   justify-content: start;
   padding: 0;
