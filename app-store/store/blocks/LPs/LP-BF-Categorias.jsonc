@@ -38,7 +38,8 @@
       "flex-layout.col#black-friday-section-banner-categorias-2",
       "flex-layout.row#black-friday-section-shelf-categorias-1",
       "flex-layout.row#black-friday-section-shelf-categorias",
-      "flex-layout.row#black-friday-section-shelf-categorias-3",
+      "flex-layout.row#black-friday-section-shelf-categorias-3-desktop",
+      "flex-layout.row#black-friday-section-shelf-categorias-3-mobile",
       "flex-layout.row#black-friday-section-shelf-categorias",
       "flex-layout.row#black-friday-section-textSeo"
     ],
@@ -70,7 +71,7 @@
   },
 
   /* ---------- 3ª FILEIRA (3 produtos + imagem) ---------- */
-  "flex-layout.row#black-friday-section-shelf-categorias-3": {
+  "flex-layout.row#black-friday-section-shelf-categorias-3-desktop": {
     "children": [
       "list-context.product-list#bf_shelf_3",
       "image#bf-shelf-image-right"
@@ -80,6 +81,23 @@
       "blockClass": ["section-shelf", "shelf-row-3"]
     }
   },
+
+  "flex-layout.row#black-friday-section-shelf-categorias-3-mobile": {
+  "children": [
+    "list-context.product-list#bf_shelf_3",
+    "image#bf-shelf-image-right"
+  ],
+  "props": {
+    "preserveLayoutOnMobile": false,
+    "blockClass": ["section-shelf", "shelf-row-3-mobile"],
+    "visibility": {
+      "desktop": "hidden",
+      "tablet": "hidden",
+      "phone": "visible"
+    }
+  }
+},
+
 
   /* ---------- 4ª FILEIRA (4 produtos) ---------- */
   "flex-layout.row#black-friday-section-shelf-categorias": {
@@ -685,9 +703,6 @@
       "loading": "eager"
     }
   },
-
-
-
   "slider-layout#section-images": {
     "props": {
       "blockClass":"section-images",

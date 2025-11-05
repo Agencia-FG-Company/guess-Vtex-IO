@@ -45,8 +45,12 @@
 
 @media (max-width: 767px) {
   .imageElement--shelf-image-left {
-    max-width: 50%;
+    max-width: 50% !important;
     max-height: 350px;
+  }
+  .imageElement--section-images-banner {
+    max-width: 1024px;
+    max-height: 128px;
   }
 }
 .carouselGaleryThumbs {
