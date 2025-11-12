@@ -42,11 +42,13 @@
 
 .imageElement--shelf-image-left {
   max-height: 753px;
+  margin: 10px;
 }
 
 .imageElement--shelf-image-right {
   max-width: 947px;
   max-height: 766px;
+  margin: 8px;
 }
 
 @media (max-width: 767px) {
@@ -61,6 +63,17 @@
   }
   .imageElement--shelf-image-left {
     width: 48%;
+  }
+}
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .imageElement--shelf-image-right {
+    max-height: 547px !important;
+  }
+  .imageElement--shelf-image-left {
+    max-height: 553px !important;
+  }
+  .wishlistIconContainer {
+    width: 100% !important;
   }
 }
 .carouselGaleryThumbs {

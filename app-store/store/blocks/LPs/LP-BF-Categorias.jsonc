@@ -678,14 +678,47 @@
   },
 
 
-  "flex-layout.col#black-friday-section-banner-categorias": {
-    "children": [
-      "image#section-banner-categorias"
-    ],
-    "props": {
-      "blockClass": ["bf-section-images"]
-    }
-  },
+"flex-layout.col#black-friday-section-banner-categorias": {
+  "children": [
+    "responsive-layout#section-banner-categorias"
+  ],
+  "props": {
+    "blockClass": ["bf-section-images"]
+  }
+},
+
+"responsive-layout#section-banner-categorias": {
+  "children": [
+    "responsive-layout.desktop#section-banner-categorias",
+    "responsive-layout.mobile#section-banner-categorias"
+  ]
+},
+"responsive-layout.desktop#section-banner-categorias": {
+  "children": [
+    "image#section-banner-categorias-desktop"
+  ]
+},
+"responsive-layout.mobile#section-banner-categorias": {
+  "children": [
+    "image#section-banner-categorias-mobile"
+  ]
+},
+"image#section-banner-categorias-desktop": {
+  "props": {
+    "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/82e53c17-eb75-4c35-a5ea-cdcb38c19efe___0cfc134066e282d1c06803b7735dcbaa.png",
+    "alt": "Banner Black Friday Guess Desktop",
+    "blockClass": ["section-images-banner-2"],
+    "loading": "eager"
+  }
+},
+"image#section-banner-categorias-mobile": {
+  "props": {
+    "src": "/arquivos/banner-mobile-lp.png",
+    "alt": "Banner Black Friday Guess Mobile",
+    "blockClass": ["section-images-banner-2"],
+    "loading": "eager"
+  }
+},
 
   "image#section-banner-categorias": {
     "props": {
@@ -695,14 +728,46 @@
       "loading": "eager"
     }
   },
-    "flex-layout.col#black-friday-section-banner-categorias-2": {
-    "children": [
-      "image#section-banner-categorias-2"
-    ],
-    "props": {
-      "blockClass": ["bf-section-images"]
-    }
-  },
+"flex-layout.col#black-friday-section-banner-categorias-2": {
+  "children": [
+    "responsive-layout#section-banner-categorias-2"
+  ],
+  "props": {
+    "blockClass": ["bf-section-images"]
+  }
+},
+"responsive-layout#section-banner-categorias-2": {
+  "children": [
+    "responsive-layout.desktop#section-banner-categorias-2",
+    "responsive-layout.mobile#section-banner-categorias-2"
+  ]
+},
+"responsive-layout.desktop#section-banner-categorias-2": {
+  "children": [
+    "image#section-banner-categorias-2-desktop"
+  ]
+},
+"responsive-layout.mobile#section-banner-categorias-2": {
+  "children": [
+    "image#section-banner-categorias-2-mobile"
+  ]
+},
+"image#section-banner-categorias-2-desktop": {
+  "props": {
+    "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/a2143e5c-cd99-4fb9-ab77-dc74cdcdd347___ac352ce35cf0fd1a6f4aca774ed92efe.png",
+    "alt": "Banner Black Friday Guess Desktop",
+    "blockClass": ["section-images-banner"],
+    "loading": "eager"
+  }
+},
+"image#section-banner-categorias-2-mobile": {
+  "props": {
+    "src": "/arquivos/banner-categorias-mobile.png",
+    "alt": "Banner Black Friday Guess Mobile",
+    "blockClass": ["section-images-banner"],
+    "loading": "eager"
+  }
+},
 
   "image#section-banner-categorias-2": {
     "props": {
