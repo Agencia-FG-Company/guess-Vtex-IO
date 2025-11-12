@@ -617,6 +617,10 @@
   color: #fff;
 }
 
+:global(.vtex-wish-list-1-x-wishlistIconContainer) :global(.vtex-wish-list-1-x-wishlistIcon) {
+  width: 100% !important;
+}
+
 .flexRow--product-main {
   max-width: 1800px;
   padding: 0 20px;
