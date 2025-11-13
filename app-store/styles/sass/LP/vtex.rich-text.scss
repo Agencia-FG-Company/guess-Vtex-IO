@@ -383,3 +383,18 @@
   position: relative;
   z-index: 2;
 }
+
+.container--title-cronometro-geral {
+  height: 245px;
+  @media (max-width: 1025px) {
+    max-height: 93px;
+  }
+}
+
+.container--subtitle-cronometro-geral {
+  height: 105px;
+  @media (max-width: 1025px) {
+    max-height: 100px;
+
+  }
+}

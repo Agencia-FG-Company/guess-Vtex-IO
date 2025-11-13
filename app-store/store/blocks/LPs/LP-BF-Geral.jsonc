@@ -250,15 +250,28 @@
 
 
   "flex-layout.col#black-friday-section-banner-geral": {
+    "title":"Sessão Banner",
     "children": [
-      "image#section-banner-geral"
+      "responsive-layout.desktop#section-banner-geral",
+      "responsive-layout.phone#section-banner-geral"
     ],
     "props": {
       "blockClass": ["bf-section-images"]
     }
   },
 
+  "responsive-layout.desktop#section-banner-geral": {
+    "title":"Sessão Banner - Desktop",
+    "children": ["image#section-banner-geral"]
+  },
+
+  "responsive-layout.phone#section-banner-geral": {
+    "title":"Sessão Banner - Mobile",
+    "children": ["image#section-banner-geral"]
+  },
+
   "image#section-banner-geral": {
+    "title":"Sessão Banner - Desktop",
     "props": {
       "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/82e53c17-eb75-4c35-a5ea-cdcb38c19efe___0cfc134066e282d1c06803b7735dcbaa.png",
       "alt": "Banner Black Friday Guess",

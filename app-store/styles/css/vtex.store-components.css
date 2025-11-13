@@ -29,7 +29,6 @@
 @media (max-width: 767px) {
   .imageElement--image-logo {
     width: 220px;
-    height: auto;
   }
 }
 
@@ -50,19 +49,9 @@
 }
 
 .imageElement--background-bf-geral {
-  max-height: 550px;
+  height: inherit;
   object-fit: cover;
   z-index: 1;
-}
-@media (max-width: 1025px) {
-  .imageElement--background-bf-geral {
-    max-height: 365px;
-  }
-}
-@media (min-width: 344px) and (max-width: 345px) {
-  .imageElement--background-bf-geral {
-    max-height: 397px;
-  }
 }
 
 .carouselGaleryThumbs {
