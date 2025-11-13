@@ -679,26 +679,23 @@
 
 
 "flex-layout.col#black-friday-section-banner-categorias": {
+  "title":"Container Banner Categorias",
   "children": [
-    "responsive-layout#section-banner-categorias"
+    "responsive-layout.desktop#section-banner-categorias",
+    "responsive-layout.mobile#section-banner-categorias"
   ],
   "props": {
     "blockClass": ["bf-section-images"]
   }
 },
-
-"responsive-layout#section-banner-categorias": {
-  "children": [
-    "responsive-layout.desktop#section-banner-categorias",
-    "responsive-layout.mobile#section-banner-categorias"
-  ]
-},
 "responsive-layout.desktop#section-banner-categorias": {
+  "title":"Banner Categorias - Desktop",
   "children": [
     "image#section-banner-categorias-desktop"
   ]
 },
 "responsive-layout.mobile#section-banner-categorias": {
+  "title":"Banner Categorias - Mobile",
   "children": [
     "image#section-banner-categorias-mobile"
   ]
@@ -729,25 +726,24 @@
     }
   },
 "flex-layout.col#black-friday-section-banner-categorias-2": {
+  "title":"Container Banner Categorias 2",
   "children": [
-    "responsive-layout#section-banner-categorias-2"
+    "responsive-layout.desktop#section-banner-categorias-2",
+    "responsive-layout.mobile#section-banner-categorias-2"
   ],
   "props": {
     "blockClass": ["bf-section-images"]
   }
 },
-"responsive-layout#section-banner-categorias-2": {
-  "children": [
-    "responsive-layout.desktop#section-banner-categorias-2",
-    "responsive-layout.mobile#section-banner-categorias-2"
-  ]
-},
+
 "responsive-layout.desktop#section-banner-categorias-2": {
+  "title":"Banner Categorias 2 - Desktop",
   "children": [
     "image#section-banner-categorias-2-desktop"
   ]
 },
 "responsive-layout.mobile#section-banner-categorias-2": {
+  "title":"Banner Categorias 2 - Mobile",
   "children": [
     "image#section-banner-categorias-2-mobile"
   ]

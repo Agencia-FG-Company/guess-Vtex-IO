@@ -509,9 +509,8 @@
 }
 
 .flexRowContent--container-link-tamanho {
-  column-gap: 10px;
+  column-gap: 3px;
   row-gap: 10px;
-  margin-bottom: 3%;
 }
 @media (max-width: 1025px) {
   .flexRowContent--container-link-tamanho {
@@ -522,7 +521,7 @@
 }
 
 .flexRowContent--container-link-tamanho-num {
-  column-gap: 10px;
+  column-gap: 3px;
   row-gap: 10px;
 }
 @media (max-width: 1025px) {

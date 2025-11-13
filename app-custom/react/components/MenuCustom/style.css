@@ -69,11 +69,12 @@
   display: flex;
   list-style: none;
   padding: 0;
+  gap: 20px;
   @media (max-width: 1024px) {
     display: block;
   }
 
-  
+
 }
 
 .submenuWrapper {
@@ -147,10 +148,10 @@
 
   .submenuWrapper.level-1 {
     display: none;
-    
+
   }
   .submenuWrapper.level-1.openSubmenu {
     display: block;
-    
+
   }
 }
