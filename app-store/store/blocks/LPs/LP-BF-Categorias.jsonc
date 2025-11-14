@@ -464,7 +464,7 @@
   },
 
   "flex-layout.row#botao-tamanho": {
-    "title":"Sessão Cronômetro",
+    "title":"Sessão tamanho Letra",
     "children": [
       "link.product#botao-tamanho-pp",
       "link.product#botao-tamanho-p",
@@ -480,6 +480,7 @@
   },
   "link.product#botao-tamanho-pp": {
     "props": {
+      "title":"Sessão tamanho PP",
       "href": "/{slug}/p",
       "label": "PP",
       "blockClass": ["link-custom-tamanho"]
@@ -487,6 +488,7 @@
   },
   "link.product#botao-tamanho-p": {
     "props": {
+      "title":"Sessão tamanho P",
       "href": "/{slug}/p",
       "label": "P",
       "blockClass": ["link-custom-tamanho"]
@@ -494,6 +496,7 @@
   },
   "link.product#botao-tamanho-m": {
     "props": {
+      "title":"Sessão tamanho M",
       "href": "/{slug}/p",
       "label": "M",
       "blockClass": ["link-custom-tamanho"]
@@ -501,6 +504,7 @@
   },
     "link.product#botao-tamanho-g": {
     "props": {
+      "title":"Sessão tamanho G",
       "href": "/{slug}/p",
       "label": "G",
       "blockClass": ["link-custom-tamanho"]
@@ -508,6 +512,7 @@
   },
     "link.product#botao-tamanho-gg": {
     "props": {
+      "title":"Sessão tamanho GG",
       "href": "/{slug}/p",
       "label": "GG",
       "blockClass": ["link-custom-tamanho"]
@@ -515,7 +520,7 @@
   },
 
   "flex-layout.row#botao-tamanho-num": {
-    "title":"Sessão Cronômetro",
+    "title":"Sessão Tamanho Numero",
     "children": [
       "link.product#botao-tamanho-34",
       "link.product#botao-tamanho-36",
@@ -534,6 +539,7 @@
   },
   "link.product#botao-tamanho-34": {
     "props": {
+      "title":"Sessão tamanho 34",
       "href": "/{slug}/p",
       "label": "34",
       "blockClass": ["link-custom-tamanho"]
@@ -541,6 +547,7 @@
   },
   "link.product#botao-tamanho-36": {
     "props": {
+      "title":"Sessão tamanho 36",
       "href": "/{slug}/p",
       "label": "36",
       "blockClass": ["link-custom-tamanho"]
@@ -548,6 +555,7 @@
   },
   "link.product#botao-tamanho-38": {
     "props": {
+      "title":"Sessão tamanho 38",
       "href": "/{slug}/p",
       "label": "38",
       "blockClass": ["link-custom-tamanho"]
@@ -555,6 +563,7 @@
   },
     "link.product#botao-tamanho-40": {
     "props": {
+      "title":"Sessão tamanho 40",
       "href": "/{slug}/p",
       "label": "40",
       "blockClass": ["link-custom-tamanho"]
@@ -562,6 +571,7 @@
   },
     "link.product#botao-tamanho-42": {
     "props": {
+      "title":"Sessão tamanho 42",
       "href": "/{slug}/p",
       "label": "42",
       "blockClass": ["link-custom-tamanho"]
@@ -569,6 +579,7 @@
   },
       "link.product#botao-tamanho-44": {
     "props": {
+      "title":"Sessão tamanho 44",
       "href": "/{slug}/p",
       "label": "44",
       "blockClass": ["link-custom-tamanho"]
@@ -581,7 +592,6 @@
       "blockClass": ["link-custom-tamanho"]
     }
   },
-
 
   "rich-text#section-images-title": {
     "title":"Sessão Images - Titulo",
@@ -758,7 +768,7 @@
 },
 "image#section-banner-categorias-2-mobile": {
   "props": {
-    "src": "/arquivos/banner-categorias-mobile.png",
+    "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/1d1cff7c-cdea-4df8-b2a1-111b1f75403b___0cb634daff38d88f28613e515f35aca5.png",
     "alt": "Banner Black Friday Guess Mobile",
     "blockClass": ["section-images-banner"],
     "loading": "eager"
