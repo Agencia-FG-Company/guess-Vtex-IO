@@ -250,15 +250,28 @@
 
 
   "flex-layout.col#black-friday-section-banner-geral": {
+    "title":"Sessão Banner",
     "children": [
-      "image#section-banner-geral"
+      "responsive-layout.desktop#section-banner-geral",
+      "responsive-layout.phone#section-banner-geral"
     ],
     "props": {
       "blockClass": ["bf-section-images"]
     }
   },
 
+  "responsive-layout.desktop#section-banner-geral": {
+    "title":"Sessão Banner - Desktop",
+    "children": ["image#section-banner-geral"]
+  },
+
+  "responsive-layout.phone#section-banner-geral": {
+    "title":"Sessão Banner - Mobile",
+    "children": ["image#section-banner-geral"]
+  },
+
   "image#section-banner-geral": {
+    "title":"Sessão Banner - Desktop",
     "props": {
       "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/82e53c17-eb75-4c35-a5ea-cdcb38c19efe___0cfc134066e282d1c06803b7735dcbaa.png",
       "alt": "Banner Black Friday Guess",
@@ -298,30 +311,94 @@
   "flex-layout.col#black-friday-cronometro-geral": {
     "title":"Sessão Cronômetro",
     "children": [
-      "image#background-cronometro-geral",
-      "rich-text#title-cronometro-geral",
-      "image#logo-guess-geral",
-      "rich-text#text-cronometro-geral",
-      "flex-layout.row#botao-desconto"
+      "responsive-layout.desktop#background-lp-geral",
+      "responsive-layout.phone#background-lp-geral",
+      "responsive-layout.desktop#title-cronometro-geral",
+      "responsive-layout.phone#title-cronometro-geral",
+      "responsive-layout.desktop#logo-guess-geral",
+      "responsive-layout.phone#logo-guess-geral-mobile",
+      "responsive-layout.desktop#text-cronometro-geral",
+      "responsive-layout.phone#text-cronometro-geral",
+      "responsive-layout.desktop#botao-desconto",
+      "responsive-layout.phone#botao-desconto"
     ],
     "props": {
       "horizontalAlign": "center",
       "blockClass": ["container-cronometro-geral"]
     }
   },
+
+  "responsive-layout.desktop#background-lp-geral": {
+    "children": ["image#background-cronometro-geral"]
+  },
+  "responsive-layout.phone#background-lp-geral": {
+    "children": ["image#background-cronometro-geral-mobile"]
+  },
+
+
+  "responsive-layout.desktop#title-cronometro-geral": {
+    "children": ["rich-text#title-cronometro-geral"]
+  },
+  "responsive-layout.phone#title-cronometro-geral": {
+    "children": ["rich-text#title-cronometro-geral-mobile"]
+  },
+
+
+  "responsive-layout.desktop#text-cronometro-geral": {
+    "children": ["rich-text#text-cronometro-geral"]
+  },
+  "responsive-layout.phone#text-cronometro-geral": {
+    "children": ["rich-text#text-cronometro-geral-mobile"]
+  },
+
+
+  "responsive-layout.desktop#logo-guess-geral": {
+    "children": ["image#logo-guess-geral"]
+  },
+  "responsive-layout.phone#logo-guess-geral-mobile": {
+    "children": ["image#logo-guess-geral-mobile"]
+  },
+
+  "responsive-layout.desktop#botao-desconto": {
+    "children": ["flex-layout.row#botao-desconto"]
+  },
+  "responsive-layout.phone#botao-desconto": {
+    "children": ["flex-layout.row#botao-desconto-mobile"]
+  },
+
   "image#background-cronometro-geral": {
-    "title":"Sessão Cronômetro - Background",
+    "title":"Sessão Cronômetro - Background Desktop",
+    "props": {
+      "blockClass": ["background-cronometro", "background-bf-geral"],
+      "src": "/arquivos/background-lpblack.png"
+    }
+  },
+  "image#background-cronometro-geral-mobile": {
+    "title":"Sessão Cronômetro - Background Mobile",
     "props": {
       "blockClass": ["background-cronometro", "background-bf-geral"],
       "src": "/arquivos/background-lpblack.png"
     }
   },
   "flex-layout.row#botao-desconto": {
-    "title":"Sessão Cronômetro",
+    "title":"Sessão Cronômetro Desktop",
     "children": [
       "link.product#botao-desconto1",
       "link.product#botao-desconto2",
       "link.product#botao-desconto3"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["container-link"],
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.row#botao-desconto-mobile": {
+    "title":"Sessão Cronômetro - Mobile",
+    "children": [
+      "link.product#botao-desconto1-mobile",
+      "link.product#botao-desconto2-mobile",
+      "link.product#botao-desconto3-mobile"
     ],
     "props": {
       "horizontalAlign": "center",
@@ -350,8 +427,40 @@
       "blockClass": ["link-custom"]
     }
   },
+  "link.product#botao-desconto1-mobile": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "Feminino até xx%",
+      "blockClass": ["link-custom"]
+    }
+  },
+  "link.product#botao-desconto2-mobile": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "Bolsas até xx%",
+      "blockClass": ["link-custom"]
+    }
+  },
+  "link.product#botao-desconto3-mobile": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "Masculino até xx%",
+      "blockClass": ["link-custom"]
+    }
+  },
   "rich-text#title-cronometro-geral": {
-    "title":"Sessão Cronômetro - Titulo",
+    "title":"Sessão Cronômetro - Titulo Desktop",
+    "props": {
+      "blockClass": ["title-cronometro-geral"],
+      "font": "t-body",
+      "text": "# Black Friday",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#title-cronometro-geral-mobile": {
+    "title":"Sessão Cronômetro - Titulo Mobile",
     "props": {
       "blockClass": ["title-cronometro-geral"],
       "font": "t-body",
@@ -362,14 +471,32 @@
     }
   },
   "image#logo-guess-geral": {
-    "title":"Sessão Cronômetro - Logo",
+    "title":"Sessão Cronômetro - Logo Desktop",
+    "props": {
+      "blockClass": ["image-logo"],
+      "src": "/arquivos/logo-guess-bf.png"
+    }
+  },
+  "image#logo-guess-geral-mobile": {
+    "title":"Sessão Cronômetro - Logo Mobile",
     "props": {
       "blockClass": ["image-logo"],
       "src": "/arquivos/logo-guess-bf.png"
     }
   },
   "rich-text#text-cronometro-geral": {
-    "title":"Sessão Cronômetro - Texto",
+    "title":"Sessão Cronômetro - Texto Desktop",
+    "props": {
+      "blockClass": ["subtitle-cronometro-geral"],
+      "font": "t-body",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat volutpat risus",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#text-cronometro-geral-mobile": {
+    "title":"Sessão Cronômetro - Texto Mobile",
     "props": {
       "blockClass": ["subtitle-cronometro-geral"],
       "font": "t-body",

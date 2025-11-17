@@ -508,13 +508,12 @@
 }
 
 .flexRowContent--container-cronometro-geral{
-  background-color: #D9D9D9;
+  position: relative;
 }
 
 .flexRowContent--container-link{
     column-gap: 10px;
     row-gap: 10px;
-    margin-bottom: 10%;
     @media (max-width: 767px) {
       font-size: 5px;
       display: flex;
@@ -566,15 +565,27 @@
   }
 }
 
+.flexRow--container-cronometro-geral {
+  height: 550px;
+}
+
 @media (max-width: 1025px) {
   .flexRow--container-custom {
     display: none;
+  }
+  .flexRow--container-cronometro-geral {
+    height: 398px;
   }
 }
 
 .flexRow--container-link {
   position: relative;
   z-index: 2;
+  height: 117px;
+  @media (max-width: 1025px) {
+    max-height: 122px;
+
+  }
 }
 
 

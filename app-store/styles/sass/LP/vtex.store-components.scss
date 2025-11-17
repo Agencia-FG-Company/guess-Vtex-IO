@@ -27,7 +27,6 @@
   z-index: 2;
   @media (max-width: 767px) {
     width: 220px;
-    height: auto;
   }
 }
 .imageElement--section-images{
@@ -48,13 +47,7 @@
 }
 
 .imageElement--background-bf-geral {
-  max-height: 550px;
+  height: inherit;
   object-fit: cover;
   z-index: 1;
-  @media (max-width: 1025px) {
-    max-height: 365px;
-  }
-  @media (min-width: 344px) and (max-width: 345px) {
-    max-height: 397px;
-  }
 }

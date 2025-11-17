@@ -18,7 +18,7 @@
         "tablet": 3,
         "phone": 2
       },
-      "showPaginationDots": "never",
+      "showPaginationDots": "always",
       "infinite": true,
       "fullWidth": false,
       "blockClass": "shelf",

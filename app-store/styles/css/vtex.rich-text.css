@@ -479,6 +479,24 @@
   z-index: 2;
 }
 
+.container--title-cronometro-geral {
+  height: 245px;
+}
+@media (max-width: 1025px) {
+  .container--title-cronometro-geral {
+    max-height: 93px;
+  }
+}
+
+.container--subtitle-cronometro-geral {
+  height: 105px;
+}
+@media (max-width: 1025px) {
+  .container--subtitle-cronometro-geral {
+    max-height: 100px;
+  }
+}
+
 .container--promotion__delivery {
   justify-content: center;
   border: 1px solid black;
