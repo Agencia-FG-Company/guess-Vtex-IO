@@ -353,10 +353,10 @@
 
 
   "responsive-layout.desktop#logo-guess-geral": {
-    "children": ["image#logo-guess-geral"]
+    "children": ["toggle-layout#logo-guess-geral"]
   },
   "responsive-layout.phone#logo-guess-geral-mobile": {
-    "children": ["image#logo-guess-geral-mobile"]
+    "children": ["toggle-layout#logo-guess-geral-mobile"]
   },
 
   "responsive-layout.desktop#botao-desconto": {
@@ -364,6 +364,20 @@
   },
   "responsive-layout.phone#botao-desconto": {
     "children": ["flex-layout.row#botao-desconto-mobile"]
+  },
+
+  "toggle-layout#logo-guess-geral": {
+    "title":"Sessão Logo - Desativador Desktop",
+    "children":[
+      "image#logo-guess-geral"
+    ]
+  },
+
+  "toggle-layout#logo-guess-geral-mobile": {
+    "title":"Sessão Logo - Desativador Mobile",
+    "children":[
+      "image#logo-guess-geral-mobile"
+    ]
   },
 
   "image#background-cronometro-geral": {
