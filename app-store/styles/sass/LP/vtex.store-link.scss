@@ -31,9 +31,21 @@
 }
 
 .label--link-custom-tamanho-ggg {
+  font-size: 32px !important;
+  margin-top: 8px;
+}
+@media (max-width: 1368px) {
+  .label--link-custom-tamanho-ggg {
+    font-size: 17px !important;
+    margin-top: 0px;
+  }
+
+}
+@media (max-width: 1025px) {
+.label--link-custom-tamanho-ggg {
   font-size: 17px !important;
 }
-
+}
 @media (max-width: 1366px) {
   .link--link-custom-tamanho {
     border-radius: 35px;
