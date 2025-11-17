@@ -451,11 +451,25 @@
   }
 }
 
+.paragraph--section-textSeo-title,
+.wrapper--section-textSeo-title {
+  color: #fff;
+}
+
+.heading--section-textSeo-title-category {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
 .headingLevel2--section-textSeo-title {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 0;
   color: #fff;
+  font-family: Inter, sans-serif;
 }
 
 .wrapper--section-textSeo-text {

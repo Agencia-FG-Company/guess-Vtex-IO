@@ -42,13 +42,21 @@
 
 .imageElement--shelf-image-left {
   max-height: 753px;
+  height: 43vw;
   margin: 8px;
+}
+@media (max-width: 1025px) {
+  .imageElement--shelf-image-left {
+    height: auto;
+    margin: 0;
+  }
 }
 
 .imageElement--shelf-image-right {
   max-width: 947px;
   max-height: 766px;
   margin: 8px;
+  width: 50vw;
 }
 
 @media (max-width: 767px) {

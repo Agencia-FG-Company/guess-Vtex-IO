@@ -557,6 +557,15 @@
   }
 }
 
+.flexRow--section-textSeo-category {
+  padding: 110px 20px;
+}
+@media (max-width: 1025px) {
+  .flexRow--section-textSeo-category {
+    padding: 10px 5px 30px;
+  }
+}
+
 .flexRowContent--black-friday-cronometro-container {
   background-color: #000;
 }
