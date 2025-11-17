@@ -449,7 +449,7 @@
       "toggle-layout#section-images-categorias-masculino"
     ],
     "props": {
-      "blockClass": ["bf-form-container"]
+      "blockClass": ["bf-form-container", "bf-form-container-category"]
     }
   },
   /* ---------- Numeros Feminino INICIO  ---------- */
@@ -612,7 +612,7 @@
     "props": {
       "blockClass": ["section-title"],
       "font": "t-body",
-      "text": "Sessão Images - Titulo Feminino"
+      "text": "Sessão *Images* - Titulo Feminino"
     }
   },
   "rich-text#section-images-title-numeros-feminino": {
@@ -659,7 +659,7 @@
     "toggle-layout#section-images-categorias-masculino": {
     "title": "Ativador seção Masculino",
     "props": {
-      "renderChildren": false
+      "renderChildren": true
     },
     "children": [
       "flex-layout.col#black-friday-section-images-categorias-masculino"
@@ -668,8 +668,7 @@
   "flex-layout.col#black-friday-section-images-categorias-masculino": {
     "title":"Sessão Images",
     "children": [
-      "rich-text#section-images-title-1-masculino",
-      "list-context.image-list#section-images-categorias-masculino",
+     "toggle-layout#section-images-categorias-masculino-image",
       "rich-text#section-images-title-numeros-masculino",
       "flex-layout.row#botao-tamanho-masculino",
       "flex-layout.row#botao-tamanho-num-masculino"
@@ -677,6 +676,16 @@
     "props": {
       "blockClass": ["bf-section-images"]
     }
+  },
+    "toggle-layout#section-images-categorias-masculino-image": {
+    "title": "Ativador seção Imagens Masculino",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "rich-text#section-images-title-1-masculino",
+      "list-context.image-list#section-images-categorias-masculino"
+    ]
   },
 
   "flex-layout.row#botao-tamanho-masculino": {
@@ -733,7 +742,7 @@
       "title":"Sessão tamanho GGG",
       "href": "/{slug}/p",
       "label": "GGG",
-      "blockClass": ["link-custom-tamanho"]
+      "blockClass": ["link-custom-tamanho", "link-custom-tamanho-ggg"]
     }
   },
 
@@ -821,12 +830,13 @@
     }
   },
 
+
   "rich-text#section-images-title-1-masculino": {
     "title":"Sessão Images - Titulo",
     "props": {
       "blockClass": ["section-title"],
       "font": "t-body",
-      "text": "Sessão Images - Titulo Masculino"
+      "text": "Sessão *Images* - Titulo Masculino"
     }
   },
   "rich-text#section-images-title-numeros-masculino": {

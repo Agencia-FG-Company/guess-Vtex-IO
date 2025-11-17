@@ -562,9 +562,10 @@
 .flexRowContent--container-link-tamanho-num {
   column-gap: 3px;
   row-gap: 10px;
-
+  
   @media (max-width: 1025px) {
     display: flex;
+    column-gap: 0;
   }
 }
 
@@ -572,6 +573,9 @@
   .flexRow--container-link-tamanho-num {
     padding-bottom: 20px;
   }
+}
+.flexRow--container-link-tamanho{
+  padding-bottom: 18px;
 }
 
 .flexCol--section-shelf {
@@ -590,21 +594,25 @@
   }
 
   &--section-textSeo {
-    padding: 10px 5px 30px;
+    padding: 10px 68px 30px;
 
     @media (max-width: 1025px) {
-      padding: 10px 5px 30px;
+      padding: 10px 15px 30px;
     }
   }
 }
 
 .flexRow--section-textSeo-category {
-  padding: 110px 20px;
+  padding-top: 65px;
   @media (max-width: 1025px) {
-    padding: 10px 5px 30px;
+    
   }
 
+}
 
+.flexRowContent--bf-form-container-category{
+  display: flex;
+  flex-direction: column;
 }
 
 .flexRowContent--black-friday-cronometro-container {

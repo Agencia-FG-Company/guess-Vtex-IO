@@ -867,6 +867,7 @@
 .menuContainer .wrapper {
   margin: 0;
   height: 100%;
+  gap: 20px;
 }
 @media (max-width: 1025px) {
   .menuContainer .wrapper {

@@ -1,21 +1,22 @@
-.link--link-custom{
-    text-decoration: none;
-    color: #fff;
-    background-color: #000;
-    border-radius: 25px;
-    width: 42% !important;
-    padding: 5px 15px;
-    display: flex;
-    white-space: nowrap;
-    column-gap: 40px;
-    font-size: 30px!important;
-        @media (max-width: 767px) {
+.link--link-custom {
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  border-radius: 25px;
+  width: 42% !important;
+  padding: 5px 15px;
+  display: flex;
+  white-space: nowrap;
+  column-gap: 40px;
+  font-size: 30px !important;
+
+  @media (max-width: 767px) {
     font-size: 18px !important;
     border: solid 2px #fff;
   }
 }
 
-.link--link-custom-tamanho{
+.link--link-custom-tamanho {
   text-decoration: none !important;
   color: #fff;
   border: 3px solid #fff;
@@ -29,6 +30,10 @@
   justify-content: center;
 }
 
+.label--link-custom-tamanho-ggg {
+  font-size: 17px !important;
+}
+
 @media (max-width: 1366px) {
   .link--link-custom-tamanho {
     border-radius: 35px;
@@ -39,7 +44,7 @@
     font-size: 16px !important;
   }
 
-  .link--link-custom-tamanho:hover{
+  .link--link-custom-tamanho:hover {
     background-color: #474747;
     color: white;
   }
@@ -47,11 +52,11 @@
 
 @media (min-width: 1024px) and (max-width: 1366px) {
   .link--link-custom-tamanho {
-    display: inline-flex!important;
-    column-gap: 10px!important;
-    margin: 5px!important;
+    display: inline-flex !important;
+    column-gap: 10px !important;
+    margin: 5px !important;
     font-size: 22px !important;
-    justify-content: center!important;
+    justify-content: center !important;
     align-items: center;
     width: 46px !important;
     height: 46px !important;
@@ -59,19 +64,18 @@
 }
 
 .sliderTrack--section-images {
-    gap: 15px!important;
-  }
+  gap: 15px !important;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
   .link--link-custom-tamanho {
-    display: inline-flex!important;
-    column-gap: 10px!important;
-    margin: 5px!important;
+    display: inline-flex !important;
+    column-gap: 10px !important;
+    margin: 5px !important;
     font-size: 22px !important;
-    justify-content: center!important;
+    justify-content: center !important;
     align-items: center;
     width: 46px !important;
     height: 46px !important;
   }
 }
-
