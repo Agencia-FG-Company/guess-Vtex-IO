@@ -62,3 +62,10 @@
   }
 }
 
+ @media (max-width: 768px){
+  .flexRowContent--bf-categorias-container{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}

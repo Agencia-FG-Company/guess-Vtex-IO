@@ -442,6 +442,26 @@
 .container--section-title {
   justify-content: center;
   text-align: center;
+  margin-top: 15px;
+  margin-bottom: 27px;
+}
+@media (max-width: 1025px) {
+  .container--section-title {
+    margin-bottom: 5px;
+  }
+}
+
+.paragraph--section-textSeo-title,
+.wrapper--section-textSeo-title {
+  color: #fff;
+}
+
+.heading--section-textSeo-title-category {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .headingLevel2--section-textSeo-title {
@@ -449,6 +469,7 @@
   font-weight: 600;
   margin-bottom: 0;
   color: #fff;
+  font-family: Inter, sans-serif;
 }
 
 .wrapper--section-textSeo-text {
@@ -495,6 +516,20 @@
   .container--subtitle-cronometro-geral {
     max-height: 100px;
   }
+}
+
+.link--section-textSeo-text {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 68px 30px;
+}
+
+.flexCol--section-textSeo {
+  padding: 10px 68px 30px;
+}
+
+.vtex-rich-text-0-x-heading-level-3 {
+  margin: 15px;
 }
 
 .container--promotion__delivery {

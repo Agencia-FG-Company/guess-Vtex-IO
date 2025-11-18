@@ -66,11 +66,15 @@
 .sliderLayoutContainer--shelf{
   margin-top: 40px!important;
   @media (max-width:1025px) {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
 }
 
-.imageElement--images-mobile-banners{
-   @media (max-width: 1025px) {
-   }
+@media (max-width: 1025px) {
+  .sliderLayoutContainer--shelf-3items {
+    max-width: 203px;
+  }
+  .sliderTrack--shelf-lpbf-categorias {
+    gap: 10px;
+  }
 }

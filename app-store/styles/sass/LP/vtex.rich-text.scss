@@ -1,6 +1,7 @@
 .container {
   &--lp__first-banner {
     height: 100%;
+
     .wrapper {
       width: 100%;
       height: 100%;
@@ -8,6 +9,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
       .heading {
         font-family: Orpheus;
         text-transform: unset;
@@ -18,6 +20,7 @@
         margin: 0;
         font-weight: 300;
         color: var(--custom-text-color) !important;
+
         @include tablet {
           width: 100%;
           display: block;
@@ -25,22 +28,27 @@
           font-size: 2.5rem;
           text-align: start;
         }
+
         @include mobile {
           text-align: center;
         }
       }
+
       .paragraph {
         color: var(--custom-text-color) !important;
         width: 24%;
         text-align: center;
+
         @media screen and (max-width: 1380px) {
           width: 50%;
         }
+
         @include tablet {
           display: flex;
           justify-content: end;
           width: 100%;
         }
+
         .link {
           color: var(--custom-text-color) !important;
           font-family: "Century";
@@ -52,21 +60,25 @@
           margin-top: 55px;
           display: grid;
           font-weight: 500;
+
           @include tablet {
             text-align: end;
             padding-right: 40px;
             font-size: 0.875rem;
           }
+
           @include mobile {
             text-align: center;
             padding-right: 0;
             margin: 15px auto;
             width: 53%;
           }
+
           &::after {
             content: url(assets/images/LP/arrow.svg);
             margin-left: 7px;
             filter: var(--invert-filter);
+
             @include mobile {
               margin-left: 0;
             }
@@ -78,6 +90,7 @@
 
   &--lp__title-shelf {
     justify-content: center;
+
     .paragraph {
       font-family: Orpheus;
       text-transform: unset;
@@ -93,9 +106,11 @@
     @include tablet {
       width: 100%;
     }
+
     .wrapper {
       width: 100%;
     }
+
     .heading {
       width: 90%;
       font-weight: 400;
@@ -103,6 +118,7 @@
       font-size: 3rem;
       font-family: "Orpheus";
       color: var(--custom-text-color) !important;
+
       @include tablet {
         width: 100%;
         display: block;
@@ -110,6 +126,7 @@
         text-align: center;
         font-size: 2.5rem;
       }
+
       @include mobile {
         width: 79%;
         padding: 20px 0;
@@ -118,6 +135,7 @@
         margin: 10px auto 0;
         font-family: 'Orpheus';
       }
+
       .link {
         font-family: "Century";
         display: block;
@@ -128,15 +146,18 @@
         text-decoration: none;
         font-weight: 500;
         text-transform: uppercase;
+
         @include tablet {
           font-size: 0.875rem;
           text-align: center;
         }
+
         @include mobile {
           text-align: right;
           margin: 35px auto 20px;
           width: 90%;
         }
+
         &::after {
           content: url(assets/images/LP/arrow.svg);
           margin-left: 7px;
@@ -152,20 +173,24 @@
       width: 100%;
       padding: 20px;
     }
+
     .heading {
       font-weight: 400;
       text-align: center;
       font-size: 3rem;
       font-family: "Orpheus";
       color: var(--custom-text-color) !important;
+
       @include tablet {
         text-align: center;
         margin-top: 50px;
         font-size: 2rem;
       }
+
       @include mobile {
         margin: 10px 0 0;
       }
+
       .link {
         font-family: 'Century';
         width: 20%;
@@ -178,20 +203,24 @@
         text-decoration: none;
         font-weight: 500;
         text-transform: uppercase;
+
         @media screen and (max-width: 1380px) {
           width: 60%;
         }
+
         @include tablet {
           margin-top: 30px;
           font-size: 0.875rem;
           text-align: end;
         }
+
         @include mobile {
           width: 100%;
           margin: 40px auto 15px;
           display: block;
           text-align: center;
         }
+
         &::after {
           content: url(assets/images/LP/arrow.svg);
           margin-left: 7px;
@@ -205,16 +234,20 @@
     position: absolute;
     bottom: 10px;
     left: 40px;
+
     .paragraph {
       font-size: 1.625rem;
-      @include mobile{
+
+      @include mobile {
         font-size: 18px;
       }
+
       .link {
         color: black;
         text-decoration: none;
         margin-top: 20px;
         display: inline-block;
+
         &::after {
           content: "";
           font-size: 1.375rem;
@@ -231,7 +264,8 @@
         }
       }
     }
-    @include mobile{
+
+    @include mobile {
       left: 20px;
     }
   }
@@ -242,8 +276,10 @@
     left: 50%;
     translate: -50% -50%;
     justify-content: center;
+
     .paragraph {
       font-size: 1.625rem;
+
       .link {
         color: black;
         text-decoration: none;
@@ -251,6 +287,7 @@
         margin-top: 20px;
         display: block;
         width: fit-content;
+
         &::after {
           content: "";
           font-size: 1.375rem;
@@ -269,13 +306,13 @@
     }
   }
 
-  &--lp__banner-wrapper--v2{
+  &--lp__banner-wrapper--v2 {
     position: absolute;
     bottom: 0;
     left: 20px;
 
-    .paragraph{
-      .link{
+    .paragraph {
+      .link {
         color: black;
         text-decoration: none;
       }
@@ -299,7 +336,7 @@
   }
 }
 
-.headingLevel1--title-cronometro-geral{
+.headingLevel1--title-cronometro-geral {
   color: #ffffff;
   font-weight: 700;
   font-family: 'Inter';
@@ -307,47 +344,71 @@
   line-height: 100%;
   letter-spacing: 24px;
   text-transform: uppercase;
+
   @media (max-width: 767px) {
     font-size: 40px !important;
     letter-spacing: 7px;
   }
 }
 
-.paragraph--subtitle-cronometro-geral{
+.paragraph--subtitle-cronometro-geral {
   color: #ffffff;
   font-size: 30px;
+
   @media (max-width: 767px) {
     font-size: 20px !important;
   }
 }
 
 
-.paragraph--section-title{
+.paragraph--section-title {
   color: #ffffff;
   font-family: 'inter';
   font-size: 64px;
   margin: 5px;
-    @media (max-width: 767px) {
+
+  @media (max-width: 767px) {
     font-size: 40px !important;
     margin: 0 !important;
   }
 }
 
-.wrapper--section-title{
-   @media (max-width: 767px) {
-    margin: 20px 0;
-   }
-}
-
-.paragraph--section-title{
+.wrapper--section-title {
   @media (max-width: 767px) {
-    margin: 0!important;
+    margin: 20px 0;
   }
 }
 
-.container--section-title{
+.paragraph--section-title {
+  @media (max-width: 767px) {
+    margin: 0 !important;
+  }
+}
+
+.container--section-title {
   justify-content: center;
   text-align: center;
+  margin-top: 15px;
+  margin-bottom: 27px;
+
+  @media (max-width: 1025px) {
+    margin-bottom: 5px;
+  }
+}
+
+.paragraph--section-textSeo-title,
+.wrapper--section-textSeo-title {
+  color: #fff;
+
+}
+
+.heading--section-textSeo-title-category {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
 }
 
 .headingLevel2--section-textSeo-title {
@@ -355,6 +416,7 @@
   font-weight: 600;
   margin-bottom: 0;
   color: #fff;
+  font-family: Inter, sans-serif;
 }
 
 .wrapper--section-textSeo-text {
@@ -397,4 +459,17 @@
     max-height: 100px;
 
   }
+}
+.link--section-textSeo-text {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 68px 30px;
+}
+
+.flexCol--section-textSeo {
+  padding: 10px 68px 30px;
+}
+
+.vtex-rich-text-0-x-heading-level-3 {
+  margin: 15px;
 }

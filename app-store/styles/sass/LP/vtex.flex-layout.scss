@@ -8,31 +8,37 @@
   &--lp__first-banner {
     .flexRowContent {
       align-items: center;
-      @include tablet{
+
+      @include tablet {
         flex-direction: column;
       }
+
       :global(.vtex-store-components-3-x-imageElement--lp__first-banner) {
         width: 60.8%;
         height: fit-content;
-        @include tablet{
-            width: 100%;
-          }
+
+        @include tablet {
+          width: 100%;
+        }
       }
     }
   }
 
   &--lp__secund-banner {
     .flexRowContent {
-      display: flex      ;
+      display: flex;
       justify-content: center;
       align-items: center;
       margin: 60px auto 0;
-      @include tablet{
+
+      @include tablet {
         gap: 10px;
         flex-direction: column-reverse;
       }
-      @include mobile{
+
+      @include mobile {
         gap: 0;
+
         :global(.vtex-store-components-3-x-imageElement--lp__secund-banner) {
           width: 95%;
         }
@@ -42,19 +48,18 @@
 
   &--lp__three-banner {
     .flexRowContent {
-        align-items: center;
-        justify-content: space-between;
-        @include tablet{
-            margin: 0;
-            flex-direction: column;
-          }
+      align-items: center;
+      justify-content: space-between;
+
+      @include tablet {
+        margin: 0;
+        flex-direction: column;
+      }
     }
   }
 }
 
 .flexRowContent--lp__banner-duplo-v2 {
-
-
   :global(.vtex-store-components-3-x-imageElement) {
     width: 950px;
     height: 634px;
@@ -96,6 +101,7 @@
     height: 660px;
     position: relative;
   }
+
   :global(.vtex-rich-text-0-x-container--lp__text-banner-triplo-um) {
     position: absolute;
     bottom: 30px;
@@ -150,7 +156,8 @@
 
 .flexColChild--lp__banner-final {
   position: relative;
-  :global(.vtex-store-components-3-x-imageElement){
+
+  :global(.vtex-store-components-3-x-imageElement) {
     width: 100%;
     height: 400px;
   }
@@ -171,8 +178,8 @@
   }
 }
 
-.flexRowContent--lp__banner--v2{
-  .flexCol--banner-text{
+.flexRowContent--lp__banner--v2 {
+  .flexCol--banner-text {
     position: relative;
   }
 }
@@ -182,10 +189,10 @@
 
 }
 
-.flexColChild--banner-text--v2{
+.flexColChild--banner-text--v2 {
   :global(.vtex-store-components-3-x-imageElement--lp__left-banner-duplo-mob) {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -199,10 +206,10 @@
 
 }
 
-.flexColChild--banner-text--v2{
+.flexColChild--banner-text--v2 {
   :global(.vtex-store-components-3-x-imageElement--lp__rigth-banner-duplo-mob) {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -217,7 +224,7 @@
   display: flex;
 }
 
-:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left-mob--v2){
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left-mob--v2) {
   position: absolute;
   bottom: 30px;
   margin: 0 20px;
@@ -228,47 +235,50 @@
 }
 
 :global(.vtex-rich-text-0-x-wrapper--lp__banner-final-text--v2) {
-    justify-items: center;
-    position: absolute;
-    bottom: 50px;
-    margin: 0 20px;
-    width: 100%;
+  justify-items: center;
+  position: absolute;
+  bottom: 50px;
+  margin: 0 20px;
+  width: 100%;
 
 }
 
-.flexRowContent{
-  &--lp__banner-duplo--v2{
+.flexRowContent {
+  &--lp__banner-duplo--v2 {
     gap: 10px;
     margin-bottom: 10px;
-    @include mobile{
+
+    @include mobile {
       margin-bottom: 10px;
     }
   }
 
-  &--lp__banner-final--v2{
+  &--lp__banner-final--v2 {
     position: relative;
   }
 
-  &--lp__banner-trio--v2{
+  &--lp__banner-trio--v2 {
     gap: 10px;
     margin-bottom: 10px;
-    @include mobile{
+
+    @include mobile {
       margin-bottom: 10px;
     }
   }
 
-  &--lp__banner-topo--v2{
+  &--lp__banner-topo--v2 {
     margin-bottom: 10px;
-    @include mobile{
+
+    @include mobile {
       margin-bottom: 10px;
     }
   }
 
-  &--lp__banner-wrapper-mob--v2{
+  &--lp__banner-wrapper-mob--v2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    :global(.vtex-store-components-3-x-imageElement--lp__banner-wrapper--v2){
+    :global(.vtex-store-components-3-x-imageElement--lp__banner-wrapper--v2) {
       height: 100%;
       display: block;
       width: 100%;
@@ -276,25 +286,28 @@
 
   }
 
-  .flexColChild--lp__banner-wrapper-two--v2{
+  .flexColChild--lp__banner-wrapper-two--v2 {
     display: contents;
   }
 
-  .flexCol{
-    &--lp__banner-text--v2{
+  .flexCol {
+    &--lp__banner-text--v2 {
       position: relative;
       width: fit-content;
     }
 
-    &--lp__banner-duplo-rigth--v2{
+    &--lp__banner-duplo-rigth--v2 {
       width: fit-content;
-      .flexColChild{
+
+      .flexColChild {
         width: fit-content;
       }
     }
-    &--lp__banner-duplo-left--v2{
+
+    &--lp__banner-duplo-left--v2 {
       width: fit-content;
-      .flexColChild{
+
+      .flexColChild {
         width: fit-content;
       }
     }
@@ -302,7 +315,7 @@
 
 }
 
-.flexColChild--lp__banner-text--v2{
+.flexColChild--lp__banner-text--v2 {
   width: fit-content;
 }
 
@@ -337,6 +350,7 @@
   .flexRowContent--Category__banners {
     display: flex;
     gap: 15px;
+
     :global(.vtex-store-components-3-x-imageElement) {
       width: 78.55px;
       height: 32px;
@@ -375,6 +389,7 @@
 @media (max-width: 1024px) {
   .flexRowContent--Category__banners {
     gap: 5px !important;
+
     :global(.vtex-store-components-3-x-imageElement) {
       width: 100px;
       height: auto;
@@ -392,6 +407,7 @@
   .flexColChild--grid_product-LP--mobile {
     :global(.vtex-list-context-0-x-list) {
       grid-template-columns: 1fr;
+
       :global(.vtex-list-context-0-x-item):first-child,
       :global(.vtex-list-context-0-x-item):last-child {
         display: none;
@@ -414,8 +430,8 @@
 
 .flexColChild--grid_product-LP--mobile {
   :global(.vtex-product-summary-2-x-containerNormal) {
-    :global(.vtex-wish-list-1-x-wishlistIconContainer){
-      :global(.vtex-button__label)::after{
+    :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+      :global(.vtex-button__label)::after {
         content: initial;
       }
     }
@@ -426,12 +442,14 @@
 .flexRowContent--grid_product-home {
   :global(.vtex-product-summary-2-x-containerNormal) {
     position: relative;
-    :global(.vtex-wish-list-1-x-wishlistIconContainer){
+
+    :global(.vtex-wish-list-1-x-wishlistIconContainer) {
       position: absolute;
       top: 0;
       z-index: 99;
       right: 10px;
-      :global(.vtex-button__label)::after{
+
+      :global(.vtex-button__label)::after {
         content: initial;
       }
     }
@@ -441,6 +459,7 @@
 .flexRowContent--LP :global(.vtex-product-summary-2-x-nameContainer--shelf) {
   display: flex !important;
 }
+
 .flexRow--LP .flexRow--selling-price-savings {
   display: block !important;
 }
@@ -451,10 +470,11 @@
 
 @media(max-width:767px) {
   .flexColChild--grid_product-LP--mobile {
+
     :global(.vtex-list-context-0-x-list),
     :global(.vtex-product-summary-2-x-containerNormal) {
-    width: 95%;
-    max-height: 100% !important;
+      width: 95%;
+      max-height: 100% !important;
     }
   }
 }
@@ -465,9 +485,9 @@
     justify-content: center;
     display: flex;
 
-  :global(.vtex-list-context-0-x-list),
-  :global(.vtex-product-summary-2-x-containerNormal) {
-    max-height: 100% !important;
+    :global(.vtex-list-context-0-x-list),
+    :global(.vtex-product-summary-2-x-containerNormal) {
+      max-height: 100% !important;
     }
   }
 }
@@ -478,9 +498,11 @@
     align-items: center;
   }
 }
+
 @media (max-width: 767px) {
   .flexRowContent--Category__banners {
     gap: 5px !important;
+
     :global(.vtex-store-components-3-x-imageElement) {
       width: 90px;
       height: auto;
@@ -502,6 +524,7 @@
       gap: 10px;
     }
   }
+
   .flexRow--LP {
     margin-bottom: 50px !important;
   }
@@ -518,26 +541,71 @@
       font-size: 5px;
       display: flex;
       flex-wrap: wrap;
+    }
+  }
+
+.flexRowContent--container-link {
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-bottom: 10%;
+
+  @media (max-width: 767px) {
+    font-size: 5px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-.flexCol--section-shelf{
+.flexRowContent--container-link-tamanho {
+  column-gap: 3px;
+  row-gap: 10px;
+
+  @media (max-width: 1025px) {
+    display: flex;
+    row-gap: 0;
+    column-gap: 15px;
+  }
+}
+
+.flexRowContent--container-link-tamanho-num {
+  column-gap: 3px;
+  row-gap: 10px;
+
+  @media (max-width: 1025px) {
+    display: flex;
+    column-gap: 0;
+  }
+}
+
+@media (max-width: 1025px) {
+  .flexRow--container-link-tamanho-num {
+    padding-bottom: 20px;
+  }
+}
+.flexRow--container-link-tamanho{
+  padding-bottom: 18px;
+}
+
+.flexCol--section-shelf {
   background-color: black;
 }
+
 .flexRowContent--bf-geral-container {
   background-color: #000;
 }
 
-.flexCol{
+.flexCol {
   &--section-shelf {
     @media (max-width: 1025px) {
       margin-top: 20px;
     }
   }
+
   &--section-textSeo {
     padding: 10px 68px 30px;
+
     @media (max-width: 1025px) {
-      padding: 10px 5px 30px;
+      padding: 10px 15px 30px;
     }
   }
 }
@@ -548,19 +616,39 @@
 }
 
 .flexRowContent--black-friday-container {
+  .flexRow--section-textSeo-category {
+    padding-top: 65px;
+    @media (max-width: 1025px) {
+    }
+  }
+}
+
+.flexRowContent--bf-form-container-category{
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow--black-friday-container {
+  background-color: #000;
+}
+
+.flexRowContent--black-friday-cronometro-container {
   background-color: #000;
 
-  :global(.vtex-product-summary-2-x-brandName--shelf){
+  :global(.vtex-product-summary-2-x-brandName--shelf) {
     color: #FDFBFB !important;
     width: auto !important;
   }
-  :global(.vtex-product-price-1-x-currencyContainer--shelf){
+
+  :global(.vtex-product-price-1-x-currencyContainer--shelf) {
     color: #FDFBFB !important;
   }
-  :global(.vtex-product-price-1-x-installments--shelf){
+
+  :global(.vtex-product-price-1-x-installments--shelf) {
     color: #FDFBFB !important;
   }
-  :global(.vtex-product-price-1-x-savings--shelf){
+
+  :global(.vtex-product-price-1-x-savings--shelf) {
     color: #FDFBFB !important;
   }
 }
@@ -600,4 +688,51 @@
 }
 .flexRow--bf-geral-container :global(.vtex-product-price-1-x-savings--shelf){
   color: #FDFBFB !important;
+}
+
+.flexRowContent--shelf-row-1 {
+  padding: 0 10px;
+  gap: 10px;
+}
+
+.flexRowContent--section-shelf {
+  margin-top: 20px;
+  padding: 0 10px;
+  justify-content: center;
+}
+
+.flexRow--bf-categorias-container :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+  display: none;
+}
+
+.flexRow--black-friday-section-image-banner {
+  padding: 0 12px;
+}
+
+.flexRow--bf-categorias-container :global(.vtex-product-summary-2-x-nameContainer--shelf) {
+  margin-top: 0;
+}
+
+.flexRow--bf-categorias-container :global(.vtex-product-summary-2-x-productBrand--shelf) {
+  width: 100% !important;
+}
+
+.flexRow--bf-categorias-container :global(.vtex-product-summary-2-x-brandName--shelf) {
+  color: #fff;
+}
+
+.flexRow--bf-categorias-container :global(.vtex-product-price-1-x-sellingPrice--shelf) {
+  color: #fff;
+}
+
+.flexRow--bf-categorias-container :global(.vtex-product-price-1-x-installments--shelf) {
+  color: #fff;
+}
+
+.flexRow--bf-categorias-container :global(.vtex-product-price-1-x-savings--shelf) {
+  color: #fff;
+}
+
+:global(.vtex-wish-list-1-x-wishlistIconContainer) :global(.vtex-wish-list-1-x-wishlistIcon) {
+  width: 100% !important;
 }

@@ -18,7 +18,7 @@
 
   .sliderArrows--shelf {
     @include tablet{
-      translate: 0 -50px;
+      translate: 0 -10px;
     }
   }
 }
@@ -56,4 +56,10 @@
 
 .paginationDot--shelf--isActive {
   background-color: #696969;
+}
+@media (min-width: 1026px) {
+  .sliderTrack--shelf-3items,
+  .sliderTrack--shelf-lpbf-categorias {
+    gap: 5px;
+  }
 }

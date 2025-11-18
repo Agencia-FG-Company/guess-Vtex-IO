@@ -1,0 +1,1053 @@
+{
+  "store.custom#landing-page-black-friday-categorias":{
+    "blocks": [
+      "flex-layout.row#bf-categorias-container"
+    ]
+  },
+  "flex-layout.row#bf-categorias-container": {
+    "children": [
+      "flex-layout.col#bf-categorias-container-categorias"
+    ],
+    "props": {
+      "blockClass": ["bf-categorias-container"]
+    }
+  },
+  "flex-layout.col#bf-categorias-container": {
+    "children": [
+      "flex-layout.col#black-friday-section-banner-categorias",
+      "flex-layout.row#black-friday-section-images-categorias",
+      "flex-layout.col#black-friday-section-banner-categorias-2",
+      "flex-layout.row#black-friday-section-shelf-categorias",
+      "flex-layout.row#black-friday-section-shelf-categorias",
+      "flex-layout.row#black-friday-section-shelf-categorias",
+      "flex-layout.row#black-friday-section-shelf-categorias",
+      "flex-layout.row#black-friday-section-textSeo"
+    ],
+    "props": {
+      "blockClass": ["bf-categorias-container"]
+    }
+  },
+
+
+  "flex-layout.col#bf-categorias-container-categorias": {
+    "children": [
+      "flex-layout.col#black-friday-section-banner-categorias",
+      "flex-layout.row#black-friday-section-images-categorias",
+      "flex-layout.col#black-friday-section-banner-categorias-2",
+      "flex-layout.row#black-friday-section-shelf-categorias-1",
+      "flex-layout.row#black-friday-section-shelf-categorias-02-fileira",
+      "flex-layout.row#black-friday-section-shelf-categorias-03-fileira",
+      "flex-layout.row#black-friday-section-image-banner",
+      "flex-layout.row#black-friday-section-shelf-categorias-04-fileira",
+      "flex-layout.row#black-friday-section-textSeo-category"
+    ],
+    "props": {
+      "blockClass": ["bf-categorias-container"]
+    }
+  },
+
+  /* ---------- 1ª FILEIRA (Imagem + 3 produtos) ---------- */
+  "flex-layout.row#black-friday-section-shelf-categorias-1": {
+    "children": [
+      "image#bf-shelf-image-left",
+      "list-context.product-list#bf_shelf_1"
+    ],
+    "props": {
+      "preserveLayoutOnMobile":true,
+      "blockClass": ["section-shelf", "shelf-row-1"]
+    }
+  },
+
+  /* ---------- 2ª FILEIRA (4 produtos) ---------- */
+  "flex-layout.row#black-friday-section-shelf-categorias-02-fileira": {
+    "children": [
+      "list-context.product-list#bf_shelf_2"
+    ],
+    "props": {
+      "blockClass": ["section-shelf", "shelf-row-2"]
+    }
+  },
+
+  /* ---------- 3ª FILEIRA (3 produtos + imagem) ---------- */
+  "flex-layout.row#black-friday-section-shelf-categorias-03-fileira": {
+    "children": [
+      "list-context.product-list#bf_shelf_3",
+      "responsive-layout.desktop#image-right"
+    ],
+    "props": {
+      "preserveLayoutOnMobile":true,
+      "blockClass": ["section-shelf", "shelf-row-3"]
+    }
+  },
+
+  "flex-layout.row#black-friday-section-image-banner": {
+    "children": [
+      "responsive-layout.mobile#image-banner"
+    ],
+    "props": {
+      "blockClass": ["black-friday-section-image-banner"]
+    }
+  },
+
+  "responsive-layout.mobile#image-banner": {
+    "children": [
+      "image#bf-image-banner"
+    ]
+  },
+
+  "image#bf-image-banner": {
+    "props": {
+      "blockClass": ["bf-image-banner"],
+      "src": "/arquivos/banner-mobile-lp.png"
+    }
+  },
+
+  /* ---------- 4ª FILEIRA (4 produtos) ---------- */
+  "flex-layout.row#black-friday-section-shelf-categorias-04-fileira": {
+    "children": [
+      "list-context.product-list#bf_shelf_4"
+    ],
+    "props": {
+      "blockClass": ["section-shelf", "shelf-row-4"]
+    }
+  },
+
+  "responsive-layout.desktop#image-right": {
+    "children": ["image#bf-shelf-image-right"]
+  },
+
+  /* ---------- IMAGENS ---------- */
+  "image#bf-shelf-image-left": {
+    "props": {
+      "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/35f3a515-2b2e-4a33-9f4b-81ae19395c34___cfd91b97098492c99f05c15cb3080a3d.png",
+      "blockClass": "shelf-image-left"
+    }
+  },
+  "image#bf-shelf-image-right": {
+    "props": {
+      "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/6a1e7892-919f-4bdd-b8c2-ac5ede73eb87___f0d63a0564d72e47bc1cf245b510ea4f.png",
+      "blockClass": "shelf-image-right"
+    }
+  },
+
+  /* ---------- LISTAS DE PRODUTOS ---------- */
+  "list-context.product-list#bf_shelf_1": {
+    "children": ["slider-layout#bf__shelf-3items"],
+    "blocks": ["product-summary.shelf#bf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+  "list-context.product-list#bf_shelf_2": {
+    "children": ["slider-layout#bf__shelf-4items"],
+    "blocks": ["product-summary.shelf#bf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+  "list-context.product-list#bf_shelf_3": {
+    "children": ["slider-layout#bf__shelf-2items"],
+    "blocks": ["product-summary.shelf#bf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+  "list-context.product-list#bf_shelf_4": {
+    "children": ["slider-layout#bf__shelf-4items"],
+    "blocks": ["product-summary.shelf#bf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+
+  /* ---------- SLIDERS ---------- */
+  "slider-layout#bf__shelf-4items": {
+    "props": {
+      "itemsPerPage": { "desktop": 4, "tablet": 2, "phone": 2 },
+      "infinite": true,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never",
+      "blockClass": "shelf-lpbf-categorias"
+    }
+  },
+  "slider-layout#bf__shelf-3items": {
+    "props": {
+      "itemsPerPage": { "desktop": 3, "tablet": 2, "phone": 1 },
+      "infinite": true,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never",
+      "blockClass": "shelf-3items"
+    }
+  },
+    "slider-layout#bf__shelf-2items": {
+    "props": {
+      "itemsPerPage": { "desktop": 2, "tablet": 2, "phone": 2 },
+      "infinite": true,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never",
+      "blockClass": "shelf-lpbf-categorias"
+    }
+  },
+    "slider-layout#bf__shelf-1items": {
+    "props": {
+      "itemsPerPage": { "desktop": 4, "tablet": 2, "phone": 1 },
+      "infinite": true,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never",
+      "blockClass": "shelf"
+    }
+  },
+
+  /* ---------- PRODUTO (reaproveitado) ---------- */
+  "product-summary.shelf#bf": {
+    "props": {
+      "blockClass": "shelf-bf"
+    },
+    "children": [
+      "stack-layout#shelf__home",
+      "flex-layout.row#flags-shelf",
+      "product-specification-badges",
+      "flex-layout.row#name-wishlist",
+      "flex-layout.row#selling-price-savings",
+      "product-installments#summary"
+    ]
+  },
+
+   "flex-layout.row#black-friday-section-shelf": {
+    "title":"Sessão Shelf",
+    "children": [
+      "flex-layout.col#black-friday-section-shelf"
+    ],
+    "props": {
+      "blockClass": ["section-shelf"]
+    }
+  },
+
+  "flex-layout.col#black-friday-section-shelf": {
+    "title":"Sessão Shelf",
+    "children": [
+      "rich-text#section-shelf-title",
+      "list-context.product-list#bf_first__shelf",
+      "list-context.product-list#bf_second__shelf"
+    ],
+    "props": {
+      "blockClass": ["section-shelf"]
+    }
+  },
+
+  "rich-text#section-shelf-title": {
+    "title":"Sessão Shelf - Titulo",
+    "props": {
+      "blockClass": ["section-title"],
+      "font": "t-body",
+      "text": "Lorem _Ipsum_ dolor"
+    }
+  },
+
+  "slider-layout#bf__shelf": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 2
+      },
+      "showPaginationDots": "never",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf",
+        "centerMode": {
+      "desktop": "disabled",
+      "phone": "to-the-left"
+    },
+    "centerModeSlidesGap": 8
+    }
+  },
+  "list-context.product-list#bf_first__shelf": {
+    "blocks": [ "product-summary.shelf#bf-1"],
+    "children": ["slider-layout#bf__shelf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+  "list-context.product-list#bf_second__shelf": {
+    "blocks": [ "product-summary.shelf#bf-2"],
+    "children": ["slider-layout#bf__shelf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
+    }
+  },
+  "product-summary.shelf#bf-1": {
+    "title": "Resumo do produto na prateleira - 1",
+    "props": {
+      "blockClas": "shelf-bf"
+    },
+    "children": [
+      "stack-layout#shelf__home",
+      "flex-layout.row#flags-shelf",
+      "product-specification-badges",
+      "flex-layout.row#name-wishlist",
+      "flex-layout.row#selling-price-savings",
+      "product-installments#summary"
+    ]
+  },
+  "product-summary.shelf#bf-2": {
+    "title": "Resumo do produto na prateleira - 2",
+    "props": {
+      "blockClas": "shelf-bf"
+    },
+    "children": [
+      "stack-layout#shelf__home",
+      "flex-layout.row#flags-shelf",
+      "product-specification-badges",
+      "flex-layout.row#name-wishlist",
+      "flex-layout.row#selling-price-savings",
+      "product-installments#summary"
+    ]
+  },
+
+"responsive-layout.phone#1": {
+  "children": ["list-context.image-list#section-images-mobile"]
+},
+
+  "list-context.image-list#section-images-mobile": {
+    "title":"Sessão Images - Images",
+    "children": [
+      "rich-text#section-images-title", 
+      "slider-layout#section-images-mobile"],
+    "props": {
+      "blockClass":"images-mobile-banners",
+      "preload": true,
+      "images": [
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#section-images-mobile": {
+    "props": {
+      "blockClass":"images-mobile-banners",
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 1,
+        "phone": 5
+      },
+      "infinite": true,
+      "showNavigationArrows":"never",
+      "showPaginationDots":"never",
+      "centerMode":{
+        "desktop": "disabled",
+        "phone": "disabled"
+      }
+    }
+  },
+  "flex-layout.row#black-friday-section-shelf-categorias": {
+    "title":"Sessão Shelf",
+    "children": [
+      "flex-layout.col#black-friday-section-shelf-categorias"
+    ],
+    "props": {
+      "blockClass": ["section-shelf"]
+    }
+  },
+
+  "flex-layout.col#black-friday-section-shelf-categorias": {
+    "title":"Sessão Shelf",
+    "children": [
+      "list-context.product-list#bf_first__shelf"
+    ],
+    "props": {
+      "blockClass": ["section-shelf"]
+    }
+  },
+
+  "slider-layout#bf__shelf": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 2
+      },
+      "showPaginationDots": "never",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf",
+        "centerMode": {
+      "desktop": "disabled",
+      "phone": "to-the-left"
+    },
+    "centerModeSlidesGap": 8
+    }
+  },
+
+  "flex-layout.row#black-friday-section-textSeo-category": {
+  "title": "Sessão Texto SEO",
+  "children": [
+    "flex-layout.col#black-friday-section-textSeo-category"
+  ],
+  "props": {
+    "blockClass": ["section-textSeo", "section-textSeo-category"]
+  }
+},
+"flex-layout.col#black-friday-section-textSeo-category": {
+  "title": "Sessão Texto SEO",
+  "children": [
+    "rich-text#section-textSeo-title-bfcategorias",
+    "CollapseText#textSeo-bfcategorias"
+  ],
+  "props": {
+    "blockClass": ["section-textSeo"]
+  }
+},
+"rich-text#section-textSeo-title-bfcategorias": {
+  "title": "Sessão Seo - Titulo",
+  "props": {
+    "blockClass": ["section-textSeo-title", "section-textSeo-title-category" ],
+    "font": "t-body",
+    "text": "# A Black Friday na GUESS Brasil começou!"
+  }
+},
+
+  "CollapseText#textSeo-bfcategorias":{
+    "children": ["rich-text#conteudoSEO-bfcategorias"]
+  },
+
+  "rich-text#conteudoSEO-bfcategorias": {
+    "props": {
+      "text": "**A Black Friday** da GUESS Brasil é o momento mais esperado do ano para quem deseja unir moda de alto padrão e valores irresistíveis: prepare-se para transformar o seu *closet* com os produtos mais icônicos da nossa marca! Não perca o **início das ofertas de Black Friday** e adquira, em primeira mão, os itens que você sempre sonhou! ## Como garantir as melhores ofertas da GUESS durante a Black Friday?  Planeje-se com antecedência para garantir os **melhores descontos de Black Friday** na GUESS Brasil. Muitas vezes, essa liberação acontece em etapas e as **promoções de Black Friday** podem surgir de forma relâmpago. Por isso, é importante agir rápido para não perder nenhuma oportunidade!",
+      "blockClass": ["section-textSeo-text", "section-textSeo-text-category"]
+    }
+  },
+
+  "flex-layout.row#black-friday-section-images-categorias": {
+    "title":"Sessão Images",
+    "children": [
+      "toggle-layout#section-images-categorias-feminino",
+      "toggle-layout#section-images-categorias-masculino"
+    ],
+    "props": {
+      "blockClass": ["bf-form-container", "bf-form-container-category"]
+    }
+  },
+  /* ---------- Numeros Feminino INICIO  ---------- */
+    "toggle-layout#section-images-categorias-feminino": {
+    "title": "Ativador seção feminino",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.col#black-friday-section-images-categorias-feminino"
+    ]
+  },
+  "flex-layout.col#black-friday-section-images-categorias-feminino": {
+    "title":"Sessão Images",
+    "children": [
+      "rich-text#section-images-title-1-feminino",
+      "list-context.image-list#section-images-categorias-feminino",
+      "rich-text#section-images-title-numeros-feminino",
+      "flex-layout.row#botao-tamanho-feminino",
+      "flex-layout.row#botao-tamanho-num-feminino"
+    ],
+    "props": {
+      "blockClass": ["bf-section-images"]
+    }
+  },
+
+  "flex-layout.row#botao-tamanho-feminino": {
+    "title":"Sessão tamanho Letra",
+    "children": [
+      "link.product#botao-tamanho-pp-feminino",
+      "link.product#botao-tamanho-p-feminino",
+      "link.product#botao-tamanho-m-feminino",
+      "link.product#botao-tamanho-g-feminino",
+      "link.product#botao-tamanho-gg-feminino"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["container-link-tamanho"],
+      "colSizing": "auto"
+    }
+  },
+ 
+  "link.product#botao-tamanho-pp-feminino": {
+    "props": {
+      "title":"Sessão tamanho PP",
+      "href": "/{slug}/p",
+      "label": "PP",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+  "link.product#botao-tamanho-p-feminino": {
+    "props": {
+      "title":"Sessão tamanho P",
+      "href": "/{slug}/p",
+      "label": "P",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+  "link.product#botao-tamanho-m-feminino": {
+    "props": {
+      "title":"Sessão tamanho M",
+      "href": "/{slug}/p",
+      "label": "M",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-g-feminino": {
+    "props": {
+      "title":"Sessão tamanho G",
+      "href": "/{slug}/p",
+      "label": "G",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-gg-feminino": {
+    "props": {
+      "title":"Sessão tamanho GG",
+      "href": "/{slug}/p",
+      "label": "GG",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+
+  "flex-layout.row#botao-tamanho-num-feminino": {
+    "title":"Sessão Tamanho Numero",
+    "children": [
+      "link.product#botao-tamanho-34-feminino",
+      "link.product#botao-tamanho-36-feminino",
+      "link.product#botao-tamanho-38-feminino",
+      "link.product#botao-tamanho-40-feminino",
+      "link.product#botao-tamanho-42-feminino",
+      "link.product#botao-tamanho-44-feminino",
+      "link.product#botao-tamanho-46-feminino"
+
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["container-link-tamanho-num"],
+      "colSizing": "auto"
+    }
+  },
+  "link.product#botao-tamanho-34-feminino": {
+    "props": {
+      "title":"Sessão tamanho 34",
+      "href": "/{slug}/p",
+      "label": "34",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+  "link.product#botao-tamanho-36-feminino": {
+    "props": {
+      "title":"Sessão tamanho 36",
+      "href": "/{slug}/p",
+      "label": "36",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+  "link.product#botao-tamanho-38-feminino": {
+    "props": {
+      "title":"Sessão tamanho 38",
+      "href": "/{slug}/p",
+      "label": "38",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-40-feminino": {
+    "props": {
+      "title":"Sessão tamanho 40",
+      "href": "/{slug}/p",
+      "label": "40",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-42-feminino": {
+    "props": {
+      "title":"Sessão tamanho 42",
+      "href": "/{slug}/p",
+      "label": "42",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+      "link.product#botao-tamanho-44-feminino": {
+    "props": {
+      "title":"Sessão tamanho 44",
+      "href": "/{slug}/p",
+      "label": "44",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+      "link.product#botao-tamanho-46-feminino": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "46",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+
+  "rich-text#section-images-title-1-feminino": {
+    "title":"Sessão Images - Titulo",
+    "props": {
+      "blockClass": ["section-title"],
+      "font": "t-body",
+      "text": "Sessão *Images* - Titulo Feminino"
+    }
+  },
+  "rich-text#section-images-title-numeros-feminino": {
+    "title":"Sessão Images - Titulo Numeração",
+    "props": {
+      "blockClass": ["section-title"],
+      "font": "t-body",
+      "text": "Sessão Images - Titulo Numeração Feminino"
+    }
+  },
+  "list-context.image-list#section-images-categorias-feminino": {
+    "title":"Sessão Images - Images",
+    "children": ["slider-layout#section-images"],
+    "props": {
+      "blockClass":"section-images",
+      "preload": true,
+      "images": [
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        }
+      ]
+    }
+  },
+    /* ---------- Numeros Feminino FIM ---------- */
+
+  /* ---------- Numeros Masculino INICIO  ---------- */
+    "toggle-layout#section-images-categorias-masculino": {
+    "title": "Ativador seção Masculino",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.col#black-friday-section-images-categorias-masculino"
+    ]
+  },
+  "flex-layout.col#black-friday-section-images-categorias-masculino": {
+    "title":"Sessão Images",
+    "children": [
+     "toggle-layout#section-images-categorias-masculino-image",
+      "rich-text#section-images-title-numeros-masculino",
+      "flex-layout.row#botao-tamanho-masculino",
+      "flex-layout.row#botao-tamanho-num-masculino"
+    ],
+    "props": {
+      "blockClass": ["bf-section-images"]
+    }
+  },
+    "toggle-layout#section-images-categorias-masculino-image": {
+    "title": "Ativador seção Imagens Masculino",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "rich-text#section-images-title-1-masculino",
+      "list-context.image-list#section-images-categorias-masculino"
+    ]
+  },
+
+  "flex-layout.row#botao-tamanho-masculino": {
+    "title":"Sessão tamanho Letra",
+    "children": [
+      "link.product#botao-tamanho-p-masculino",
+      "link.product#botao-tamanho-m-masculino",
+      "link.product#botao-tamanho-g-masculino",
+      "link.product#botao-tamanho-gg-masculino",
+      "link.product#botao-tamanho-ggg-masculino"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["container-link-tamanho"],
+      "colSizing": "auto"
+    }
+  },
+ 
+
+  "link.product#botao-tamanho-p-masculino": {
+    "props": {
+      "title":"Sessão tamanho P",
+      "href": "/{slug}/p",
+      "label": "P",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+  "link.product#botao-tamanho-m-masculino": {
+    "props": {
+      "title":"Sessão tamanho M",
+      "href": "/{slug}/p",
+      "label": "M",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-g-masculino": {
+    "props": {
+      "title":"Sessão tamanho G",
+      "href": "/{slug}/p",
+      "label": "G",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-gg-masculino": {
+    "props": {
+      "title":"Sessão tamanho GG",
+      "href": "/{slug}/p",
+      "label": "GG",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-ggg-masculino": {
+    "props": {
+      "title":"Sessão tamanho GGG",
+      "href": "/{slug}/p",
+      "label": "GGG",
+      "blockClass": ["link-custom-tamanho", "link-custom-tamanho-ggg"]
+    }
+  },
+
+  "flex-layout.row#botao-tamanho-num-masculino": {
+    "title":"Sessão Tamanho Numero",
+    "children": [
+      "link.product#botao-tamanho-36-masculino",
+      "link.product#botao-tamanho-38-masculino",
+      "link.product#botao-tamanho-40-masculino",
+      "link.product#botao-tamanho-42-masculino",
+      "link.product#botao-tamanho-44-masculino",
+      "link.product#botao-tamanho-46-masculino",
+      "link.product#botao-tamanho-48-masculino",
+      "link.product#botao-tamanho-50-masculino"
+
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["container-link-tamanho-num"],
+      "colSizing": "auto"
+    }
+  },
+ 
+  "link.product#botao-tamanho-36-masculino": {
+    "props": {
+      "title":"Sessão tamanho 36",
+      "href": "/{slug}/p",
+      "label": "36",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+  "link.product#botao-tamanho-38-masculino": {
+    "props": {
+      "title":"Sessão tamanho 38",
+      "href": "/{slug}/p",
+      "label": "38",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-40-masculino": {
+    "props": {
+      "title":"Sessão tamanho 40",
+      "href": "/{slug}/p",
+      "label": "40",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+    "link.product#botao-tamanho-42-masculino": {
+    "props": {
+      "title":"Sessão tamanho 42",
+      "href": "/{slug}/p",
+      "label": "42",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+      "link.product#botao-tamanho-44-masculino": {
+    "props": {
+      "title":"Sessão tamanho 44",
+      "href": "/{slug}/p",
+      "label": "44",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+      "link.product#botao-tamanho-46-masculino": {
+    "props": {
+      "href": "/{slug}/p",
+      "label": "46",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+   "link.product#botao-tamanho-48-masculino": {
+    "props": {
+      "title":"Sessão tamanho 48",
+      "href": "/{slug}/p",
+      "label": "48",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+   "link.product#botao-tamanho-50-masculino": {
+    "props": {
+      "title":"Sessão tamanho 50",
+      "href": "/{slug}/p",
+      "label": "50",
+      "blockClass": ["link-custom-tamanho"]
+    }
+  },
+
+
+  "rich-text#section-images-title-1-masculino": {
+    "title":"Sessão Images - Titulo",
+    "props": {
+      "blockClass": ["section-title"],
+      "font": "t-body",
+      "text": "Sessão *Images* - Titulo Masculino"
+    }
+  },
+  "rich-text#section-images-title-numeros-masculino": {
+    "title":"Sessão Images - Titulo Numeração",
+    "props": {
+      "blockClass": ["section-title"],
+      "font": "t-body",
+      "text": "Sessão Images - Titulo Numeração Masculino"
+    }
+  },
+  "list-context.image-list#section-images-categorias-masculino": {
+    "title":"Sessão Images - Images",
+    "children": ["slider-layout#section-images"],
+    "props": {
+      "blockClass":"section-images",
+      "preload": true,
+      "images": [
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        },
+        {
+          "loading": "eager",
+          "image": "/arquivos/section-images-banner.png"
+        }
+      ]
+    }
+  },
+    /* ---------- Numeros Feminino FIM ---------- */
+
+  //   "flex-layout.row#black-friday-section-images-categorias-2": {
+  //   "title":"Sessão Images",
+  //   "children": [
+  //     "flex-layout.col#black-friday-section-images-categorias"
+  //   ],
+  //   "props": {
+  //     "blockClass": ["bf-form-container","container-custom"]
+  //   }
+  // },
+  // "flex-layout.col#black-friday-section-images-categorias-2": {
+  //   "title":"Sessão Images",
+  //   "children": [
+  //     "rich-text#section-images-title",
+  //     "list-context.image-list#section-images-categorias"
+  //   ],
+  //   "props": {
+  //     "blockClass": ["bf-section-images"]
+  //   }
+  // },
+
+  //   "rich-text#section-images-title-2": {
+  //   "title":"Sessão Images - Titulo",
+  //   "props": {
+  //     "blockClass": ["section-title"],
+  //     "font": "t-body",
+  //     "text": "Lorem _Ipsum_ dolor"
+  //   }
+  // },
+  // "list-context.image-list#section-images-categorias-2": {
+  //   "title":"Sessão Images - Images",
+  //   "children": ["slider-layout#section-images"],
+  //   "props": {
+  //     "blockClass":"section-images",
+  //     "preload": true,
+  //     "images": [
+  //       {
+  //         "loading": "eager",
+  //         "image": "/arquivos/section-images-banner.png"
+  //       },
+  //       {
+  //         "loading": "eager",
+  //         "image": "/arquivos/section-images-banner.png"
+  //       },
+  //       {
+  //         "loading": "eager",
+  //         "image": "/arquivos/section-images-banner.png"
+  //       },
+  //       {
+  //         "loading": "eager",
+  //         "image": "/arquivos/section-images-banner.png"
+  //       }
+  //     ]
+  //   }
+  // },
+
+
+"flex-layout.col#black-friday-section-banner-categorias": {
+  "title":"Container Banner Categorias",
+  "children": [
+    "responsive-layout.desktop#section-banner-categorias",
+    "responsive-layout.mobile#section-banner-categorias"
+  ],
+  "props": {
+    "blockClass": ["bf-section-images"]
+  }
+},
+"responsive-layout.desktop#section-banner-categorias": {
+  "title":"Banner Categorias - Desktop",
+  "children": [
+    "image#section-banner-categorias-desktop"
+  ]
+},
+"responsive-layout.mobile#section-banner-categorias": {
+  "title":"Banner Categorias - Mobile",
+  "children": [
+    "image#section-banner-categorias-mobile"
+  ]
+},
+"image#section-banner-categorias-desktop": {
+  "props": {
+    "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/82e53c17-eb75-4c35-a5ea-cdcb38c19efe___0cfc134066e282d1c06803b7735dcbaa.png",
+    "alt": "Banner Black Friday Guess Desktop",
+    "blockClass": ["section-images-banner-2"],
+    "loading": "eager"
+  }
+},
+"image#section-banner-categorias-mobile": {
+  "props": {
+    "src": "/arquivos/banner-mobile-lp.png",
+    "alt": "Banner Black Friday Guess Mobile",
+    "blockClass": ["section-images-banner-2"],
+    "loading": "eager"
+  }
+},
+
+  "image#section-banner-categorias": {
+    "props": {
+      "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/82e53c17-eb75-4c35-a5ea-cdcb38c19efe___0cfc134066e282d1c06803b7735dcbaa.png",
+      "alt": "Banner Black Friday Guess",
+      "blockClass": ["section-images-banner-2"],
+      "loading": "eager"
+    }
+  },
+"flex-layout.col#black-friday-section-banner-categorias-2": {
+  "title":"Container Banner Categorias 2",
+  "children": [
+    "responsive-layout.desktop#section-banner-categorias-2",
+    "responsive-layout.mobile#section-banner-categorias-2"
+  ],
+  "props": {
+    "blockClass": ["bf-section-images"]
+  }
+},
+
+"responsive-layout.desktop#section-banner-categorias-2": {
+  "title":"Banner Categorias 2 - Desktop",
+  "children": [
+    "image#section-banner-categorias-2-desktop"
+  ]
+},
+"responsive-layout.mobile#section-banner-categorias-2": {
+  "title":"Banner Categorias 2 - Mobile",
+  "children": [
+    "image#section-banner-categorias-2-mobile"
+  ]
+},
+"image#section-banner-categorias-2-desktop": {
+  "props": {
+    "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/a2143e5c-cd99-4fb9-ab77-dc74cdcdd347___ac352ce35cf0fd1a6f4aca774ed92efe.png",
+    "alt": "Banner Black Friday Guess Desktop",
+    "blockClass": ["section-images-banner"],
+    "loading": "eager"
+  }
+},
+"image#section-banner-categorias-2-mobile": {
+  "props": {
+    "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/1d1cff7c-cdea-4df8-b2a1-111b1f75403b___0cb634daff38d88f28613e515f35aca5.png",
+    "alt": "Banner Black Friday Guess Mobile",
+    "blockClass": ["section-images-banner"],
+    "loading": "eager"
+  }
+},
+
+  "image#section-banner-categorias-2": {
+    "props": {
+      "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/a2143e5c-cd99-4fb9-ab77-dc74cdcdd347___ac352ce35cf0fd1a6f4aca774ed92efe.png",
+      "alt": "Banner Black Friday Guess",
+      "blockClass": ["section-images-banner"],
+      "loading": "eager"
+    }
+  },
+  "slider-layout#section-images": {
+    "props": {
+      "blockClass":"section-images",
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 1,
+        "phone": 2
+      },
+      "infinite": true,
+      "showNavigationArrows":"never",
+      "showPaginationDots":"never",
+      "centerMode":{
+        "desktop": "disabled",
+        "phone": "disabled"
+      }
+    }
+  }
+}
+
+
+
