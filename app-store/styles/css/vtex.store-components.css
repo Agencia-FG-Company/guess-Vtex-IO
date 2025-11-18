@@ -132,6 +132,10 @@
   z-index: 1;
 }
 
+.imageElement--section-images-banner-2 {
+  width: 100%;
+}
+
 .carouselGaleryThumbs {
   display: block;
   padding: 0 15px;
