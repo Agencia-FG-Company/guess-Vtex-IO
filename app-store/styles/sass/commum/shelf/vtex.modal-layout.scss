@@ -10,6 +10,7 @@
         border: 2px solid #bdbec0;
         @include tablet{
             bottom: 8px;
+            z-index: 9;
         }
     }
 }
