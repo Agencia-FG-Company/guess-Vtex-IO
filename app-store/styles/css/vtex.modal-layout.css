@@ -112,6 +112,7 @@
 @media (max-width: 1025px) {
   .triggerContainer--fast-buy {
     bottom: 8px;
+    z-index: 9;
   }
 }
 
