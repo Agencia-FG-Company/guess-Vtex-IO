@@ -6,43 +6,39 @@ function getCookie(name: string): string {
 }
 
 export const awinGet = () => {
-   console.log('Awin: componente carregado')
-   useEffect(() => {
-       // Aguarda o evento orderPlaced aparecer no dataLayer
-       const interval = setInterval(() => {
-      console.log('Awin: componente carregado222')
-    const dataLayer = (window as any).dataLayer || []
-    const orderEvent = dataLayer.find((item: any) => item.event === 'orderPlaced')
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const dataLayer = (window as any).dataLayer || []
+      const orderEvent = dataLayer.find((item: any) => item.event === 'orderPlaced')
 
-    if (!orderEvent) return // ainda não chegou, tenta de novo
+      if (!orderEvent) return
 
-    clearInterval(interval) // achou, para de verificar
+      clearInterval(interval)
 
-    const awc = getCookie('AwinChannelCookie')
-    const orderId = orderEvent.orderGroup
-    const value = orderEvent.transactionTotal
-    const currency = orderEvent.transactionCurrency
+      const awc = getCookie('_aw_sn_124520')
+      const orderId = orderEvent.orderGroup
+      const value = orderEvent.transactionTotal
+      const currency = orderEvent.transactionCurrency
 
-    if (!orderId || !value || !awc) {
-      console.warn('Awin: dados insuficientes', { orderId, value, awc })
-      return
-    }
+      if (!orderId || !value) {
+        console.warn('Awin: dados insuficientes', { orderId, value })
+        return
+      }
 
-    fetch('/_v/awin/conversion', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ orderId, value, currency, awc }),
-    })
-      .then(res => res.json())
-      .then(data => console.log('Awin: conversão enviada', data))
-      .catch(err => console.error('Awin: erro ao enviar conversão', err))
+      fetch('/_v/awin/conversion', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ orderId, value, currency, awc }),
+      })
+        .then(res => res.json())
+        .then(data => console.log('Awin: conversão enviada', data))
+        .catch(err => console.error('Awin: erro ao enviar conversão', err))
 
-  }, 500) // verifica a cada 500ms
+    }, 500)
 
-  // Para de verificar depois de 10 segundos para não ficar rodando forever
-  setTimeout(() => clearInterval(interval), 15000)
+    setTimeout(() => clearInterval(interval), 15000)
 
-}, [])
+  }, [])
 
   return <div />
 }
