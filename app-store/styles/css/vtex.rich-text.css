@@ -582,6 +582,7 @@
 .container--cashback__pdp .paragraph {
   font-size: 13px;
   margin: 0;
+  gap: 5px;
 }
 .container--pdp__trigger {
   width: fit-content !important;
