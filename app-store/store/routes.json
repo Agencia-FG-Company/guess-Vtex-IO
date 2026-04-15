@@ -61,5 +61,8 @@
   },
   "store.custom#LP-shades-of-the-season": {
     "path": "/shades-of-the-season"
+  },
+  "store.custom#regulamento-livelo": {
+    "path": "/regulamento-livelo"
   }
 }

@@ -1,0 +1,41 @@
+{
+  "store.custom#regulamento-livelo": {
+    "blocks": [
+      "flex-layout.row#regulamento-livelo"
+    ],
+    "props": {
+      "blockClass": "regulamento-livelo"
+    }
+  },
+
+  "flex-layout.row#regulamento-livelo": {
+    "children": [
+      "flex-layout.col#regulamento-livelo"
+    ]
+  },
+
+  "flex-layout.col#regulamento-livelo": {
+    "children": [
+      "rich-text#regulamento-livelo-title",
+      "rich-text#regulamento-livelo-content"
+    ],
+    "props": {
+      "blockClass": "regulamento-livelo",
+      "preventVerticalStretch": true
+    }
+  },
+  "rich-text#regulamento-livelo-title": {
+    "props": {
+      "text": "**Regulamento Guess Brasil e Livelo**",
+      "blockClass": "regulamento-livelo-title",
+      "textAlignment": "CENTER"
+    }
+  },
+
+  "rich-text#regulamento-livelo-content": {
+    "props": {
+      "text": "Ao realizar as compras na loja virtual do Guess Brasil, em www.guessbrasil.com.br/livelo?utm_source=parcerias&utm_medium=livelo (*Hotsite*), o cliente aceita e concorda com as regras contidas abaixo.\n\n**1. Participantes:** São as pessoas físicas, maiores de dezoito anos, que (i) adquirirem produtos vendidos e entregues pela Guess Brasil no Hotsite; (ii) sejam titulares do CPF informado durante o processo de compra no Hotsite (iii) incluírem o voucher disponibilizado da Parceria denominado **“LIVELO”** (com todas as letras maiúsculas) no campo \"CUPOM DE DESCONTO\" na sacola de compras do site antes de concluir a sua compra para acumular Pontos Livelo e (iv) cumpram todas as condições deste regulamento e do regulamento do Programa Livelo, disponível em www.livelo.com.br/regulamento.\n\n**2. Campanha:** Os Participantes poderão acumular:\n\n**(i) Acúmulo Padrão:** 2 (dois) Pontos Livelo a cada R$1 (um real) em compras para todos os Participantes, podendo ser alterado pela Guess Brasil a qualquer tempo; ou\n\n**(ii) Acúmulo Especial:** 3 (três) ou mais Pontos Livelo a cada real em campanhas especiais válidas por tempo determinado, conforme regras e mecânicas definidas na própria oferta/campanha.\n\n**2.1.** Em uma compra, o Participante somente pode acumular Pontos **OU** pelo Acúmulo Padrão **OU** Acúmulo Especial a depender das regras definidas na oferta, não sendo possível acumular Pontos nas duas modalidades.\n\n**2.2.** Para campanhas/ofertas que tiverem como critério a necessidade de ser assinante do Clube Livelo, serão elegíveis apenas os assinantes que (i) tiverem realizado sua adesão ao Clube Livelo antes de adquirir produtos no Hotsite e (ii) permanecer com sua assinatura ativa até o crédito dos Pontos Livelo.\n\n**3. Período:** A presente Campanha é válida por tempo indeterminado, podendo ser encerrado mediante prévio aviso de 30 (trinta) dias por parte da Guess Brasil.\n\n**4. Pontos Acumulados:** A quantidade de pontos a serem creditados será definida pela Guess Brasil, e este comunicará a Livelo para que proceda com o crédito devido.\n\n**5. Validade dos Pontos:** Os Pontos oriundos desta Campanha de Incentivo terão validade de 24 (vinte e quatro) meses a contar da data de creditamento na Conta Livelo do Participante.\n\n**6. Prazo para Crédito de Pontos:** Os Pontos Livelo serão creditados em até 30 (trinta) dias corridos contados do recebimento, pelo cliente, do produto adquirido no Hotsite, desde que o número do CPF informado seja válido.\n\n**7. ATENÇÃO: O que não acumula Pontos:** Não acumulam Pontos Livelo (i) embalagens para presente, (ii) frete, (iii) valores pagos com Cupom de Desconto, gift card e Vale-Compra; (iv) pedidos realizados por pessoa jurídica; e (v) compras realizadas fora do Hotsite.\n\nTambém não serão creditados Pontos Livelo para (i) pedidos não aprovados ou cancelados; (ii) produtos devolvidos pelo Participante; (iii) caso de suspeita de fraude; (iv) a não inserção do voucher denominado **“LIVELO”** (com todas as letras maiúsculas) no campo \"CUPOM DE DESCONTO\" na sacola de compras do site antes de concluir a sua compra (v) em hipótese de violação deste regulamento ou regulamento do Programa Livelo; e Produtos que não são vendidos e nem entregues pela Guess Brasil.\n\n**COMPRAS EFETUADAS EM CANAIS NÃO INFORMADOS NESTE REGULAMENTO NÃO SERÃO PASSÍVEIS DE ACÚMULO DE PONTOS LIVELO.**\n\n**8. Não cumulatividade:** Esta Campanha não é cumulativa com outras promoções, bonificações ou descontos.\n\n**9. Responsabilidade:** A Livelo não se responsabiliza pela qualidade dos produtos e serviços oferecidos e disponibilizados pela **Guess Brasil**. A Livelo não se responsabiliza por informações incorretas apresentadas pela **Guess Brasil** e/ou Participante, incluindo, mas não se limitando o número de CPF para proceder com o crédito de Pontos. Cabe ao Parceiro definir a conversão de dólar para real em campanhas realizadas na paridade dólar por ponto.",
+      "textAlignment": "LEFT"
+    }
+  }
+}

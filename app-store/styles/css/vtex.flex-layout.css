@@ -694,6 +694,16 @@
   width: 22px !important;
 }
 
+.flexCol--regulamento-livelo {
+  margin: 20px 80px 80px;
+}
+@media (max-width: 760px) {
+  .flexCol--regulamento-livelo {
+    margin: 0;
+    padding: 20px;
+  }
+}
+
 .flexRow--product-main {
   max-width: 1800px;
   padding: 0 20px;
