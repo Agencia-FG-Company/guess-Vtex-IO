@@ -137,5 +137,8 @@
   "category-validator": {
     "component": "CategoryValidator",
     "composition": "children"
+  },
+  "awinGet": {
+    "component": "awinGet"
   }
 }
