@@ -2,25 +2,23 @@
     "store.custom#LP-banners-laterais": {
         "children": [
             "responsive-layout.desktop#lp-banners-laterais--desktop",
-            "responsive-layout.mobile#lp-banners-laterais--mobile"
+            "responsive-layout.mobile#lp-banners-laterais--mobile",
+            "flex-layout.row#lp-banners-laterais__bredcrumb",
+            "search-result-layout.customQuery#lp-banners-laterais"
         ]
     },
     // DESKTOP
     "responsive-layout.desktop#lp-banners-laterais--desktop": {
         "title": "Bloco desktop",
         "children": [
-            "flex-layout.row#lp-banners-laterais__banner-topo--v2",
-            "flex-layout.row#lp-banners-laterais__bredcrumb",
-            "search-result-layout.customQuery#lp-banners-laterais"
+            "flex-layout.row#lp-banners-laterais__banner-topo--v2"
         ]
     },
     // MOBILE
     "responsive-layout.mobile#lp-banners-laterais--mobile": {
         "title": "Bloco mobile",
         "children": [
-            "flex-layout.row#lp-banners-laterais__banner-topo--v2",
-            "flex-layout.row#lp-banners-laterais__bredcrumb",
-            "search-result-layout.customQuery#lp-banners-laterais"
+            "flex-layout.row#lp-banners-laterais__banner-topo--v2"
         ]
     },
     // BANNER TOPO

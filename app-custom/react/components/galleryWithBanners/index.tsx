@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
+
 interface GalleryWithBannersProps {
-  images?: { imageUrl: string; link?: string; enabled?: boolean }[]
+  images?: Array<{ imageUrl: string; link?: string; enabled?: boolean }>
 }
 
 const GalleryWithBanners: React.FC<GalleryWithBannersProps> & {
@@ -22,10 +23,12 @@ const GalleryWithBanners: React.FC<GalleryWithBannersProps> & {
 
         // Só injeta se estiver ativado
         if (
-          targetItem &&
-          targetItem.parentNode &&
-          imageData?.enabled !== false &&
-          !targetItem.previousElementSibling?.classList?.contains('aviso-banner-injetado')
+          targetItem?.parentNode &&
+          imageData &&
+          imageData.enabled !== false &&
+          !targetItem.previousElementSibling?.classList?.contains(
+            'aviso-banner-injetado'
+          )
         ) {
           const avisoDiv = document.createElement('div')
           avisoDiv.className = 'aviso-banner-injetado'
@@ -56,7 +59,8 @@ const GalleryWithBanners: React.FC<GalleryWithBannersProps> & {
       injectBanners()
     })
 
-    const targetNode = document.querySelector('.vtex-search-result-3-x-gallery') || document.body
+    const targetNode =
+      document.querySelector('.vtex-search-result-3-x-gallery') ?? document.body
     observer.observe(targetNode, {
       childList: true,
       subtree: true,

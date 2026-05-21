@@ -1,0 +1,47 @@
+/* container do ícone + tooltip */
+:global(.cashback-info-wrapper) {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+}
+
+/* ícone "i" */
+:global(.cashback-info-icon) {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: bold;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* tooltip escondido por padrão */
+:global(.cashback-tooltip) {
+    position: absolute;
+    bottom: calc(100% + 3px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 1;
+    visibility: hidden;
+    transition: 0.2s;
+    z-index: 999;
+}
+
+/* exibe tooltip ao passar o mouse */
+:global(.cashback-info-wrapper:hover .cashback-tooltip) {
+  opacity: 1;
+  visibility: visible;
+}

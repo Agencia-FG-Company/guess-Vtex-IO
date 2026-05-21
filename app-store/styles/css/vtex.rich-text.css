@@ -532,6 +532,10 @@
   margin: 15px;
 }
 
+.wrapper--regulamento-livelo-title {
+  width: 100%;
+}
+
 .container--promotion__delivery {
   justify-content: center;
   border: 1px solid black;
@@ -582,6 +586,7 @@
 .container--cashback__pdp .paragraph {
   font-size: 13px;
   margin: 0;
+  gap: 5px;
 }
 .container--pdp__trigger {
   width: fit-content !important;
