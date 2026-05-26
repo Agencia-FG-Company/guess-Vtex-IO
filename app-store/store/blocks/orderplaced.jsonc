@@ -23,8 +23,7 @@
       "op-confirmation-icon",
       "op-confirmation-title",
       "op-confirmation-message",
-      "flex-layout.row#confirmation-buttons",
-      "awinGet" 
+      "flex-layout.row#confirmation-buttons"
     ]
   },
   "flex-layout.row#confirmation-buttons": {
