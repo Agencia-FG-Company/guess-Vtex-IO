@@ -1,24 +1,23 @@
 {
   "store.custom#faq": {
     "children": [
-      "flex-layout.row#faq"
+      "flex-layout.row#faq",
+      "FaqJsonLd"
     ]
   },
-
   "flex-layout.row#faq": {
     "title": "Conteúdo",
     "props": {
       "blockClass": "faq"
     },
     "children": [
-       "rich-text#faq"
+      "rich-text#faq"
     ]
   },
-
   "rich-text#faq": {
     "title": "Texto",
     "props": {
-      "blockClass":"faq",
+      "blockClass": "faq",
       "text": "# Dúvidas Frequentes \n Onde posso encontrar produtos da Guess no Brasil?\n\nVocê pode encontrar a loja mais próxima de você através deste link: https://www.guessbrasil.com.br/onde-encontrar\n\nComo posso entrar em contato?\nEnviei um email para sac@guessbrasil.com.br que iremos te responder com prioridade."
     }
   }
