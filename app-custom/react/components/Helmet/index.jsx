@@ -31,6 +31,23 @@ export const headCustom = () => {
     };
   }, []);
 
+  const organizationSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GUESS Brasil",
+    "url": "https://www.guessbrasil.com.br",
+    "logo": "https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.167/logo/new-logo-guess-small___27ee63f1c7bf362b14233e6c9c9630c7.png",
+    "sameAs": [
+      "https://www.instagram.com/guessbrasil/",
+      "https://www.facebook.com/GUESSBrazil/"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": "Portuguese"
+    }
+  });
+
   return (
     <>
       <Helmet>
@@ -42,6 +59,8 @@ export const headCustom = () => {
         <link rel="preload" as="image" href="https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/b53cdbaf-fadb-4f53-bf4c-8eb0e2224f4e___18908525d436d79dd984b59de518be2e.jpg" type="image/jpeg"/>
         <link rel="preload" as="image" href="https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/ea709ffc-7ef1-4feb-b4c0-cc16a6f199c8___0b6506de8dbd3cc88193221bcc2f4335.png" type="image/png"/>
         <link rel="preload" as="image" href="https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/0d8a7620-5169-417b-a6fe-45d0ab2ab227___56773a2d95246bf4d374bc2f0872b5a9.png" type="image/png"/>
+        {/* Organization Schema */}
+        <script type="application/ld+json">{organizationSchema}</script>
         {/* <GlobalStyles/> */}
       </Helmet>
     </>
