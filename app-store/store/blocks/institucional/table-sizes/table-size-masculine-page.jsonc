@@ -1,6 +1,8 @@
 {
   "store.custom#table-sizes-masculine": {
-    "children": ["flex-layout.row#table__sizes-container-masculine"]
+    "children": ["flex-layout.row#table__sizes-container-masculine",
+  "TableMasculineJsonLd"]
+    
   },
   "flex-layout.row#table__sizes-container-masculine": {
     "title": "Conteúdo",

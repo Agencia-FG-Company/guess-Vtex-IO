@@ -1,6 +1,7 @@
 {
   "store.custom#table-sizes-feminine": {
-    "children": ["flex-layout.row#table__sizes-container"]
+    "children": ["flex-layout.row#table__sizes-container", 
+    "TableFeminineJsonLd"]    
   },
   "flex-layout.row#table__sizes-container": {
     "title": "Conteúdo",
