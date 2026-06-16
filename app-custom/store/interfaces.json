@@ -140,5 +140,11 @@
   },
   "FaqJsonLd": {
   "component": "FaqJsonLd"
+  },
+  "TableFeminineJsonLd": {
+  "component": "TableFeminineJsonLd"
+  },
+"TableMasculineJsonLd": {
+  "component": "TableMasculineJsonLd"
   }
 }
