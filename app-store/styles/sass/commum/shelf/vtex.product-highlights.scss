@@ -8,9 +8,6 @@
   width: fit-content !important;
 }
 
-.productHighlightWrapper .productHighlightText[data-highlight-id="138"],
-.productHighlightWrapper .productHighlightText[data-highlight-id="157"],
-.productHighlightWrapper .productHighlightText[data-highlight-id="159"],
 .productHighlightWrapper .productHighlightText[data-highlight-id="177"] {
   background: #f2f2f2;
   color: #808080;
@@ -30,42 +27,8 @@
   margin: 0;
 }
 
-.productHighlightWrapper .productHighlightText[data-highlight-id="138"]::after,
-.productHighlightWrapper .productHighlightText[data-highlight-id="157"]::after,
-.productHighlightWrapper .productHighlightText[data-highlight-id="159"]::after,
 .productHighlightWrapper .productHighlightText[data-highlight-id="177"]::after {
   content: "Sale";
-  font-family: "Futura";
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 16px;
-  letter-spacing: 2%;
-  text-align: center;
-  color: #808080;
-}
-
-.productHighlightWrapper .productHighlightText[data-highlight-id="211"] {
-  order: 1;
-  background: #f2f2f2;
-  color: #808080;
-  font-family: "Futura";
-  font-size: 0px;
-  font-style: normal;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  text-transform: capitalize;
-  border-radius: 10px;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  width: 130px;
-  height: 22px;
-  margin: 0;
-}
-
-.productHighlightWrapper .productHighlightText[data-highlight-id="211"]::after {
-  content: "Desconto Progressivo";
   font-family: "Futura";
   font-weight: 500;
   font-size: 13px;
@@ -196,6 +159,40 @@
     border-radius: 4px;
     display: block;
   }
+
+  .productHighlightWrapper[data-highlight-id="211"],
+  .productHighlightWrapper[data-highlight-id="299"] {
+    font-size: 13px;
+    line-height: 16px;
+    padding: 2px 11px;
+    background: #f9f8f8;
+    color: #303030;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .productHighlightWrapper[data-highlight-id="138"],
+  .productHighlightWrapper[data-highlight-id="157"],
+  .productHighlightWrapper[data-highlight-id="158"],
+  .productHighlightWrapper[data-highlight-id="159"] {
+    padding: 2px 11px;
+    background: #f9f8f8;
+    color: #303030;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 4px;
+    display: block;
+
+    &::after {
+      content: "extra 20% 2 itens +";
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
 }
 
 :global(.vtex-flex-layout-0-x-flexCol--product__right-col) {
@@ -211,6 +208,40 @@
     text-transform: capitalize;
     border-radius: 4px;
     display: block;
+  }
+
+  .productHighlightWrapper[data-highlight-id="211"],
+  .productHighlightWrapper[data-highlight-id="299"] {
+    font-size: 13px;
+    line-height: 16px;
+    padding: 2px 11px;
+    background: #f9f8f8;
+    color: #303030;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .productHighlightWrapper[data-highlight-id="138"],
+  .productHighlightWrapper[data-highlight-id="157"],
+  .productHighlightWrapper[data-highlight-id="158"],
+  .productHighlightWrapper[data-highlight-id="159"] {
+    padding: 2px 11px;
+    background: #f9f8f8;
+    color: #303030;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 4px;
+    display: block;
+
+    &::after {
+      content: "extra 20% 2 itens +";
+      font-size: 13px;
+      line-height: 16px;
+    }
   }
 }
 //mobile outlet
@@ -228,6 +259,42 @@
     text-transform: capitalize;
     border-radius: 4px;
     display: block;
+  }
+
+  .productHighlightWrapper[data-highlight-id="211"],
+  .productHighlightWrapper[data-highlight-id="299"] {
+    bottom: 7px;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 2px 11px;
+    background: #f9f8f8;
+    color: #303030;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .productHighlightWrapper[data-highlight-id="138"],
+  .productHighlightWrapper[data-highlight-id="157"],
+  .productHighlightWrapper[data-highlight-id="158"],
+  .productHighlightWrapper[data-highlight-id="159"] {
+    bottom: 7px;
+    padding: 2px 11px;
+    background: #f9f8f8;
+    color: #303030;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 4px;
+    display: block;
+
+    &::after {
+      content: "extra 20% 2 itens +";
+      font-size: 13px;
+      line-height: 16px;
+    }
   }
 
 }
