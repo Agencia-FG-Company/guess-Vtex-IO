@@ -1,9 +1,65 @@
 import React, { useEffect } from "react";
-import { Helmet } from "vtex.render-runtime";
+import { Helmet, useRuntime } from "vtex.render-runtime";
 // import {GlobalStyles} from "../global-css/index"
 import '../global-css/style.css'
 
+const SEARCH_ROUTE_IDS = [
+  "store.search",
+  "store.search#brand",
+  "store.search#department",
+  "store.search#category",
+  "store.search#subcategory",
+];
+
 export const headCustom = () => {
+  const { route } = useRuntime();
+  const isSearchRoute = SEARCH_ROUTE_IDS.includes(route.routeId);
+
+  // A paginação "Ver mais" muda a URL sem remontar a página, então o canonical
+  // nativo fica preso no valor do load inicial. A tag canonical é gerenciada
+  // pelo react-helmet (marcada com data-react-helmet="true") — ou seja,
+  // qualquer <Helmet> da árvore que re-renderizar faz o react-helmet reescrever
+  // essa tag de volta para o valor que ele controla, desfazendo qualquer
+  // alteração manual feita uma única vez (por isso escutar history/poll não
+  // bastava). A correção observa a própria tag e reaplica o valor correto
+  // sempre que ela for reescrita.
+  useEffect(() => {
+    if (!isSearchRoute) return undefined;
+
+    const getDesiredHref = () =>
+      `${window.location.origin}${window.location.pathname}${window.location.search}`;
+
+    const applyCanonical = () => {
+      const desired = getDesiredHref();
+      let link = document.querySelector('link[rel="canonical"]');
+      if (!link) {
+        link = document.createElement("link");
+        link.setAttribute("rel", "canonical");
+        document.head.appendChild(link);
+      }
+      if (link.getAttribute("href") !== desired) {
+        link.setAttribute("href", desired);
+      }
+    };
+
+    applyCanonical();
+
+    const observer = new MutationObserver(applyCanonical);
+    observer.observe(document.head, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["href"],
+    });
+
+    const intervalId = setInterval(applyCanonical, 300);
+
+    return () => {
+      observer.disconnect();
+      clearInterval(intervalId);
+    };
+  }, [isSearchRoute]);
+
   useEffect(() => {
     const script = document.createElement("script");
     script.defer = true;
