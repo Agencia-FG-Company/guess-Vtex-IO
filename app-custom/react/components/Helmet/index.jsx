@@ -5,29 +5,51 @@ import '../global-css/style.css'
 
 export const headCustom = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.defer = true;
-    script.innerHTML = `
-      (function (o, c, t, a, d, e, s) {
-        o.octadesk = o.octadesk || {};
-        o.octadesk.chatOptions = {
-          subDomain: a,
-          showButton: d,
-          openOnMessage: e,
-          hide: s,
-        };
-        const bd = c.getElementsByTagName("body")[0];
-        const sc = c.createElement("script");
-        sc.async = true;
-        sc.src = t;
-        bd.appendChild(sc);
-      })(window, document, 'https://cdn.octadesk.com/embed.js', 'o167017-6bc', 'true', 'true', 'false');
-    `;
-    document.body.appendChild(script);
+    let loaded = false;
+    let script;
+
+    const loadOctadesk = () => {
+      if (loaded) return;
+      loaded = true;
+
+      script = document.createElement("script");
+      script.defer = true;
+      script.innerHTML = `
+        (function (o, c, t, a, d, e, s) {
+          o.octadesk = o.octadesk || {};
+          o.octadesk.chatOptions = {
+            subDomain: a,
+            showButton: d,
+            openOnMessage: e,
+            hide: s,
+          };
+          const bd = c.getElementsByTagName("body")[0];
+          const sc = c.createElement("script");
+          sc.async = true;
+          sc.src = t;
+          bd.appendChild(sc);
+        })(window, document, 'https://cdn.octadesk.com/embed.js', 'o167017-6bc', 'true', 'true', 'false');
+      `;
+      document.body.appendChild(script);
+
+      events.forEach((evt) =>
+        window.removeEventListener(evt, loadOctadesk)
+      );
+      clearTimeout(timeoutId);
+    };
+
+    const events = ["pointerdown", "keydown", "scroll", "touchstart"];
+    events.forEach((evt) =>
+      window.addEventListener(evt, loadOctadesk, { passive: true, once: true })
+    );
+    const timeoutId = setTimeout(loadOctadesk, 5000);
 
     return () => {
-      // Cleanup do script ao desmontar o componente
-      document.body.removeChild(script);
+      events.forEach((evt) => window.removeEventListener(evt, loadOctadesk));
+      clearTimeout(timeoutId);
+      if (script) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 
