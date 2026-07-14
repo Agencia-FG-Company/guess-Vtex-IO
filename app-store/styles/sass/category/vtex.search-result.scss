@@ -75,6 +75,8 @@
     flex-shrink: 1;
     max-width: 350px !important;
     position: relative;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 350px auto 520px;
 
     :global(.vtex-stack-layout-0-x-stackContainer--shelf) {
       overflow: hidden;
@@ -86,6 +88,7 @@
 
     @media (max-width: 767px) {
       max-width: 197px !important;
+      contain-intrinsic-size: auto 197px auto 430px;
     }
   }
 }
@@ -110,10 +113,13 @@
   .galleryItem--grid-banners-laterais {
     padding: 0;
     max-width: 24% !important;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 300px auto 480px;
 
     @include mobile {
       padding: 0;
       max-width: 42% !important;
+      contain-intrinsic-size: auto 160px auto 380px;
 
       :global(.vtex-product-summary-2-x-nameContainer--shelf) {
         padding: 0;
