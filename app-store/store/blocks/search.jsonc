@@ -225,6 +225,7 @@
   "flex-layout.col#content": {
     "children": [
       "flex-layout.row#searchinfo",
+      "rich-text#search-subtitle",
       "flex-layout.row#products",
       "search-fetch-more",
       "flex-layout.row#seo__content"
@@ -233,6 +234,12 @@
       "width": "grow",
       "preventVerticalStretch": true,
       "blockClass": "content"
+    }
+  },
+  "rich-text#search-subtitle": {
+    "props": {
+      "text": "## Subtítulo da categoria",
+      "blockClass": "search-subtitle"
     }
   },
   "flex-layout.row#searchinfo": {
@@ -284,6 +291,7 @@
       "ConditionBlock",
       "flex-layout.row#productCountMobile",
       "flex-layout.row#searchinfomobile",
+      "rich-text#search-subtitle",
       "flex-layout.row#searchbread",
       "flex-layout.row#contentmobile",
       "search-fetch-more",
