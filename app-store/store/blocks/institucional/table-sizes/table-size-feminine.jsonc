@@ -35,34 +35,90 @@
     "flex-layout.col##table__sizes-feminine-03"]
   },
   "responsive-layout.mobile#table__sizes-feminine": {
-    "children": ["image#table__sizes-feminine--mobile"]
+    "children": ["flex-layout.row#table__sizes-feminine--mobile"]
   },
-  "image#table__sizes-feminine--mobile": {
+  "flex-layout.row#table__sizes-feminine--mobile": {
+    "title": "imagens femininas mobile",
     "props": {
-      "src": "assets/images/table-size/feminine/femininoModelagemMobile.png"
-      
-    }
+      "blockClass": "table__sizes-feminine-mobile"
+    },
+    "children": [
+      "flex-layout.col#table__sizes-feminine-01--item",
+      "flex-layout.col#table__sizes-feminine-02--item",
+      "flex-layout.col#table__sizes-feminine-03--item",
+      "flex-layout.col#table__sizes-feminine-04--item",
+      "flex-layout.col#table__sizes-feminine-05--item",
+      "flex-layout.col#table__sizes-feminine-06--item",
+      "flex-layout.col#table__sizes-feminine-07--item",
+      "flex-layout.col#table__sizes-feminine-08--item",
+      "flex-layout.col#table__sizes-feminine-09--item"
+    ]
   },
   "flex-layout.col##table__sizes-feminine-01": {
     "children": [
-      "image#table__sizes-feminine-01",
-      "image#table__sizes-feminine-04",
-      "image#table__sizes-feminine-07"
+      "flex-layout.col#table__sizes-feminine-01--item",
+      "flex-layout.col#table__sizes-feminine-04--item",
+      "flex-layout.col#table__sizes-feminine-07--item"
     ]
   },
   "flex-layout.col##table__sizes-feminine-02": {
     "children": [
-      "image#table__sizes-feminine-02",
-      "image#table__sizes-feminine-05",
-      "image#table__sizes-feminine-08"
+      "flex-layout.col#table__sizes-feminine-02--item",
+      "flex-layout.col#table__sizes-feminine-05--item",
+      "flex-layout.col#table__sizes-feminine-08--item"
     ]
   },
   "flex-layout.col##table__sizes-feminine-03": {
     "children": [
-      "image#table__sizes-feminine-03",
-      "image#table__sizes-feminine-06",
-      "image#table__sizes-feminine-09"
+      "flex-layout.col#table__sizes-feminine-03--item",
+      "flex-layout.col#table__sizes-feminine-06--item",
+      "flex-layout.col#table__sizes-feminine-09--item"
     ]
+  },
+  "flex-layout.col#table__sizes-feminine-01--item": {
+    "title": "1981 Skinny",
+    "props": { "blockClass": "table__sizes-feminine-item" },
+    "children": ["rich-text#table__sizes-feminine-01--title", "image#table__sizes-feminine-01"]
+  },
+  "flex-layout.col#table__sizes-feminine-02--item": {
+    "title": "Curve X Skinny",
+    "props": { "blockClass": "table__sizes-feminine-item" },
+    "children": ["rich-text#table__sizes-feminine-02--title", "image#table__sizes-feminine-02"]
+  },
+  "flex-layout.col#table__sizes-feminine-03--item": {
+    "title": "Mid Rise Skinny",
+    "props": { "blockClass": "table__sizes-feminine-item" },
+    "children": ["rich-text#table__sizes-feminine-03--title", "image#table__sizes-feminine-03"]
+  },
+  "flex-layout.col#table__sizes-feminine-04--item": {
+    "title": "Straight Leg",
+    "props": { "blockClass": "table__sizes-feminine-item" },
+    "children": ["rich-text#table__sizes-feminine-04--title", "image#table__sizes-feminine-04"]
+  },
+  "flex-layout.col#table__sizes-feminine-05--item": {
+    "title": "High Flare",
+    "props": { "blockClass": "table__sizes-feminine-item" },
+    "children": ["rich-text#table__sizes-feminine-05--title", "image#table__sizes-feminine-05"]
+  },
+  "flex-layout.col#table__sizes-feminine-06--item": {
+    "title": "Marilyn Zip",
+    "props": { "blockClass": "table__sizes-feminine-item" },
+    "children": ["rich-text#table__sizes-feminine-06--title", "image#table__sizes-feminine-06"]
+  },
+  "flex-layout.col#table__sizes-feminine-07--item": {
+    "title": "Tomboy",
+    "props": { "blockClass": "table__sizes-feminine-item" },
+    "children": ["rich-text#table__sizes-feminine-07--title", "image#table__sizes-feminine-07"]
+  },
+  "flex-layout.col#table__sizes-feminine-08--item": {
+    "title": "Jegging",
+    "props": { "blockClass": "table__sizes-feminine-item" },
+    "children": ["rich-text#table__sizes-feminine-08--title", "image#table__sizes-feminine-08"]
+  },
+  "flex-layout.col#table__sizes-feminine-09--item": {
+    "title": "Mom",
+    "props": { "blockClass": "table__sizes-feminine-item" },
+    "children": ["rich-text#table__sizes-feminine-09--title", "image#table__sizes-feminine-09"]
   },
   "rich-text#table__sizes-feminine--title": {
     "title": "titulo das imagens de medidas",
@@ -71,49 +127,175 @@
       "text": "## Modelagens Jeans"
     }
   },
+  "rich-text#table__sizes-feminine-01--title": {
+    "title": "Título - 1981 Skinny",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [1981 Skinny](#)\n"
+    }
+  },
   "image#table__sizes-feminine-01": {
     "props": {
-      "src": "assets/images/table-size/feminine/icon-1981-skinny.jpg"
+      "src": "assets/images/table-size/feminine/icon-1981-skinny.jpg",
+      "alt": "1981 Skinny",
+      "link": {
+        "props": {
+          "label": "1981 Skinny",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "rich-text#table__sizes-feminine-02--title": {
+    "title": "Título - Curve X Skinny",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Curve X Skinny](#)\n"
     }
   },
   "image#table__sizes-feminine-02": {
     "props": {
-      "src": "assets/images/table-size/feminine/icon-curvex-skinny.jpg"
+      "src": "assets/images/table-size/feminine/icon-curvex-skinny.jpg",
+      "alt": "Curve X Skinny",
+      "link": {
+        "props": {
+          "label": "Curve X Skinny",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "rich-text#table__sizes-feminine-03--title": {
+    "title": "Título - Mid Rise Skinny",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Mid Rise Skinny](#)\n"
     }
   },
   "image#table__sizes-feminine-03": {
     "props": {
-      "src": "assets/images/table-size/feminine/icon-mid-rise-skinny.jpg"
+      "src": "assets/images/table-size/feminine/icon-mid-rise-skinny.jpg",
+      "alt": "Mid Rise Skinny",
+      "link": {
+        "props": {
+          "label": "Mid Rise Skinny",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "rich-text#table__sizes-feminine-04--title": {
+    "title": "Título - Straight Leg",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Straight Leg](#)\n"
     }
   },
   "image#table__sizes-feminine-04": {
     "props": {
-      "src": "assets/images/table-size/feminine/icon-straight-leg.jpg"
+      "src": "assets/images/table-size/feminine/icon-straight-leg.jpg",
+      "alt": "Straight Leg",
+      "link": {
+        "props": {
+          "label": "Straight Leg",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "rich-text#table__sizes-feminine-05--title": {
+    "title": "Título - High Flare",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [High Flare](#)\n"
     }
   },
   "image#table__sizes-feminine-05": {
     "props": {
-      "src": "assets/images/table-size/feminine/icon-high-flare.jpg"
+      "src": "assets/images/table-size/feminine/icon-high-flare.jpg",
+      "alt": "High Flare",
+      "link": {
+        "props": {
+          "label": "High Flare",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "rich-text#table__sizes-feminine-06--title": {
+    "title": "Título - Marilyn Zip",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Marilyn Zip](#)\n"
     }
   },
   "image#table__sizes-feminine-06": {
     "props": {
-      "src": "assets/images/table-size/feminine/icon-marilyn-zip.jpg"
+      "src": "assets/images/table-size/feminine/icon-marilyn-zip.jpg",
+      "alt": "Marilyn Zip",
+      "link": {
+        "props": {
+          "label": "Marilyn Zip",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "rich-text#table__sizes-feminine-07--title": {
+    "title": "Título - Tomboy",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Tomboy](#)\n"
     }
   },
   "image#table__sizes-feminine-07": {
     "props": {
-      "src": "assets/images/table-size/feminine/icon-tomboy.jpg"
+      "src": "assets/images/table-size/feminine/icon-tomboy.jpg",
+      "alt": "Tomboy",
+      "link": {
+        "props": {
+          "label": "Tomboy",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "rich-text#table__sizes-feminine-08--title": {
+    "title": "Título - Jegging",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Jegging](#)\n"
     }
   },
   "image#table__sizes-feminine-08": {
     "props": {
-      "src": "assets/images/table-size/feminine/icon-jegging.jpg"
+      "src": "assets/images/table-size/feminine/icon-jegging.jpg",
+      "alt": "Jegging",
+      "link": {
+        "props": {
+          "label": "Jegging",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "rich-text#table__sizes-feminine-09--title": {
+    "title": "Título - Mom",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Mom](#)\n"
     }
   },
   "image#table__sizes-feminine-09": {
     "props": {
-      "src": "assets/images/table-size/feminine/icon-mom.jpg"
+      "src": "assets/images/table-size/feminine/icon-mom.jpg",
+      "alt": "Mom",
+      "link": {
+        "props": {
+          "label": "Mom",
+          "href": "#"
+        }
+      }
     }
   },
   "rich-text#table__sizes-feminine--text": {

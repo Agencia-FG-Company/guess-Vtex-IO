@@ -25,10 +25,10 @@
       "blockClass": "table__sizes-masculine"
     },
     "children": [
-       "image#table__sizes-masculine-01",
-       "image#table__sizes-masculine-02",
-       "image#table__sizes-masculine-03",
-       "image#table__sizes-masculine-04"
+       "flex-layout.col#table__sizes-masculine-01",
+       "flex-layout.col#table__sizes-masculine-02",
+       "flex-layout.col#table__sizes-masculine-03",
+       "flex-layout.col#table__sizes-masculine-04"
     ]
   },
   "rich-text#table__sizes-masculine--title": {
@@ -38,24 +38,120 @@
       "text": "## Modelagens Jeans"
     }
   },
+  "flex-layout.col#table__sizes-masculine-01": {
+    "title": "Skinny",
+    "props": {
+      "blockClass": "table__sizes-masculine-item"
+    },
+    "children": [
+      "rich-text#table__sizes-masculine-01--title",
+      "image#table__sizes-masculine-01"
+    ]
+  },
+  "rich-text#table__sizes-masculine-01--title": {
+    "title": "Título - Skinny",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Skinny](#)\n"
+    }
+  },
   "image#table__sizes-masculine-01": {
     "props": {
-      "src": "assets/images/table-size/masculine/icon-skinny.jpg"
+      "src": "assets/images/table-size/masculine/icon-skinny.jpg",
+      "alt": "Skinny",
+      "link": {
+        "props": {
+          "label": "Skinny",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "flex-layout.col#table__sizes-masculine-02": {
+    "title": "Slim Straight",
+    "props": {
+      "blockClass": "table__sizes-masculine-item"
+    },
+    "children": [
+      "rich-text#table__sizes-masculine-02--title",
+      "image#table__sizes-masculine-02"
+    ]
+  },
+  "rich-text#table__sizes-masculine-02--title": {
+    "title": "Título - Slim Straight",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Slim Straight](#)\n"
     }
   },
   "image#table__sizes-masculine-02": {
     "props": {
-      "src": "assets/images/table-size/masculine/icon-slim-stranght.jpg"
+      "src": "assets/images/table-size/masculine/icon-slim-stranght.jpg",
+      "alt": "Slim Straight",
+      "link": {
+        "props": {
+          "label": "Slim Straight",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "flex-layout.col#table__sizes-masculine-03": {
+    "title": "Slim Tapered",
+    "props": {
+      "blockClass": "table__sizes-masculine-item"
+    },
+    "children": [
+      "rich-text#table__sizes-masculine-03--title",
+      "image#table__sizes-masculine-03"
+    ]
+  },
+  "rich-text#table__sizes-masculine-03--title": {
+    "title": "Título - Slim Tapered",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Slim Tapered](#)\n"
     }
   },
   "image#table__sizes-masculine-03": {
     "props": {
-      "src": "assets/images/table-size/masculine/icon-slim-tappered.jpg"
+      "src": "assets/images/table-size/masculine/icon-slim-tappered.jpg",
+      "alt": "Slim Tapered",
+      "link": {
+        "props": {
+          "label": "Slim Tapered",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "flex-layout.col#table__sizes-masculine-04": {
+    "title": "Jogger",
+    "props": {
+      "blockClass": "table__sizes-masculine-item"
+    },
+    "children": [
+      "rich-text#table__sizes-masculine-04--title",
+      "image#table__sizes-masculine-04"
+    ]
+  },
+  "rich-text#table__sizes-masculine-04--title": {
+    "title": "Título - Jogger",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Jogger](#)\n"
     }
   },
   "image#table__sizes-masculine-04": {
     "props": {
-      "src": "assets/images/table-size/masculine/icon-jogger.jpg"
+      "src": "assets/images/table-size/masculine/icon-jogger.jpg",
+      "alt": "Jogger",
+      "link": {
+        "props": {
+          "label": "Jogger",
+          "href": "#"
+        }
+      }
     }
   },
   "rich-text#table__sizes-masculine--text": {

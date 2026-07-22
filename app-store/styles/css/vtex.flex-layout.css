@@ -1520,8 +1520,36 @@
 .flexRow--table__sizes-feminine .flexRowContent--table__sizes-feminine .flexCol .flexColChild :global(.vtex-store-components-3-x-imageElement) {
   width: max-content;
 }
+.flexRow--table__sizes-feminine .flexRowContent--table__sizes-feminine .flexCol--table__sizes-feminine-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.flexRow--table__sizes-feminine-mobile .flexRowContent--table__sizes-feminine-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px 0;
+}
+.flexRow--table__sizes-feminine-mobile .flexRowContent--table__sizes-feminine-mobile .flexCol--table__sizes-feminine-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 48%;
+}
+.flexRow--table__sizes-feminine-mobile .flexRowContent--table__sizes-feminine-mobile .flexCol--table__sizes-feminine-item :global(.vtex-store-components-3-x-imageElement) {
+  max-width: 100%;
+}
 .flexRow--table__sizes-masculine .flexRowContent--table__sizes-masculine {
   justify-content: center;
+}
+.flexRow--table__sizes-masculine .flexRowContent--table__sizes-masculine .flexCol--table__sizes-masculine-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .flexRow--table__sizes-feminine--tables {
   margin-top: 40px;

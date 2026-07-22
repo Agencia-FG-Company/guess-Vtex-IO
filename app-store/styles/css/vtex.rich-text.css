@@ -1415,6 +1415,24 @@
   text-transform: uppercase;
   margin: 2rem auto;
 }
+.container--table__sizes-image-title {
+  justify-content: center;
+}
+.container--table__sizes-image-title .heading {
+  font-family: "Futura";
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 8px;
+}
+.container--table__sizes-image-title .link {
+  color: inherit;
+  text-decoration: none;
+}
+.container--table__sizes-image-title .link:hover {
+  text-decoration: underline;
+}
 .container--table__sizes-text {
   margin: 40px 0;
 }
