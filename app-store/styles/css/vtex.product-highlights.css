@@ -205,7 +205,7 @@
 :global(.vtex-product-summary-2-x-element) .productHighlightWrapper[data-highlight-id="157"]::after,
 :global(.vtex-product-summary-2-x-element) .productHighlightWrapper[data-highlight-id="158"]::after,
 :global(.vtex-product-summary-2-x-element) .productHighlightWrapper[data-highlight-id="159"]::after {
-  content: "extra 20% 2 itens +";
+  content: "Extra 20% 2 itens +";
   font-size: 13px;
   line-height: 16px;
 }
@@ -253,7 +253,7 @@
 :global(.vtex-flex-layout-0-x-flexCol--product__right-col) .productHighlightWrapper[data-highlight-id="157"]::after,
 :global(.vtex-flex-layout-0-x-flexCol--product__right-col) .productHighlightWrapper[data-highlight-id="158"]::after,
 :global(.vtex-flex-layout-0-x-flexCol--product__right-col) .productHighlightWrapper[data-highlight-id="159"]::after {
-  content: "extra 20% 2 itens +";
+  content: "Extra 20% 2 itens +";
   font-size: 13px;
   line-height: 16px;
 }
@@ -304,7 +304,7 @@
 :global(.vtex-flex-layout-0-x-flexRowContent--product-main) .productHighlightWrapper[data-highlight-id="157"]::after,
 :global(.vtex-flex-layout-0-x-flexRowContent--product-main) .productHighlightWrapper[data-highlight-id="158"]::after,
 :global(.vtex-flex-layout-0-x-flexRowContent--product-main) .productHighlightWrapper[data-highlight-id="159"]::after {
-  content: "extra 20% 2 itens +";
+  content: "Extra 20% 2 itens +";
   font-size: 13px;
   line-height: 16px;
 }

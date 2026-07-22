@@ -1152,14 +1152,17 @@
 }
 
 .flexRowContent--flags-shelf .stretchChildrenWidth {
+  gap: 8px;
   display: flex;
   justify-content: flex-start;
   column-gap: 16px;
+  flex-direction: column;
 }
 @media (max-width: 768px) {
   .flexRowContent--flags-shelf .stretchChildrenWidth {
     flex-wrap: wrap;
     row-gap: 8px;
+    margin-top: 8px;
   }
 }
 
