@@ -1695,42 +1695,17 @@ export function PrivacyPolicyPart1() {
             <br /> <br /> Para qualquer dúvida, solicitação ou reclamação referente ao tratamento de dados pessoais, favor entrar em contato com o nosso Encarregado de Dados Pessoais:
             <br /> <br />
             <strong
-              style={{                
+              style={{
                 fontWeight: "bold",
               }}
             >
-              DPO EXPERT®{' '}
+              MND7 CONSULTORIA E TREINAMENTOS LTDA.
             </strong>
-            <span
-              style={{
-                color: "#0563c1",
-              }}
-            >
-              (
-            </span>
-            <a
-              href="https://www.dpoexpert.com.br/"
-              style={{
-                color: "#0563c1",
-                textDecoration: "underline",
-              }}
-              target="_blank"
-            >
-              www.dpoexpert.com.br
-            </a>
-            <span
-              style={{
-                color: "#0563c1",
-              }}
-            >
-              ){' '}
-            </span> <br />
             <br />
-            Responsável: Rafael Susskind  <br />
             <br />
-            Responsável substituto: Renata Adeli Franhan Parizotto <br />
+            Responsável: Edgard Dolata  <br />
             <br />
-            <span>            
+            <span>
               contato: </span>
             <a
               href="mailto:dpo@guessbrasil.com.br"
