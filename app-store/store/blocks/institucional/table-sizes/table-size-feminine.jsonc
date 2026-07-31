@@ -78,47 +78,103 @@
   "flex-layout.col#table__sizes-feminine-01--item": {
     "title": "1981 Skinny",
     "props": { "blockClass": "table__sizes-feminine-item" },
-    "children": ["rich-text#table__sizes-feminine-01--title", "image#table__sizes-feminine-01"]
+    "children": ["rich-text#table__sizes-feminine-01--title", "image#table__sizes-feminine-01", "rich-text#table__sizes-feminine-01--subtitle"]
+  },
+  "rich-text#table__sizes-feminine-01--subtitle": {
+    "title": "Subtítulo - 1981 Skinny",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA ALTA  \nMODELAGEM JUSTA  \nPERNAS JUSTAS"
+    }
   },
   "flex-layout.col#table__sizes-feminine-02--item": {
     "title": "Curve X Skinny",
     "props": { "blockClass": "table__sizes-feminine-item" },
-    "children": ["rich-text#table__sizes-feminine-02--title", "image#table__sizes-feminine-02"]
+    "children": ["rich-text#table__sizes-feminine-02--title", "image#table__sizes-feminine-02", "rich-text#table__sizes-feminine-02--subtitle"]
+  },
+  "rich-text#table__sizes-feminine-02--subtitle": {
+    "title": "Subtítulo - Curve X Skinny",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM JUSTA  \nRECORTES QUE VALORIZAM O CORPO"
+    }
   },
   "flex-layout.col#table__sizes-feminine-03--item": {
     "title": "Mid Rise Skinny",
     "props": { "blockClass": "table__sizes-feminine-item" },
-    "children": ["rich-text#table__sizes-feminine-03--title", "image#table__sizes-feminine-03"]
+    "children": ["rich-text#table__sizes-feminine-03--title", "image#table__sizes-feminine-03", "rich-text#table__sizes-feminine-03--subtitle"]
+  },
+  "rich-text#table__sizes-feminine-03--subtitle": {
+    "title": "Subtítulo - Mid Rise Skinny",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM JUSTA  \nPERNAS JUSTAS"
+    }
   },
   "flex-layout.col#table__sizes-feminine-04--item": {
     "title": "Straight Leg",
     "props": { "blockClass": "table__sizes-feminine-item" },
-    "children": ["rich-text#table__sizes-feminine-04--title", "image#table__sizes-feminine-04"]
+    "children": ["rich-text#table__sizes-feminine-04--title", "image#table__sizes-feminine-04", "rich-text#table__sizes-feminine-04--subtitle"]
+  },
+  "rich-text#table__sizes-feminine-04--subtitle": {
+    "title": "Subtítulo - Straight Leg",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM RETA  \nPERNAS RETAS"
+    }
   },
   "flex-layout.col#table__sizes-feminine-05--item": {
     "title": "High Flare",
     "props": { "blockClass": "table__sizes-feminine-item" },
-    "children": ["rich-text#table__sizes-feminine-05--title", "image#table__sizes-feminine-05"]
+    "children": ["rich-text#table__sizes-feminine-05--title", "image#table__sizes-feminine-05", "rich-text#table__sizes-feminine-05--subtitle"]
+  },
+  "rich-text#table__sizes-feminine-05--subtitle": {
+    "title": "Subtítulo - High Flare",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA ALTA  \nMODELAGEM FLARE  \nPERNAS LARGAS NA BARRA"
+    }
   },
   "flex-layout.col#table__sizes-feminine-06--item": {
     "title": "Marilyn Zip",
     "props": { "blockClass": "table__sizes-feminine-item" },
-    "children": ["rich-text#table__sizes-feminine-06--title", "image#table__sizes-feminine-06"]
+    "children": ["rich-text#table__sizes-feminine-06--title", "image#table__sizes-feminine-06", "rich-text#table__sizes-feminine-06--subtitle"]
+  },
+  "rich-text#table__sizes-feminine-06--subtitle": {
+    "title": "Subtítulo - Marilyn Zip",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA ALTA  \nMODELAGEM JUSTA  \nZÍPER FRONTAL"
+    }
   },
   "flex-layout.col#table__sizes-feminine-07--item": {
     "title": "Tomboy",
     "props": { "blockClass": "table__sizes-feminine-item" },
-    "children": ["rich-text#table__sizes-feminine-07--title", "image#table__sizes-feminine-07"]
+    "children": ["rich-text#table__sizes-feminine-07--title", "image#table__sizes-feminine-07", "rich-text#table__sizes-feminine-07--subtitle"]
+  },
+  "rich-text#table__sizes-feminine-07--subtitle": {
+    "title": "Subtítulo - Tomboy",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM RETA  \nCAIMENTO DESCONTRAÍDO"
+    }
   },
   "flex-layout.col#table__sizes-feminine-08--item": {
     "title": "Jegging",
     "props": { "blockClass": "table__sizes-feminine-item" },
-    "children": ["rich-text#table__sizes-feminine-08--title", "image#table__sizes-feminine-08"]
+    "children": ["rich-text#table__sizes-feminine-08--title", "image#table__sizes-feminine-08", "rich-text#table__sizes-feminine-08--subtitle"]
+  },
+  "rich-text#table__sizes-feminine-08--subtitle": {
+    "title": "Subtítulo - Jegging",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM JUSTA  \nTECIDO ELÁSTICO"
+    }
   },
   "flex-layout.col#table__sizes-feminine-09--item": {
     "title": "Mom",
     "props": { "blockClass": "table__sizes-feminine-item" },
-    "children": ["rich-text#table__sizes-feminine-09--title", "image#table__sizes-feminine-09"]
+    "children": ["rich-text#table__sizes-feminine-09--title", "image#table__sizes-feminine-09", "rich-text#table__sizes-feminine-09--subtitle"]
   },
   "rich-text#table__sizes-feminine--title": {
     "title": "titulo das imagens de medidas",
@@ -296,6 +352,13 @@
           "href": "#"
         }
       }
+    }
+  },
+  "rich-text#table__sizes-feminine-09--subtitle": {
+    "title": "Subtítulo - Mom",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA ALTA  \nMODELAGEM SOLTA  \nPERNAS LARGAS"
     }
   },
   "rich-text#table__sizes-feminine--text": {

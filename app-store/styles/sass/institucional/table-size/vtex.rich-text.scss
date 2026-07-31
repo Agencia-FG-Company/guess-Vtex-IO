@@ -41,6 +41,19 @@
       }
     }
   }
+  &--table__sizes-image-subtitle {
+    justify-content: center;
+    .paragraph {
+      font-family: "Futura";
+      font-size: 14px;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: center;
+      color: #000000;
+      line-height: 1.4;
+      margin: 4px 0 0;
+    }
+  }
   &--table__sizes-text {
     margin: 40px 0;
     .heading {

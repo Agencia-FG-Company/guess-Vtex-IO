@@ -1433,6 +1433,19 @@
 .container--table__sizes-image-title .link:hover {
   text-decoration: underline;
 }
+.container--table__sizes-image-subtitle {
+  justify-content: center;
+}
+.container--table__sizes-image-subtitle .paragraph {
+  font-family: "Futura";
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: #767676;
+  line-height: 1.4;
+  margin: 4px 0 0;
+}
 .container--table__sizes-text {
   margin: 40px 0;
 }

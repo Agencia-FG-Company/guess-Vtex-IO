@@ -45,7 +45,8 @@
     },
     "children": [
       "rich-text#table__sizes-masculine-01--title",
-      "image#table__sizes-masculine-01"
+      "image#table__sizes-masculine-01",
+      "rich-text#table__sizes-masculine-01--subtitle"
     ]
   },
   "rich-text#table__sizes-masculine-01--title": {
@@ -53,6 +54,13 @@
     "props": {
       "blockClass": "table__sizes-image-title",
       "text": "### [Skinny](#)\n"
+    }
+  },
+  "rich-text#table__sizes-masculine-01--subtitle": {
+    "title": "Subtítulo - Skinny",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM JUSTA  \nPERNAS JUSTAS"
     }
   },
   "image#table__sizes-masculine-01": {
@@ -74,7 +82,8 @@
     },
     "children": [
       "rich-text#table__sizes-masculine-02--title",
-      "image#table__sizes-masculine-02"
+      "image#table__sizes-masculine-02",
+      "rich-text#table__sizes-masculine-02--subtitle"
     ]
   },
   "rich-text#table__sizes-masculine-02--title": {
@@ -82,6 +91,13 @@
     "props": {
       "blockClass": "table__sizes-image-title",
       "text": "### [Slim Straight](#)\n"
+    }
+  },
+  "rich-text#table__sizes-masculine-02--subtitle": {
+    "title": "Subtítulo - Slim Straight",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM SLIM  \nPERNAS RETAS"
     }
   },
   "image#table__sizes-masculine-02": {
@@ -103,7 +119,8 @@
     },
     "children": [
       "rich-text#table__sizes-masculine-03--title",
-      "image#table__sizes-masculine-03"
+      "image#table__sizes-masculine-03",
+      "rich-text#table__sizes-masculine-03--subtitle"
     ]
   },
   "rich-text#table__sizes-masculine-03--title": {
@@ -111,6 +128,13 @@
     "props": {
       "blockClass": "table__sizes-image-title",
       "text": "### [Slim Tapered](#)\n"
+    }
+  },
+  "rich-text#table__sizes-masculine-03--subtitle": {
+    "title": "Subtítulo - Slim Tapered",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM SLIM  \nPERNAS AFUNILADAS"
     }
   },
   "image#table__sizes-masculine-03": {
@@ -132,7 +156,8 @@
     },
     "children": [
       "rich-text#table__sizes-masculine-04--title",
-      "image#table__sizes-masculine-04"
+      "image#table__sizes-masculine-04",
+      "rich-text#table__sizes-masculine-04--subtitle"
     ]
   },
   "rich-text#table__sizes-masculine-04--title": {
@@ -140,6 +165,13 @@
     "props": {
       "blockClass": "table__sizes-image-title",
       "text": "### [Jogger](#)\n"
+    }
+  },
+  "rich-text#table__sizes-masculine-04--subtitle": {
+    "title": "Subtítulo - Jogger",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM SOLTA  \nPUNHO AJUSTADO"
     }
   },
   "image#table__sizes-masculine-04": {
