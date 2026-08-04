@@ -1,0 +1,372 @@
+// LP Banners Laterais — v2
+//
+// Reconstrução do "LP-banners-laterais". O conteúdo é o mesmo; o que muda é a
+// forma de declarar os blocos:
+//
+// 1. Nenhum bloco é referenciado pelo nome puro da interface. No template
+//    antigo, "galleryWithBanners" e "ConditionBlock" apareciam sem `#id`, o que
+//    os torna o bloco DEFAULT daquela interface no tema inteiro — o mesmo
+//    bloco, compartilhado por todas as páginas. O conteúdo salvo no Site Editor
+//    fica preso a uma chave ambígua e, a cada publish, a resolução volta para
+//    os `props` declarados aqui no tema. É por isso que só este template perdia
+//    conteúdo: é o único que fazia isso.
+//
+// 2. Os blocos que carregam conteúdo editável foram clonados com IDs próprios,
+//    em vez de reaproveitados de `search.jsonc`. Antes, o banner do topo
+//    (`image#search__result`) e o slider do ConditionBlock
+//    (`list-context.image-list#search__result`) eram os MESMOS objetos usados na
+//    página de busca, então editar em um lugar mexia no outro.
+//
+// 3. Os componentes custom são os novos: `search-grid-banners` (em vez de
+//    `galleryWithBanners`) e `block-switch` (em vez de `ConditionBlock`).
+//
+// Blocos apenas de layout, sem conteúdo editável, continuam sendo
+// reaproveitados de `search.jsonc` de propósito (searchinfo, searchbread,
+// productCountMobile, search-fetch-more, product-summary.shelf#default).
+{
+  "store.custom#lp-banners-laterais-v2": {
+    "children": [
+      "responsive-layout.desktop#lp-bl-v2--desktop",
+      "responsive-layout.mobile#lp-bl-v2--mobile",
+      "flex-layout.row#lp-bl-v2__breadcrumb",
+      "search-result-layout.customQuery#lp-bl-v2"
+    ]
+  },
+
+  // DESKTOP
+  "responsive-layout.desktop#lp-bl-v2--desktop": {
+    "title": "Bloco desktop",
+    "children": [
+      "flex-layout.row#lp-bl-v2__banner-topo"
+    ]
+  },
+
+  // MOBILE
+  "responsive-layout.mobile#lp-bl-v2--mobile": {
+    "title": "Bloco mobile",
+    "children": [
+      "flex-layout.row#lp-bl-v2__banner-topo"
+    ]
+  },
+
+  // BANNER TOPO
+  "flex-layout.row#lp-bl-v2__banner-topo": {
+    "title": "Banner topo",
+    "props": {
+      "blockClass": "lp__banners_laterais-topo--v2"
+    },
+    "children": [
+      "image#lp-bl-v2__banner-topo"
+    ]
+  },
+  "image#lp-bl-v2__banner-topo": {
+    "title": "Banner topo",
+    "props": {
+      "src": "assets/images/LP/banner-topo-1.webp.jpg",
+      "blockClass": "lp__banners_laterais--banner-top"
+    }
+  },
+
+  // BREADCRUMB
+  "flex-layout.row#lp-bl-v2__breadcrumb": {
+    "title": "breadcrumb-lp",
+    "props": {
+      "blockClass": "lp__banners_laterais-breadcrumb"
+    },
+    "children": [
+      "Breadcrumb"
+    ]
+  },
+
+  // VITRINE
+  "search-result-layout.customQuery#lp-bl-v2": {
+    "blocks": [
+      "search-result-layout.desktop#lp-bl-v2",
+      "search-result-layout.mobile#lp-bl-v2",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "blockClass": "lp__banners_laterais-result",
+      "querySchema": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 32,
+        "skusFilter": "ALL",
+        "simulationBehavior": "skip",
+        "mapField": "productClusterIds",
+        "queryField": "232" //SETAR ID DA COLECTION NO SITE EDITOR
+      }
+    }
+  },
+
+  "search-result-layout.desktop#lp-bl-v2": {
+    "title": "Listagem Desktop",
+    "children": [
+      "search-grid-banners#lp-bl-v2",
+      "toggle-layout#lp-bl-v2__topo-desktop",
+      "flex-layout.row#lp-bl-v2__result"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+
+  "search-result-layout.mobile#lp-bl-v2": {
+    "title": "Listagem Mobile",
+    "children": [
+      "search-grid-banners#lp-bl-v2",
+      "toggle-layout#lp-bl-v2__topo-mobile",
+      "block-switch#lp-bl-v2",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#searchbread",
+      "flex-layout.row#lp-bl-v2__products",
+      "search-fetch-more",
+      "flex-layout.row#lp-bl-v2__seo"
+    ],
+    "props": {
+      "pagination": "show-more"
+    }
+  },
+
+  // BANNERS ENTRE OS PRODUTOS (novo componente)
+  // `position` é 1-based: "ocupa a vaga do enésimo produto".
+  // Os valores abaixo reproduzem os índices fixos do galleryWithBanners:
+  // desktop [0, 3, 6, 9] e mobile [0, 4, 6, 10].
+  "search-grid-banners#lp-bl-v2": {
+    "title": "Banners na Vitrine",
+    "props": {
+      "galleryLayoutName": "grid-banners-laterais",
+      "banners": [
+        {
+          "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/ac5b3828-6668-4229-bec2-9be44f385a0c___4ad696184a512e3e492f3d1a943cb8e8.jpg",
+          "link": "/colecao-1",
+          "alt": "Coleção 1",
+          "enabled": true,
+          "openInNewTab": false,
+          "desktopPosition": 1,
+          "phonePosition": 1
+        },
+        {
+          "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/1d7ff5c6-1453-422c-bac1-b2d2f8de9551___d1c4b8819e9302df992c1d1a6be997f3.jpg",
+          "link": "/colecao-2",
+          "alt": "Coleção 2",
+          "enabled": true,
+          "openInNewTab": false,
+          "desktopPosition": 4,
+          "phonePosition": 5
+        },
+        {
+          "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/3a2c4b0d-f0a5-413f-bc9e-e0653abf2fda___65f3e3ecf26a27bfda04e9a73a258b03.jpg",
+          "link": "/colecao-3",
+          "alt": "Coleção 3",
+          "enabled": true,
+          "openInNewTab": false,
+          "desktopPosition": 7,
+          "phonePosition": 7
+        },
+        {
+          "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/87232c54-cebe-44b5-89cc-9ef940dd6e89___109c70af8a1be9fcc798693f29723d7c.jpg",
+          "link": "/colecao-4",
+          "alt": "Coleção 4",
+          "enabled": true,
+          "openInNewTab": false,
+          "desktopPosition": 10,
+          "phonePosition": 11
+        }
+      ]
+    }
+  },
+
+  // ATIVADOR DO BANNER DE TOPO DA VITRINE
+  // Clone de `toggle-layout#search__result-*`, agora exclusivo desta LP.
+  "toggle-layout#lp-bl-v2__topo-desktop": {
+    "title": "Ativador Banner Topo Desktop",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "image#lp-bl-v2__topo-vitrine"
+    ]
+  },
+  "toggle-layout#lp-bl-v2__topo-mobile": {
+    "title": "Ativador Banner Topo Mobile",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "image#lp-bl-v2__topo-vitrine"
+    ]
+  },
+  "image#lp-bl-v2__topo-vitrine": {
+    "title": "Top Banner Vitrine",
+    "props": {
+      "src": "",
+      "blockClass": "search__result",
+      "alt": "Banner Topo",
+      "height": "auto"
+    }
+  },
+
+  // SLIDER DE BANNERS (opcional, ligado/desligado no Site Editor)
+  // Substitui o `ConditionBlock`. Slot nomeado em vez de children posicional.
+  // `active: false` reproduz o comportamento atual: hoje o ConditionBlock desta
+  // LP não recebe `toggleActive`, então cai no segundo filho, que não existe —
+  // ou seja, não renderiza nada.
+  // `whenActive` é um slot. `children` repete o mesmo bloco de propósito: se por
+  // algum motivo o slot não for resolvido, o componente cai no fallback
+  // posicional e o resultado é idêntico nos dois caminhos.
+  "block-switch#lp-bl-v2": {
+    "title": "Slider de Banners da Vitrine",
+    "props": {
+      "active": false,
+      "wrapper": "none",
+      "whenActive": "list-context.image-list#lp-bl-v2__banners"
+    },
+    "children": [
+      "list-context.image-list#lp-bl-v2__banners"
+    ]
+  },
+  "list-context.image-list#lp-bl-v2__banners": {
+    "title": "Banners da Vitrine",
+    "children": [
+      "slider-layout#lp-bl-v2__banners"
+    ],
+    "props": {
+      "preload": true,
+      "height": 650,
+      "images": []
+    }
+  },
+  "slider-layout#lp-bl-v2__banners": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 6,
+        "tablet": 4,
+        "phone": 1
+      },
+      "infinite": true,
+      "blockClass": "search__result",
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never",
+      "centerMode": {
+        "desktop": "disabled",
+        "phone": "center"
+      },
+      "centerPadding": 10
+    }
+  },
+
+  // RESULTADO — DESKTOP
+  "flex-layout.row#lp-bl-v2__result": {
+    "children": [
+      "flex-layout.col#lp-bl-v2__filter",
+      "flex-layout.col#lp-bl-v2__content"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "result"
+    }
+  },
+
+  // FILTRO — clone de `flex-layout.col#filter`, exclusivo desta LP porque o
+  // texto do gatilho é editável no Site Editor.
+  "flex-layout.col#lp-bl-v2__filter": {
+    "children": [
+      "disclosure-layout#lp-bl-v2__filter"
+    ],
+    "props": {
+      "blockClass": "filterCol"
+    }
+  },
+  "disclosure-layout#lp-bl-v2__filter": {
+    "children": [
+      "disclosure-trigger#lp-bl-v2__filter",
+      "disclosure-content#lp-bl-v2__filter"
+    ]
+  },
+  "disclosure-trigger#lp-bl-v2__filter": {
+    "props": {
+      "blockClass": "filter"
+    },
+    "children": [
+      "rich-text#lp-bl-v2__filter"
+    ]
+  },
+  "rich-text#lp-bl-v2__filter": {
+    "props": {
+      "blockClass": "filter",
+      "text": "Filtros"
+    }
+  },
+  "disclosure-content#lp-bl-v2__filter": {
+    "props": {
+      "blockClass": "filter"
+    },
+    "children": [
+      "filter-navigator.v3"
+    ]
+  },
+
+  "flex-layout.col#lp-bl-v2__content": {
+    "children": [
+      "flex-layout.row#searchinfo",
+      "flex-layout.row#lp-bl-v2__products",
+      "search-fetch-more",
+      "flex-layout.row#lp-bl-v2__seo"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true,
+      "blockClass": "content"
+    }
+  },
+
+  // GRADE DE PRODUTOS
+  "flex-layout.row#lp-bl-v2__products": {
+    "children": [
+      "search-content#lp-bl-v2"
+    ]
+  },
+  "search-content#lp-bl-v2": {
+    "blocks": [
+      "gallery#lp-bl-v2",
+      "not-found"
+    ]
+  },
+  "gallery#lp-bl-v2": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid-banners-laterais",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "desktop": 4,
+            "tablet": 3,
+            "phone": 2
+          }
+        }
+      ],
+      "GridSummary": "product-summary.shelf#default"
+    }
+  },
+
+  // CONTEÚDO SEO — clone de `flex-layout.row#seo__content`, que hoje é
+  // compartilhado com a busca e com as outras LPs.
+  "flex-layout.row#lp-bl-v2__seo": {
+    "title": "Conteúdo SEO",
+    "props": {
+      "blockClass": "seo__content"
+    },
+    "children": [
+      "rich-text#lp-bl-v2__seo"
+    ]
+  },
+  "rich-text#lp-bl-v2__seo": {
+    "props": {
+      "blockClass": "seo__content",
+      "text": ""
+    }
+  }
+}

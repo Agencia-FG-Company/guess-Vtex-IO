@@ -1,0 +1,35 @@
+// Banners inseridos entre os produtos da vitrine — componente
+// `search-grid-banners`.
+//
+// O `galleryWithBanners` antigo aplicava esses valores como style inline no
+// componente, e a regra de altura mobile morava em `vtex.my-account.scss`
+// (namespace de outro app). Aqui tudo vive nos css-handles do próprio app.
+
+.gridBanner {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+
+  // Acompanha a vaga que o produto ocuparia em `.galleryItem--grid-banners-laterais`.
+  max-width: 25%;
+
+  @include tablet {
+    max-height: 380px;
+  }
+
+  @include mobile {
+    max-width: 47%;
+  }
+}
+
+.gridBannerLink {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.gridBannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

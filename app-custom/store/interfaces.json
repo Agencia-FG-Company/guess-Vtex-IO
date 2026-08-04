@@ -112,6 +112,13 @@
     "component": "galleryWithBanners",
     "composition": "children"
   },
+  "search-grid-banners": {
+    "component": "searchGridBanners"
+  },
+  "block-switch": {
+    "component": "blockSwitch",
+    "composition": "children"
+  },
   "PopupForm": {
     "component": "PopupForm"
   },
@@ -139,12 +146,12 @@
     "composition": "children"
   },
   "FaqJsonLd": {
-  "component": "FaqJsonLd"
+    "component": "FaqJsonLd"
   },
   "TableFeminineJsonLd": {
-  "component": "TableFeminineJsonLd"
+    "component": "TableFeminineJsonLd"
   },
-"TableMasculineJsonLd": {
-  "component": "TableMasculineJsonLd"
+  "TableMasculineJsonLd": {
+    "component": "TableMasculineJsonLd"
   }
 }

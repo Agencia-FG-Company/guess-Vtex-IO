@@ -9,19 +9,23 @@
   animation-fill-mode: forwards;
   animation-play-state: running;
   animation-direction: normal;
-  animation-timing-function: linear;
-  animation-name: marquee;
+
+  /* Estado antes da medição, e fallback caso o JS não rode.
+     A duração real é calculada no componente a partir da largura medida da faixa
+     e da velocidade em px/s, e entra como style inline no primeiro efeito.
+     Este valor é longo o suficiente para a faixa ficar praticamente parada nesse
+     intervalo, então não há salto de velocidade quando a duração real assume.
+
+     Importante: sem nenhum `animation-duration` aqui, a propriedade cairia no
+     valor inicial 0s sempre que o inline faltasse — e nada animaria. Não voltar
+     a declarar isso dentro de um media query: foi o que fez mobile e desktop
+     rodarem em velocidades diferentes. */
+  animation-duration: 300000ms;
 }
 
 .textSliderContainer {
-    display: flex;
-    align-items: anchor-center;
-}
-
-@media (max-width: 767px) {
-  .textSliderTrack {
-    animation-duration: 300000ms !important;
-  }
+  display: flex;
+  align-items: anchor-center;
 }
 
 @keyframes marquee {
