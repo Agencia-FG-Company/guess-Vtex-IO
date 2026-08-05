@@ -1,3 +1,3 @@
-import SearchGridBanners from './components/searchGridBanners/index'
+import SearchGridBanners from "./components/searchGridBanners";
 
 export default SearchGridBanners
