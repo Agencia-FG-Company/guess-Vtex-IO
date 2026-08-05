@@ -1525,6 +1525,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 60px;
 }
 .flexRow--table__sizes-feminine-mobile .flexRowContent--table__sizes-feminine-mobile {
   display: flex;
@@ -1550,6 +1551,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 60px;
 }
 .flexRow--table__sizes-feminine--tables {
   margin-top: 40px;
