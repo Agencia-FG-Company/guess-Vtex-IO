@@ -25,11 +25,31 @@
       "blockClass": "table__sizes-masculine"
     },
     "children": [
-       "image#table__sizes-masculine-01",
-       "image#table__sizes-masculine-02",
-       "image#table__sizes-masculine-03",
-       "image#table__sizes-masculine-04"
+       "toggle-layout#table__sizes-masculine-01",
+       "toggle-layout#table__sizes-masculine-02",
+       "toggle-layout#table__sizes-masculine-03",
+       "toggle-layout#table__sizes-masculine-04"
     ]
+  },
+  "toggle-layout#table__sizes-masculine-01": {
+    "title": "Ativador - Skinny",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-masculine-01"]
+  },
+  "toggle-layout#table__sizes-masculine-02": {
+    "title": "Ativador - Slim Straight",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-masculine-02"]
+  },
+  "toggle-layout#table__sizes-masculine-03": {
+    "title": "Ativador - Slim Tapered",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-masculine-03"]
+  },
+  "toggle-layout#table__sizes-masculine-04": {
+    "title": "Ativador - Jogger",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-masculine-04"]
   },
   "rich-text#table__sizes-masculine--title": {
     "title": "titulo das imagens de medidas",
@@ -38,24 +58,152 @@
       "text": "## Modelagens Jeans"
     }
   },
+  "flex-layout.col#table__sizes-masculine-01": {
+    "title": "Skinny",
+    "props": {
+      "blockClass": "table__sizes-masculine-item"
+    },
+    "children": [
+      "rich-text#table__sizes-masculine-01--title",
+      "image#table__sizes-masculine-01",
+      "rich-text#table__sizes-masculine-01--subtitle"
+    ]
+  },
+  "rich-text#table__sizes-masculine-01--title": {
+    "title": "Título - Skinny",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Skinny](#)\n"
+    }
+  },
+  "rich-text#table__sizes-masculine-01--subtitle": {
+    "title": "Subtítulo - Skinny",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM JUSTA  \nPERNAS JUSTAS"
+    }
+  },
   "image#table__sizes-masculine-01": {
     "props": {
-      "src": "assets/images/table-size/masculine/icon-skinny.jpg"
+      "src": "assets/images/table-size/masculine/icon-skinny.jpg",
+      "alt": "Skinny",
+      "link": {
+        "props": {
+          "label": "Skinny",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "flex-layout.col#table__sizes-masculine-02": {
+    "title": "Slim Straight",
+    "props": {
+      "blockClass": "table__sizes-masculine-item"
+    },
+    "children": [
+      "rich-text#table__sizes-masculine-02--title",
+      "image#table__sizes-masculine-02",
+      "rich-text#table__sizes-masculine-02--subtitle"
+    ]
+  },
+  "rich-text#table__sizes-masculine-02--title": {
+    "title": "Título - Slim Straight",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Slim Straight](#)\n"
+    }
+  },
+  "rich-text#table__sizes-masculine-02--subtitle": {
+    "title": "Subtítulo - Slim Straight",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM SLIM  \nPERNAS RETAS"
     }
   },
   "image#table__sizes-masculine-02": {
     "props": {
-      "src": "assets/images/table-size/masculine/icon-slim-stranght.jpg"
+      "src": "assets/images/table-size/masculine/icon-slim-stranght.jpg",
+      "alt": "Slim Straight",
+      "link": {
+        "props": {
+          "label": "Slim Straight",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "flex-layout.col#table__sizes-masculine-03": {
+    "title": "Slim Tapered",
+    "props": {
+      "blockClass": "table__sizes-masculine-item"
+    },
+    "children": [
+      "rich-text#table__sizes-masculine-03--title",
+      "image#table__sizes-masculine-03",
+      "rich-text#table__sizes-masculine-03--subtitle"
+    ]
+  },
+  "rich-text#table__sizes-masculine-03--title": {
+    "title": "Título - Slim Tapered",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Slim Tapered](#)\n"
+    }
+  },
+  "rich-text#table__sizes-masculine-03--subtitle": {
+    "title": "Subtítulo - Slim Tapered",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM SLIM  \nPERNAS AFUNILADAS"
     }
   },
   "image#table__sizes-masculine-03": {
     "props": {
-      "src": "assets/images/table-size/masculine/icon-slim-tappered.jpg"
+      "src": "assets/images/table-size/masculine/icon-slim-tappered.jpg",
+      "alt": "Slim Tapered",
+      "link": {
+        "props": {
+          "label": "Slim Tapered",
+          "href": "#"
+        }
+      }
+    }
+  },
+  "flex-layout.col#table__sizes-masculine-04": {
+    "title": "Jogger",
+    "props": {
+      "blockClass": "table__sizes-masculine-item"
+    },
+    "children": [
+      "rich-text#table__sizes-masculine-04--title",
+      "image#table__sizes-masculine-04",
+      "rich-text#table__sizes-masculine-04--subtitle"
+    ]
+  },
+  "rich-text#table__sizes-masculine-04--title": {
+    "title": "Título - Jogger",
+    "props": {
+      "blockClass": "table__sizes-image-title",
+      "text": "### [Jogger](#)\n"
+    }
+  },
+  "rich-text#table__sizes-masculine-04--subtitle": {
+    "title": "Subtítulo - Jogger",
+    "props": {
+      "blockClass": "table__sizes-image-subtitle",
+      "text": "CINTURA MÉDIA  \nMODELAGEM SOLTA  \nPUNHO AJUSTADO"
     }
   },
   "image#table__sizes-masculine-04": {
     "props": {
-      "src": "assets/images/table-size/masculine/icon-jogger.jpg"
+      "src": "assets/images/table-size/masculine/icon-jogger.jpg",
+      "alt": "Jogger",
+      "link": {
+        "props": {
+          "label": "Jogger",
+          "href": "#"
+        }
+      }
     }
   },
   "rich-text#table__sizes-masculine--text": {
