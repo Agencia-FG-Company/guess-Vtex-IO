@@ -25,11 +25,31 @@
       "blockClass": "table__sizes-masculine"
     },
     "children": [
-       "flex-layout.col#table__sizes-masculine-01",
-       "flex-layout.col#table__sizes-masculine-02",
-       "flex-layout.col#table__sizes-masculine-03",
-       "flex-layout.col#table__sizes-masculine-04"
+       "toggle-layout#table__sizes-masculine-01",
+       "toggle-layout#table__sizes-masculine-02",
+       "toggle-layout#table__sizes-masculine-03",
+       "toggle-layout#table__sizes-masculine-04"
     ]
+  },
+  "toggle-layout#table__sizes-masculine-01": {
+    "title": "Ativador - Skinny",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-masculine-01"]
+  },
+  "toggle-layout#table__sizes-masculine-02": {
+    "title": "Ativador - Slim Straight",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-masculine-02"]
+  },
+  "toggle-layout#table__sizes-masculine-03": {
+    "title": "Ativador - Slim Tapered",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-masculine-03"]
+  },
+  "toggle-layout#table__sizes-masculine-04": {
+    "title": "Ativador - Jogger",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-masculine-04"]
   },
   "rich-text#table__sizes-masculine--title": {
     "title": "titulo das imagens de medidas",

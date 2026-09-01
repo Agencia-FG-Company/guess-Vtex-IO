@@ -11,26 +11,25 @@
     }
   }
 
-  &--table__sizes-feminine {
-    .flexRowContent--table__sizes-feminine {
-      justify-content: space-evenly !important;
-      align-items: center !important;
-      .flexCol {
-        width: auto;
-        .flexColChild {
-          display: contents;
-
-          :global(.vtex-store-components-3-x-imageElement) {
-            width: max-content;
-          }
-        }
-      }
+  &--table__sizes-feminine-desktop {
+    .flexRowContent--table__sizes-feminine-desktop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      gap: 48px 24px;
       .flexCol--table__sizes-feminine-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-bottom: 60px;
+        flex: 0 1 260px;
+        max-width: 260px;
+
+        :global(.vtex-store-components-3-x-imageElement) {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -38,14 +37,16 @@
     .flexRowContent--table__sizes-feminine-mobile {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 24px 0;
+      justify-content: center;
+      width: 100%;
+      gap: 32px 16px;
       .flexCol--table__sizes-feminine-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 48%;
+        flex: 0 1 45%;
+        max-width: 45%;
 
         :global(.vtex-store-components-3-x-imageElement) {
           max-width: 100%;
@@ -55,13 +56,18 @@
   }
   &--table__sizes-masculine {
     .flexRowContent--table__sizes-masculine {
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
+      width: 100%;
+      gap: 48px 24px;
       .flexCol--table__sizes-masculine-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-bottom: 60px;
+        flex: 0 1 220px;
+        max-width: 220px;
       }
     }
   }

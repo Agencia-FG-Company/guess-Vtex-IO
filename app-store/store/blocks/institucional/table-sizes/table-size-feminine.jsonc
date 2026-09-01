@@ -30,9 +30,24 @@
     ]
   },
   "responsive-layout.desktop#table__sizes-feminine": {
-    "children": [ "flex-layout.col##table__sizes-feminine-01",
-    "flex-layout.col##table__sizes-feminine-02",
-    "flex-layout.col##table__sizes-feminine-03"]
+    "children": ["flex-layout.row#table__sizes-feminine--desktop"]
+  },
+  "flex-layout.row#table__sizes-feminine--desktop": {
+    "title": "imagens femininas desktop",
+    "props": {
+      "blockClass": "table__sizes-feminine-desktop"
+    },
+    "children": [
+      "toggle-layout#table__sizes-feminine-01",
+      "toggle-layout#table__sizes-feminine-02",
+      "toggle-layout#table__sizes-feminine-03",
+      "toggle-layout#table__sizes-feminine-04",
+      "toggle-layout#table__sizes-feminine-05",
+      "toggle-layout#table__sizes-feminine-06",
+      "toggle-layout#table__sizes-feminine-07",
+      "toggle-layout#table__sizes-feminine-08",
+      "toggle-layout#table__sizes-feminine-09"
+    ]
   },
   "responsive-layout.mobile#table__sizes-feminine": {
     "children": ["flex-layout.row#table__sizes-feminine--mobile"]
@@ -43,37 +58,61 @@
       "blockClass": "table__sizes-feminine-mobile"
     },
     "children": [
-      "flex-layout.col#table__sizes-feminine-01--item",
-      "flex-layout.col#table__sizes-feminine-02--item",
-      "flex-layout.col#table__sizes-feminine-03--item",
-      "flex-layout.col#table__sizes-feminine-04--item",
-      "flex-layout.col#table__sizes-feminine-05--item",
-      "flex-layout.col#table__sizes-feminine-06--item",
-      "flex-layout.col#table__sizes-feminine-07--item",
-      "flex-layout.col#table__sizes-feminine-08--item",
-      "flex-layout.col#table__sizes-feminine-09--item"
+      "toggle-layout#table__sizes-feminine-01",
+      "toggle-layout#table__sizes-feminine-02",
+      "toggle-layout#table__sizes-feminine-03",
+      "toggle-layout#table__sizes-feminine-04",
+      "toggle-layout#table__sizes-feminine-05",
+      "toggle-layout#table__sizes-feminine-06",
+      "toggle-layout#table__sizes-feminine-07",
+      "toggle-layout#table__sizes-feminine-08",
+      "toggle-layout#table__sizes-feminine-09"
     ]
   },
-  "flex-layout.col##table__sizes-feminine-01": {
-    "children": [
-      "flex-layout.col#table__sizes-feminine-01--item",
-      "flex-layout.col#table__sizes-feminine-04--item",
-      "flex-layout.col#table__sizes-feminine-07--item"
-    ]
+  "toggle-layout#table__sizes-feminine-01": {
+    "title": "Ativador - 1981 Skinny",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-feminine-01--item"]
   },
-  "flex-layout.col##table__sizes-feminine-02": {
-    "children": [
-      "flex-layout.col#table__sizes-feminine-02--item",
-      "flex-layout.col#table__sizes-feminine-05--item",
-      "flex-layout.col#table__sizes-feminine-08--item"
-    ]
+  "toggle-layout#table__sizes-feminine-02": {
+    "title": "Ativador - Curve X Skinny",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-feminine-02--item"]
   },
-  "flex-layout.col##table__sizes-feminine-03": {
-    "children": [
-      "flex-layout.col#table__sizes-feminine-03--item",
-      "flex-layout.col#table__sizes-feminine-06--item",
-      "flex-layout.col#table__sizes-feminine-09--item"
-    ]
+  "toggle-layout#table__sizes-feminine-03": {
+    "title": "Ativador - Mid Rise Skinny",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-feminine-03--item"]
+  },
+  "toggle-layout#table__sizes-feminine-04": {
+    "title": "Ativador - Straight Leg",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-feminine-04--item"]
+  },
+  "toggle-layout#table__sizes-feminine-05": {
+    "title": "Ativador - High Flare",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-feminine-05--item"]
+  },
+  "toggle-layout#table__sizes-feminine-06": {
+    "title": "Ativador - Marilyn Zip",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-feminine-06--item"]
+  },
+  "toggle-layout#table__sizes-feminine-07": {
+    "title": "Ativador - Tomboy",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-feminine-07--item"]
+  },
+  "toggle-layout#table__sizes-feminine-08": {
+    "title": "Ativador - Jegging",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-feminine-08--item"]
+  },
+  "toggle-layout#table__sizes-feminine-09": {
+    "title": "Ativador - Mom",
+    "props": { "renderChildren": true },
+    "children": ["flex-layout.col#table__sizes-feminine-09--item"]
   },
   "flex-layout.col#table__sizes-feminine-01--item": {
     "title": "1981 Skinny",
