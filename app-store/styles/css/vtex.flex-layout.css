@@ -1516,7 +1516,7 @@
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  gap: 48px 24px;
+  gap: 48px 15px;
 }
 .flexRow--table__sizes-feminine-desktop .flexRowContent--table__sizes-feminine-desktop .flexCol--table__sizes-feminine-item {
   display: flex;
